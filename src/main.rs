@@ -15,13 +15,15 @@ mod write_banner;
 
 fn main() {
     dotenv::dotenv().ok();
+
     let subs = cmd::run("az account list --query '[].name' --output json");
     let az_sub = subs[0].as_str().expect("ERR converting subs[0] to str");
     eprintln!("Got az_sub='{az_sub}'");
+
     let vms = cmd::run(&format!(
         "az vm list --subscription '{az_sub}' --output json"
     ));
-    //eprintln!("vms: {:?}", vms[0]);
+
     eprintln!("");
     for vm in vms.members() {
         print!("\"{name}\" >> ", name = vm["name"]);
@@ -43,5 +45,4 @@ fn main() {
         }
         println!("\n");
     }
-    //= get_vms(az_sub);
 }
