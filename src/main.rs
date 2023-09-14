@@ -11,6 +11,7 @@ use dotenv;
 // https://docs.rs/json/latest/json/
 extern crate json;
 use json::JsonValue;
+mod filter_keys;
 
 mod cmd;
 mod write_banner;
@@ -29,79 +30,37 @@ fn main() {
     ));
 
     eprintln!("");
-    let vm_keys: Vec<String> = vms[0].entries().map(|(k, v)| format!("{}", k)).collect();
+    let vm_keys: Vec<String> = vms[0].entries().map(|(k, _)| format!("{}", k)).collect();
     // remove keys for vm.entries()
     for vm in vms.members_mut() {
         let mut skip: String = "".into();
         for key in vm_keys.iter() {
-            if remove_key(&key) {
+            if filter_keys::remove_key(&key) {
                 vm.remove(&key);
                 skip += &format!(",\"{key}\"");
             }
         }
     }
+    // print csv header
+    eprintln!("# VM info CSV, subscription:\"{az_sub}\"");
+    for (key, sub_key) in filter_keys::get_key_sort_order() {
+        if sub_key == "" {
+            print!("{key}, ");
+        } else {
+            print!("{sub_key}, ");
+        }
+    }
     // print out vms
     for vm in vms.members() {
-        print!("\"{name}\" >> ", name = vm["name"]);
-        for (k, v) in vm.entries() {
-            print!("{k}={v}, ");
+        let mut vm2 = vm.clone();
+        for (key, sub_key) in filter_keys::get_key_sort_order() {
+            if sub_key == "" {
+                print!("{}, ", vm2.remove(&key));
+            } else {
+                print!("{}, ", vm2.remove(&key)[sub_key]);
+            }
         }
-        // print_json_entries(vm);
-        println!("\n");
-    }
-}
-
-fn remove_key(k: &str) -> bool {
-    // match keys to ignore (return false)
-    if [
-        "additionalCapabilities",
-        "applicationProfile",
-        "availabilitySet",
-        // "billingProfile",
-        "capacityReservation",
-        "diagnosticsProfile",
-        "evictionPolicy",
-        "extendedLocation",
-        "extensionsTimeBudget",
-        // "fqdns" . // --show-details
-        // "hardwareProfile",
-        "host",
-        "hostGroup",
-        "id",
-        "identity",
-        "instanceView",
-        "licenseType",
-        "location",
-        "macAddresses", // --show-details
-        // "name",
-        "networkProfile",
-        "osProfile",
-        "plan",
-        "platformFaultDomain",
-        // "powerState", // --show-details
-        "priority",
-        // "privateIps"  // --show-details
-        "provisioningState",
-        "proximityPlacementGroup",
-        // "publicIps"  // --show-details
-        // "resourceGroup",
-        "resources",
-        "scheduledEventsProfile",
-        "securityProfile",
-        "storageProfile",
-        // "tags",
-        "timeCreated",
-        "type",
-        "userData",
-        "virtualMachineScaleSet",
-        // "vmId",
-        // "zones",
-    ]
-    .contains(&k)
-    {
-        true
-    } else {
-        false
+        println!();
     }
 }
 
