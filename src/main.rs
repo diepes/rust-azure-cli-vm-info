@@ -51,24 +51,40 @@ fn main() {
     // print csv header
     eprintln!("# VM info CSV, subscription:\"{az_sub}\"");
     for (key, sub_key) in &print_keys {
+        let print_key;
         if sub_key == "" {
-            print!("{key}, ");
+            print_key = escape_csv_field(key);
         } else {
-            print!("{sub_key}, ");
+            print_key = escape_csv_field(sub_key);
         }
+        print!("{print_key},");
     }
     println!();
     // print out vms
     for vm in vms.members() {
         let mut vm2 = vm.clone();
         for (key, sub_key) in &print_keys {
+            let print_key;
             if sub_key == "" {
-                print!("{}, ", vm2.remove(&key));
+                print_key = escape_csv_field(&vm2.remove(&key).to_string());
             } else {
-                print!("{}, ", vm2.remove(&key)[sub_key]);
+                print_key = escape_csv_field(&vm2.remove(&key)[sub_key].to_string());
             }
+            print!("{print_key},");
         }
         println!();
+    }
+}
+fn escape_csv_field(input: &str) -> String {
+    if input.contains(',') || input.contains('"') {
+        // If the string contains a comma or double quote, enclose it in double quotes
+        // and escape any double quotes within the field.
+        // also excel does not like spaces after comma between fields
+        let escaped = input.replace("\"", "\"\"");
+        format!("\"{}\"", escaped)
+    } else {
+        // If the string doesn't contain a comma or double quote, no need to enclose it.
+        input.to_string()
     }
 }
 fn enrich_vm_fields(vms: &mut JsonValue, print_keys: &mut Vec<(String, String)>) {
