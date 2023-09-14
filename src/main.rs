@@ -72,57 +72,30 @@ fn main() {
     }
 }
 fn enrich_vm_fields(vms: &mut JsonValue, print_keys: &mut Vec<(String, String)>) {
+    // Azure source 2023-09 Instance size flexibility ratios https://aka.ms/isf
+    let get_csv = filter_keys::get_azure_flex_groups();
+    let size_vec = get_csv.get().expect("No csv data ??");
     for vm in vms.members_mut() {
-        let new_values = match vm["hardwareProfile"]["vmSize"].as_str() {
-            Some("Standard_B8ms") => [
-                "8",
-                "8vCPU+32GB",
-                "Opt.flex.Standard_B1ms (BS High Mem) 1vCPU+2GB",
-            ],
-            Some("Standard_B2s") => [
-                "2",
-                "2vCPU+4GB",
-                "Opt.flex.Standard_B1ls (BS Series) 1vCPU+0.5GB",
-            ],
-            Some("Standard_E8s_v3") => [
-                "4",
-                "8vCPU+64GB",
-                "Opt.flex.Standard_E2s_v3 (ESv3) 2vCPU+16GB",
-            ],
-            Some("Standard_E4s_v3") => [
-                "2",
-                "4vCPU+32GB",
-                "Opt.flex.Standard_E2s_v3 (ESv3) 2vCPU+16GB",
-            ],
-            Some("Standard_D8s_v3") => [
-                "4",
-                "8vCPU+32GB",
-                "Opt.flex.Standard_D2s_v3 (Dsv3) 2vCPU+8GB",
-            ],
-            Some("Standard_D4s_v3") => [
-                "2",
-                "4vCPU+16GB",
-                "Opt.flex.Standard_D2s_v3 (Dsv3) 2vCPU+8GB",
-            ],
-            Some("Standard_D2s_v3") => [
-                "1",
-                "2vCPU+8GB",
-                "Opt.flex.Standard_D2s_v3 (Dsv3) 2vCPU+8GB",
-            ],
-            _ => ["N.A", "N.A", "N.A"],
-        };
-        println!(
-            "debug {:?} {:?}",
-            vm["hardwareProfile"]["vmSize"].as_str(),
-            new_values
-        );
-        for (i, new_key) in ["ReserveUnits", "Cpu+Ram", "ReserveOptFlex"]
+        let vm_size = vm["hardwareProfile"]["vmSize"]
+            .as_str()
+            .expect("VM with no vmSize ??");
+
+        let csv_row = &size_vec
             .iter()
-            .enumerate()
-        {
+            .find(|row| row.flex_sku_name == vm_size)
+            .expect("Unknow vm size ?")
+            .clone(); // ensure we have our own copy of the matching row.
+
+        for new_key in ["flex_group", "flex_sku_name", "flex_ratio"] {
             let new_key_subkey = (new_key.to_string(), "".to_string());
-            vm.insert(new_key, new_values[i])
-                .expect("Couldnt insert into JsonValue");
+            let new_value = match new_key {
+                "flex_group" => &csv_row.flex_group,
+                "flex_sku_name" => &csv_row.flex_sku_name,
+                "flex_ratio" => &csv_row.flex_ratio,
+                _ => panic!("no match to csv struct"),
+            };
+            vm.insert(new_key, new_value.clone())
+                .expect("Couldn't insert into JsonValue");
             if !print_keys.contains(&new_key_subkey) {
                 print_keys.push(new_key_subkey);
             }

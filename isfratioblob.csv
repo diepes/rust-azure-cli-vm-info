@@ -1,0 +1,2248 @@
+InstanceSizeFlexibilityGroup,ArmSkuName,Ratio
+Azure Red Hat OpenShift Compute Optimized,Red_Hat_OpenShift_Compute_Optimized_v2_4_vCPU,1
+Azure Red Hat OpenShift Compute Optimized,Red_Hat_OpenShift_Compute_Optimized_v2_8_vCPU,2
+Azure Red Hat OpenShift Compute Optimized,Red_Hat_OpenShift_Compute_Optimized_v2_16_vCPU,4
+Azure Red Hat OpenShift Compute Optimized,Red_Hat_OpenShift_Compute_Optimized_v2_32_vCPU,8
+Azure Red Hat OpenShift General Purpose,Red_Hat_OpenShift_General_Purpose_v3_4_vCPU,1
+Azure Red Hat OpenShift General Purpose,Red_Hat_OpenShift_General_Purpose_v3_8_vCPU,2
+Azure Red Hat OpenShift General Purpose,Red_Hat_OpenShift_General_Purpose_v3_16_vCPU,4
+Azure Red Hat OpenShift General Purpose,Red_Hat_OpenShift_General_Purpose_v3_32_vCPU,8
+Azure Red Hat OpenShift Memory Optimized,Red_Hat_OpenShift_Memory_Optimized_v3_4_vCPU,1
+Azure Red Hat OpenShift Memory Optimized,Red_Hat_OpenShift_Memory_Optimized_v3_8_vCPU,2
+Azure Red Hat OpenShift Memory Optimized,Red_Hat_OpenShift_Memory_Optimized_v3_16_vCPU,4
+Azure Red Hat OpenShift Memory Optimized,Red_Hat_OpenShift_Memory_Optimized_v3_32_vCPU,8
+Azure Redis Cache Enterprise,Azure_Redis_Cache_Enterprise_E1,1
+Azure Redis Cache Enterprise,Azure_Redis_Cache_Enterprise_E10,2
+Azure Redis Cache Enterprise,Azure_Redis_Cache_Enterprise_E20,4
+Azure Redis Cache Enterprise,Azure_Redis_Cache_Enterprise_E50,8
+Azure Redis Cache Enterprise,Azure_Redis_Cache_Enterprise_E100,15
+Azure Redis Cache Enterprise Flash,Azure_Redis_Cache_Enterprise_Flash_F300,1
+Azure Redis Cache Enterprise Flash,Azure_Redis_Cache_Enterprise_Flash_F700,2
+Azure Redis Cache Enterprise Flash,Azure_Redis_Cache_Enterprise_Flash_F1500,4
+Azure Redis Cache Premium,Azure_Redis_Cache_Premium_P1_Cache,1
+Azure Redis Cache Premium,Azure_Redis_Cache_Premium_P2_Cache,2
+Azure Redis Cache Premium,Azure_Redis_Cache_Premium_P3_Cache,4
+Azure Redis Cache Premium,Azure_Redis_Cache_Premium_P4_Cache,8
+Azure Redis Cache Premium,Azure_Redis_Cache_Premium_P5_Cache,18
+BS Series,Standard_B1ls,1
+BS Series,Standard_B1s,2
+BS Series,Standard_B2s,8
+BS Series High Memory,Standard_B1ms,1
+BS Series High Memory,Standard_B2ms,4
+BS Series High Memory,Standard_B4ms,8
+BS Series High Memory,Standard_B8ms,16
+BS Series High Memory,Standard_B12ms,24
+BS Series High Memory,Standard_B16ms,32
+BS Series High Memory,Standard_B20ms,40
+Basv2 Series,Standard_B2als_v2,1
+Basv2 Series,Standard_B2as_v2,1
+Basv2 Series,Standard_B2ats_v2,1
+Basv2 Series,Standard_B4als_v2,2
+Basv2 Series,Standard_B4as_v2,2
+Basv2 Series,Standard_B8als_v2,4
+Basv2 Series,Standard_B8as_v2,4
+Basv2 Series,Standard_B16als_v2,8
+Basv2 Series,Standard_B16as_v2,8
+Basv2 Series,Standard_B32als_v2,16
+Basv2 Series,Standard_B32as_v2,16
+Bpsv2 Series,Standard_B2ps_v2,1
+Bpsv2 Series,Standard_B2pts_v2,1
+Bpsv2 Series,Standard_B2pls_v2,1
+Bpsv2 Series,Standard_B4pls_v2,2
+Bpsv2 Series,Standard_B4ps_v2,2
+Bpsv2 Series,Standard_B8ps_v2,4
+Bpsv2 Series,Standard_B8pls_v2,4
+Bpsv2 Series,Standard_B16pls_v2,8
+Bpsv2 Series,Standard_B16ps_v2,8
+Bsv2 Series,Standard_B2ts_v2,1
+Bsv2 Series,Standard_B2ls_v2,1
+Bsv2 Series,Standard_B2s_v2,1
+Bsv2 Series,Standard_B4s_v2,2
+Bsv2 Series,Standard_B4ls_v2,2
+Bsv2 Series,Standard_B8s_v2,4
+Bsv2 Series,Standard_B8ls_v2,4
+Bsv2 Series,Standard_B16s_v2,8
+Bsv2 Series,Standard_B16ls_v2,8
+Bsv2 Series,Standard_B32ls_v2,16
+Bsv2 Series,Standard_B32s_v2,16
+D Series,Standard_D1,1
+D Series,Standard_D2,2
+D Series,Standard_D3,4
+D Series,Standard_D4,8
+D Series High Memory,Standard_D11,1
+D Series High Memory,Standard_D12,2
+D Series High Memory,Standard_D13,4
+D Series High Memory,Standard_D14,8
+DCSv2 Series,Standard_DC1s_v2,1
+DCSv2 Series,Standard_DC2s_v2,2
+DCSv2 Series,Standard_DC4s_v2,4
+DCSv2 Series,Standard_DC8_v2,8
+DCadsv5-series DedicatedHost,DCadsv5 Type 1,1
+DCadsv5-series Linux,Standard_DC2ads_v5,1
+DCadsv5-series Linux,Standard_DC4ads_v5,2
+DCadsv5-series Linux,Standard_DC8ads_v5,4
+DCadsv5-series Linux,Standard_DC16ads_v5,8
+DCadsv5-series Linux,Standard_DC32ads_v5,16
+DCadsv5-series Linux,Standard_DC48ads_v5,24
+DCadsv5-series Linux,Standard_DC64ads_v5,32
+DCadsv5-series Linux,Standard_DC96ads_v5,48
+DCasv5-series DedicatedHost,DCasv5 Type 1,1
+DCasv5-series Linux,Standard_DC2as_v5,1
+DCasv5-series Linux,Standard_DC4as_v5,2
+DCasv5-series Linux,Standard_DC8as_v5,4
+DCasv5-series Linux,Standard_DC16as_v5,8
+DCasv5-series Linux,Standard_DC32as_v5,16
+DCasv5-series Linux,Standard_DC48as_v5,24
+DCasv5-series Linux,Standard_DC64as_v5,32
+DCasv5-series Linux,Standard_DC96as_v5,48
+DCdsv3 Series DedicatedHost,DCdsv3 Type1,1
+DCdsv3 Series Linux,Standard_DC1ds_v3,1
+DCdsv3 Series Linux,Standard_DC2ds_v3,2
+DCdsv3 Series Linux,Standard_DC4ds_v3,4
+DCdsv3 Series Linux,Standard_DC8ds_v3,8
+DCdsv3 Series Linux,Standard_DC16ds_v3,16
+DCdsv3 Series Linux,Standard_DC24ds_v3,24
+DCdsv3 Series Linux,Standard_DC32ds_v3,32
+DCdsv3 Series Linux,Standard_DC48ds_v3,48
+DCsv2 Series Dedicated Host,DCsv2 Type 1,1
+DCsv3 Series DedicatedHost,DCsv3 Type1,1
+DCsv3 Series Linux,Standard_DC1s_v3,1
+DCsv3 Series Linux,Standard_DC2s_v3,2
+DCsv3 Series Linux,Standard_DC4s_v3,4
+DCsv3 Series Linux,Standard_DC8s_v3,8
+DCsv3 Series Linux,Standard_DC16s_v3,16
+DCsv3 Series Linux,Standard_DC24s_v3,24
+DCsv3 Series Linux,Standard_DC32s_v3,32
+DCsv3 Series Linux,Standard_DC48s_v3,48
+DS Series,Standard_DS1,1
+DS Series,Standard_DS2,2
+DS Series,Standard_DS3,4
+DS Series,Standard_DS4,8
+DS Series High Memory,Standard_DS11,1
+DS Series High Memory,Standard_DS12,2
+DS Series High Memory,Standard_DS13,4
+DS Series High Memory,Standard_DS14,8
+DSv2 Series,Standard_DS1_v2,1
+DSv2 Series,Standard_DS2_v2,2
+DSv2 Series,Standard_DS3_v2,4
+DSv2 Series,Standard_DS4_v2,8
+DSv2 Series,Standard_DS5_v2,16
+DSv2 Series High Memory,Standard_DS11_v2,1
+DSv2 Series High Memory,Standard_DS11-1_v2,1
+DSv2 Series High Memory,Standard_DS12-2_v2,2
+DSv2 Series High Memory,Standard_DS12-1_v2,2
+DSv2 Series High Memory,Standard_DS12_v2,2
+DSv2 Series High Memory,Standard_DS13-2_v2,4
+DSv2 Series High Memory,Standard_DS13-4_v2,4
+DSv2 Series High Memory,Standard_DS13_v2,4
+DSv2 Series High Memory,Standard_DS14-4_v2,8
+DSv2 Series High Memory,Standard_DS14-8_v2,8
+DSv2 Series High Memory,Standard_DS14_v2,8
+DSv2 Series High Memory,Standard_DS15_v2,10
+DSv2 Series High Memory Isolated,Standard_DS15i_v2,1
+DSv3 Series,Standard_D2s_v3,1
+DSv3 Series,Standard_D4s_v3,2
+DSv3 Series,Standard_D8s_v3,4
+DSv3 Series,Standard_D8hs_v3,4
+DSv3 Series,Standard_D16s_v3,8
+DSv3 Series,Standard_D32s_v3,16
+DSv3 Series,Standard_D32-16s_v3,16
+DSv3 Series,Standard_D32-8s_v3,16
+DSv3 Series,Standard_D48s_v3,24
+DSv3 Series,Standard_D64s_v3,32
+DSv3 Series,Standard_D64-32s_v3,32
+DSv3 Series,Standard_D64-16s_v3,32
+DSv3 Series Dedicated Host,Dsv3_Type1,1
+DSv3 Series Dedicated Host,Dsv3_Type2,1.1875
+DSv3 Series Dedicated Host,Dsv3_Type3,1.25
+DSv3 Series Dedicated Host,Dsv3_Type4,1.5625
+DSv4 Series Dedicated Host,Dsv4_Type1,1
+DSv4 Series Dedicated Host,Dsv4_Type2,1.25
+Dadsv5 Internal Series,Internal_D2ads_v5,1
+Dadsv5 Internal Series,Internal_D4ads_v5,2
+Dadsv5 Internal Series,Internal_D8ads_v5,4
+Dadsv5 Internal Series,Internal_D16ads_v5,8
+Dadsv5 Internal Series,Internal_D32ads_v5,16
+Dadsv5 Internal Series,Internal_D48ads_v5,24
+Dadsv5 Internal Series,Internal_D64ads_v5,32
+Dadsv5 Internal Series,Internal_D96ads_v5,48
+Dadsv5 Series,Standard_D2ads_v5,1
+Dadsv5 Series,Standard_D4ads_v5,2
+Dadsv5 Series,Standard_D8ads_v5,4
+Dadsv5 Series,Standard_D16ads_v5,8
+Dadsv5 Series,Standard_D32ads_v5,16
+Dadsv5 Series,Standard_D48ads_v5,24
+Dadsv5 Series,Standard_D64ads_v5,32
+Dadsv5 Series,Standard_D96ads_v5,48
+Dadsv5 Series DedicatedHost,Dadsv5_Type1,1
+Dalsv5 Internal Series,Internal_D2als_v5,1
+Dalsv5 Internal Series,Internal_D4als_v5,2
+Dalsv5 Internal Series,Internal_D8als_v5,4
+Dalsv5 Internal Series,Internal_D16als_v5,8
+Dalsv5 Internal Series,Internal_D32als_v5,16
+Dalsv5 Internal Series,Internal_D48als_v5,24
+Dalsv5 Internal Series,Internal_D64als_v5,32
+Dalsv5 Internal Series,Internal_D96als_v5,48
+Dasv4 Series,Standard_D2as_v4,1
+Dasv4 Series,Standard_D4ahs_v4,2
+Dasv4 Series,Standard_D4as_v4,2
+Dasv4 Series,Standard_D8ahs_v4,4
+Dasv4 Series,Standard_D8as_v4,4
+Dasv4 Series,Standard_D16as_v4,8
+Dasv4 Series,Standard_D32as_v4,16
+Dasv4 Series,Standard_D48as_v4,24
+Dasv4 Series,Standard_D64as_v4,32
+Dasv4 Series,Standard_D96as_v4,48
+Dasv4 Series Dedicated Host,Dasv4_Type1,1
+Dasv4 Series Dedicated Host,Dasv4_Type2,1
+Dasv5 Internal Series,Internal_D2as_v5,1
+Dasv5 Internal Series,Internal_D4as_v5,2
+Dasv5 Internal Series,Internal_D8as_v5,4
+Dasv5 Internal Series,Internal_D16as_v5,8
+Dasv5 Internal Series,Internal_D32as_v5,16
+Dasv5 Internal Series,Internal_D48as_v5,24
+Dasv5 Internal Series,Internal_D64as_v5,32
+Dasv5 Internal Series,Internal_D96as_v5,48
+Dasv5 Promo Series,Standard_D2as_v5_Promo,1
+Dasv5 Promo Series,Standard_D4as_v5_Promo,2
+Dasv5 Promo Series,Standard_D8as_v5_Promo,4
+Dasv5 Promo Series,Standard_D16as_v5_Promo,8
+Dasv5 Promo Series,Standard_D32as_v5_Promo,16
+Dasv5 Promo Series,Standard_D48as_v5_Promo,24
+Dasv5 Promo Series,Standard_D64as_v5_Promo,32
+Dasv5 Promo Series,Standard_D96as_v5_Promo,48
+Dasv5 Series,Standard_D2as_v5,1
+Dasv5 Series,Standard_D4as_v5,2
+Dasv5 Series,Standard_D8as_v5,4
+Dasv5 Series,Standard_D16as_v5,8
+Dasv5 Series,Standard_D32as_v5,16
+Dasv5 Series,Standard_D48as_v5,24
+Dasv5 Series,Standard_D64as_v5,32
+Dasv5 Series,Standard_D96as_v5,48
+Dasv5 Series DedicatedHost,Dasv5_Type1,1
+Dav4 Series,Standard_D2a_v4,1
+Dav4 Series,Standard_D4a_v4,2
+Dav4 Series,Standard_D8a_v4,4
+Dav4 Series,Standard_D16a_v4,8
+Dav4 Series,Standard_D32a_v4,16
+Dav4 Series,Standard_D48a_v4,24
+Dav4 Series,Standard_D64a_v4,32
+Dav4 Series,Standard_D96a_v4,48
+Ddsv4 Series,Standard_D2ds_v4,1
+Ddsv4 Series,Standard_D4ds_v4,2
+Ddsv4 Series,Standard_D8ds_v4,4
+Ddsv4 Series,Standard_D16ds_v4,8
+Ddsv4 Series,Standard_D32ds_v4,16
+Ddsv4 Series,Standard_D48ds_v4,24
+Ddsv4 Series,Standard_D64ds_v4,32
+Ddsv4 Series Dedicated Host,Ddsv4_Type 1,1
+Ddsv4 Series Dedicated Host,Ddsv4_Type2,1.1875
+Ddsv5 Series,Standard_D2ds_v5,1
+Ddsv5 Series,Standard_D4ds_v5,2
+Ddsv5 Series,Standard_D8ds_v5,4
+Ddsv5 Series,Standard_D16ds_v5,8
+Ddsv5 Series,Standard_D32ds_v5,16
+Ddsv5 Series,Standard_D48ds_v5,24
+Ddsv5 Series,Standard_D64ds_v5,32
+Ddsv5 Series,Standard_D96ds_v5,48
+Ddsv5 Series DedicatedHost,Ddsv5_Type1,1
+Ddv4 Series,Standard_D2d_v4,1
+Ddv4 Series,Standard_D4d_v4,2
+Ddv4 Series,Standard_D8d_v4,4
+Ddv4 Series,Standard_D16d_v4,8
+Ddv4 Series,Standard_D32d_v4,16
+Ddv4 Series,Standard_D48d_v4,24
+Ddv4 Series,Standard_D64d_v4,32
+Ddv5 Series,Standard_D2d_v5,1
+Ddv5 Series,Standard_D4d_v5,2
+Ddv5 Series,Standard_D8d_v5,4
+Ddv5 Series,Standard_D16d_v5,8
+Ddv5 Series,Standard_D32d_v5,16
+Ddv5 Series,Standard_D48d_v5,24
+Ddv5 Series,Standard_D64d_v5,32
+Ddv5 Series,Standard_D96d_v5,48
+Dldsv5 Series,Standard_D2lds_v5,1
+Dldsv5 Series,Standard_D4lds_v5,2
+Dldsv5 Series,Standard_D8lds_v5,4
+Dldsv5 Series,Standard_D16lds_v5,8
+Dldsv5 Series,Standard_D32lds_v5,16
+Dldsv5 Series,Standard_D48lds_v5,24
+Dldsv5 Series,Standard_D64lds_v5,32
+Dldsv5 Series,Standard_D96lds_v5,48
+Dlsv5 Series,Standard_D2ls_v5,1
+Dlsv5 Series,Standard_D4ls_v5,2
+Dlsv5 Series,Standard_D8ls_v5,4
+Dlsv5 Series,Standard_D16ls_v5,8
+Dlsv5 Series,Standard_D32ls_v5,16
+Dlsv5 Series,Standard_D48ls_v5,24
+Dlsv5 Series,Standard_D64ls_v5,32
+Dlsv5 Series,Standard_D96ls_v5,48
+Dpdsv5 Series,Standard_D2pds_v5,1
+Dpdsv5 Series,Standard_D4pds_v5,2
+Dpdsv5 Series,Standard_D8pds_v5,4
+Dpdsv5 Series,Standard_D16pds_v5,8
+Dpdsv5 Series,Standard_D32pds_v5,16
+Dpdsv5 Series,Standard_D48pds_v5,24
+Dpdsv5 Series,Standard_D64pds_v5,32
+Dpldsv5 Series,Standard_D2plds_v5,1
+Dpldsv5 Series,Standard_D4plds_v5,2
+Dpldsv5 Series,Standard_D8plds_v5,4
+Dpldsv5 Series,Standard_D16plds_v5,8
+Dpldsv5 Series,Standard_D32plds_v5,16
+Dpldsv5 Series,Standard_D48plds_v5,24
+Dpldsv5 Series,Standard_D64plds_v5,32
+Dplsv5 Series,Standard_D2pls_v5,1
+Dplsv5 Series,Standard_D4pls_v5,2
+Dplsv5 Series,Standard_D8pls_v5,4
+Dplsv5 Series,Standard_D16pls_v5,8
+Dplsv5 Series,Standard_D32pls_v5,16
+Dplsv5 Series,Standard_D48pls_v5,24
+Dplsv5 Series,Standard_D64pls_v5,32
+Dpsv5 Series,Standard_D2ps_v5,1
+Dpsv5 Series,Standard_D4ps_v5,2
+Dpsv5 Series,Standard_D8ps_v5,4
+Dpsv5 Series,Standard_D16ps_v5,8
+Dpsv5 Series,Standard_D32ps_v5,16
+Dpsv5 Series,Standard_D48ps_v5,24
+Dpsv5 Series,Standard_D64ps_v5,32
+Dsv4 Series,Standard_D2s_v4,1
+Dsv4 Series,Standard_D4s_v4,2
+Dsv4 Series,Standard_D8s_v4,4
+Dsv4 Series,Standard_D16s_v4,8
+Dsv4 Series,Standard_D32s_v4,16
+Dsv4 Series,Standard_D48s_v4,24
+Dsv4 Series,Standard_D64s_v4,32
+Dsv5 Series,Standard_D2s_v5,1
+Dsv5 Series,Standard_D4s_v5,2
+Dsv5 Series,Standard_D8s_v5,4
+Dsv5 Series,Standard_D16s_v5,8
+Dsv5 Series,Standard_D32s_v5,16
+Dsv5 Series,Standard_D48s_v5,24
+Dsv5 Series,Standard_D64s_v5,32
+Dsv5 Series,Standard_D96s_v5,48
+Dsv5 Series DedicatedHost,Dsv5_Type1,1
+Dv2 Series,Standard_D1_v2,1
+Dv2 Series,Standard_D2_v2,2
+Dv2 Series,Standard_D3_v2,4
+Dv2 Series,Standard_D4_v2,8
+Dv2 Series,Standard_D5_v2,16
+Dv2 Series High Memory,Standard_D11_v2,1
+Dv2 Series High Memory,Standard_D12_v2,2
+Dv2 Series High Memory,Standard_D13_v2,4
+Dv2 Series High Memory,Standard_D14_v2,8
+Dv2 Series High Memory,Standard_D15_v2,10
+Dv2 Series High Memory Isolated,Standard_D15i_v2,1
+Dv3 Series,Standard_D2_v3,1
+Dv3 Series,Standard_D4_v3,2
+Dv3 Series,Standard_D8_v3,4
+Dv3 Series,Standard_D16_v3,8
+Dv3 Series,Standard_D32_v3,16
+Dv3 Series,Standard_D48_v3,24
+Dv3 Series,Standard_D64_v3,32
+Dv4 Series,Standard_D2_v4,1
+Dv4 Series,Standard_D4_v4,2
+Dv4 Series,Standard_D8_v4,4
+Dv4 Series,Standard_D16_v4,8
+Dv4 Series,Standard_D32_v4,16
+Dv4 Series,Standard_D48_v4,24
+Dv4 Series,Standard_D64_v4,32
+Dv5 Series,Standard_D2_v5,1
+Dv5 Series,Standard_D4_v5,2
+Dv5 Series,Standard_D8_v5,4
+Dv5 Series,Standard_D16_v5,8
+Dv5 Series,Standard_D32_v5,16
+Dv5 Series,Standard_D48_v5,24
+Dv5 Series,Standard_D64_v5,32
+Dv5 Series,Standard_D96_v5,48
+ECadsv5-series DedicatedHost,ECadsv5 Type 1,1
+ECadsv5-series Linux,Standard_EC2ads_v5,1
+ECadsv5-series Linux,Standard_EC4ads_v5,2
+ECadsv5-series Linux,Standard_EC8ads_v5,4
+ECadsv5-series Linux,Standard_EC16ads_v5,8
+ECadsv5-series Linux,Standard_EC20ads_v5,10
+ECadsv5-series Linux,Standard_EC32ads_v5,16
+ECadsv5-series Linux,Standard_EC48ads_v5,24
+ECadsv5-series Linux,Standard_EC64ads_v5,32
+ECadsv5-series Linux,Standard_EC96iads_v5,48
+ECadsv5-series Linux,Standard_EC96ads_v5,48
+ECasv5-series DedicatedHost,ECasv5 Type 1,1
+ECasv5-series Linux,Standard_EC2as_v5,1
+ECasv5-series Linux,Standard_EC4as_v5,2
+ECasv5-series Linux,Standard_EC8as_v5,4
+ECasv5-series Linux,Standard_EC16as_v5,8
+ECasv5-series Linux,Standard_EC20as_v5,10
+ECasv5-series Linux,Standard_EC32as_v5,16
+ECasv5-series Linux,Standard_EC48as_v5,24
+ECasv5-series Linux,Standard_EC64as_v5,32
+ECasv5-series Linux,Standard_EC96as_v5,48
+ECasv5-series Linux,Standard_EC96ias_v5,48
+ESv3 Series,Standard_E2s_v3,1
+ESv3 Series,Standard_E4-2s_v3,2
+ESv3 Series,Standard_E4s_v3,2
+ESv3 Series,Standard_E8-2s_v3,4
+ESv3 Series,Standard_E8-4s_v3,4
+ESv3 Series,Standard_E8s_v3,4
+ESv3 Series,Standard_E16-4s_v3,8
+ESv3 Series,Standard_E16-8s_v3,8
+ESv3 Series,Standard_E16s_v3,8
+ESv3 Series,Standard_E20s_v3,10
+ESv3 Series,Standard_E32-8s_v3,16
+ESv3 Series,Standard_E32-16s_v3,16
+ESv3 Series,Standard_E32s_v3,16
+ESv3 Series,Standard_E48s_v3,24
+ESv3 Series,Standard_E64-16s_v3,28.8
+ESv3 Series,Standard_E64-32s_v3,28.8
+ESv3 Series,Standard_E64s_v3,28.8
+ESv3 Series Dedicated Host,Esv3_Type1,1
+ESv3 Series Dedicated Host,Esv3_Type2,1.107142857
+ESv3 Series Dedicated Host,Esv3_Type3,1.428571429
+ESv3 Series Dedicated Host,Esv3_Type4,1.5
+ESv3 Series Isolated,Standard_E64is_v3,1
+ESv4 Series Dedicated Host,Standard_E64is_v4_SPECIAL,1
+ESv4 Series Dedicated Host,Esv4_Type1,1
+ESv4 Series Dedicated Host,Esv4_Type2,1.3125
+Eadsv5 Internal Series,Internal_E2ads_v5,1
+Eadsv5 Internal Series,Internal_E4ads_v5,2
+Eadsv5 Internal Series,Internal_E8ads_v5,4
+Eadsv5 Internal Series,Internal_E16ads_v5,8
+Eadsv5 Internal Series,Internal_E20ads_v5,10
+Eadsv5 Internal Series,Internal_E32ads_v5,16
+Eadsv5 Internal Series,Internal_E48ads_v5,24
+Eadsv5 Internal Series,Internal_E64ads_v5,32
+Eadsv5 Internal Series,Internal_E96ads_v5,48
+Eadsv5 Series,Standard_E2ads_v5,1
+Eadsv5 Series,Standard_E4ads_v5,2
+Eadsv5 Series,Standard_E4-2ads_v5,2
+Eadsv5 Series,Standard_E8ads_v5,4
+Eadsv5 Series,Standard_E8-2ads_v5,4
+Eadsv5 Series,Standard_E8-4ads_v5,4
+Eadsv5 Series,Standard_E16ads_v5,8
+Eadsv5 Series,Standard_E16-8ads_v5,8
+Eadsv5 Series,Standard_E16-4ads_v5,8
+Eadsv5 Series,Standard_E20ads_v5,10
+Eadsv5 Series,Standard_E32ads_v5,16
+Eadsv5 Series,Standard_E32-16ads_v5,16
+Eadsv5 Series,Standard_E32-8ads_v5,16
+Eadsv5 Series,Standard_E48ads_v5,24
+Eadsv5 Series,Standard_E64ads_v5,32
+Eadsv5 Series,Standard_E64-16ads_v5,32
+Eadsv5 Series,Standard_E64-32ads_v5,32
+Eadsv5 Series,Standard_E96-48ads_v5,48
+Eadsv5 Series,Standard_E96-24ads_v5,48
+Eadsv5 Series,Standard_E96ads_v5,48
+Eadsv5 Series,Standard_E96iads_v5,48
+Eadsv5 Series,Standard_E112iads_v5,56
+Eadsv5 Series DedicatedHost,Eadsv5_Type1,1
+Easv4 Series,Standard_E2as_v4,1
+Easv4 Series,Standard_E4-2as_v4,2
+Easv4 Series,Standard_E4as_v4,2
+Easv4 Series,Standard_E8-2as_v4,4
+Easv4 Series,Standard_E8-4as_v4,4
+Easv4 Series,Standard_E8as_v4,4
+Easv4 Series,Standard_E16-4as_v4,8
+Easv4 Series,Standard_E16-8as_v4,8
+Easv4 Series,Standard_E16as_v4,8
+Easv4 Series,Standard_E20as_v4,10
+Easv4 Series,Standard_E32-8as_v4,16
+Easv4 Series,Standard_E32-16as_v4,16
+Easv4 Series,Standard_E32as_v4,16
+Easv4 Series,Standard_E48as_v4,24
+Easv4 Series,Standard_E64-16as_v4,32
+Easv4 Series,Standard_E64-32as_v4,32
+Easv4 Series,Standard_E64as_v4,32
+Easv4 Series,Standard_E96ias_v4,48
+Easv4 Series,Standard_E96-48as_v4,48
+Easv4 Series,Standard_E96as_v4,48
+Easv4 Series,Standard_E96-24as_v4,48
+Easv4 Series Dedicated Host,Easv4_Type1,1
+Easv4 Series Dedicated Host,Easv4_Type2,1
+Easv5 Internal Series,Internal_E2as_v5,1
+Easv5 Internal Series,Internal_E4as_v5,2
+Easv5 Internal Series,Internal_E8as_v5,4
+Easv5 Internal Series,Internal_E16as_v5,8
+Easv5 Internal Series,Internal_E20as_v5,10
+Easv5 Internal Series,Internal_E32as_v5,16
+Easv5 Internal Series,Internal_E48as_v5,24
+Easv5 Internal Series,Internal_E64as_v5,32
+Easv5 Internal Series,Internal_E96as_v5,48
+Easv5 Promo Series,Standard_E2as_v5_Promo,1
+Easv5 Promo Series,Standard_E4as_v5_Promo,2
+Easv5 Promo Series,Standard_E8as_v5_Promo,4
+Easv5 Promo Series,Standard_E16as_v5_Promo,8
+Easv5 Promo Series,Standard_E20as_v5_Promo,10
+Easv5 Promo Series,Standard_E32as_v5_Promo,16
+Easv5 Promo Series,Standard_E48as_v5_Promo,24
+Easv5 Promo Series,Standard_E64as_v5_Promo,32
+Easv5 Promo Series,Standard_E96as_v5_Promo,48
+Easv5 Series,Standard_E2as_v5,1
+Easv5 Series,Standard_E4as_v5,2
+Easv5 Series,Standard_E4-2as_v5,2
+Easv5 Series,Standard_E8-2as_v5,4
+Easv5 Series,Standard_E8-4as_v5,4
+Easv5 Series,Standard_E8as_v5,4
+Easv5 Series,Standard_E16-4as_v5,8
+Easv5 Series,Standard_E16-8as_v5,8
+Easv5 Series,Standard_E16as_v5,8
+Easv5 Series,Standard_E20as_v5,10
+Easv5 Series,Standard_E32-8as_v5,16
+Easv5 Series,Standard_E32-16as_v5,16
+Easv5 Series,Standard_E32as_v5,16
+Easv5 Series,Standard_E48as_v5,24
+Easv5 Series,Standard_E64-16as_v5,32
+Easv5 Series,Standard_E64-32as_v5,32
+Easv5 Series,Standard_E64as_v5,32
+Easv5 Series,Standard_E96-48as_v5,48
+Easv5 Series,Standard_E96-24as_v5,48
+Easv5 Series,Standard_E96as_v5,48
+Easv5 Series,Standard_E96ias_v5,48
+Easv5 Series,Standard_E112ias_v5,56
+Easv5 Series DedicatedHost,Easv5_Type1,1
+Eav4 Series,Standard_E2a_v4,1
+Eav4 Series,Standard_E4a_v4,2
+Eav4 Series,Standard_E8a_v4,4
+Eav4 Series,Standard_E16a_v4,8
+Eav4 Series,Standard_E20a_v4,10
+Eav4 Series,Standard_E32a_v4,16
+Eav4 Series,Standard_E48a_v4,24
+Eav4 Series,Standard_E64a_v4,32
+Eav4 Series,Standard_E96a_v4,48
+Ebdsv5 Series,Standard_E2bds_v5,1
+Ebdsv5 Series,Standard_E4bds_v5,2
+Ebdsv5 Series,Standard_E8bds_v5,4
+Ebdsv5 Series,Standard_E16bds_v5,8
+Ebdsv5 Series,Standard_E32bds_v5,16
+Ebdsv5 Series,Standard_E48bds_v5,24
+Ebdsv5 Series,Standard_E64bds_v5,32
+Ebdsv5 Series,Standard_E96bds_v5,48
+Ebdsv5 Series,Standard_E112ibds_v5,56
+Ebdsv5 Series Dedicated Host,Ebdsv5-Type1,1
+Ebsv5 Series,Standard_E2bs_v5,1
+Ebsv5 Series,Standard_E4bs_v5,2
+Ebsv5 Series,Standard_E8bs_v5,4
+Ebsv5 Series,Standard_E16bs_v5,8
+Ebsv5 Series,Standard_E32bs_v5,16
+Ebsv5 Series,Standard_E48bs_v5,24
+Ebsv5 Series,Standard_E64bs_v5,32
+Ebsv5 Series,Standard_E96bs_v5,48
+Ebsv5 Series,Standard_E112ibs_v5,56
+Ebsv5 Series Dedicated Host,Ebsv5-Type1,1
+Edsv4 Series,Standard_E2ds_v4,1
+Edsv4 Series,Standard_E4-2ds_v4,2
+Edsv4 Series,Standard_E4ds_v4_ADHType1,2
+Edsv4 Series,Standard_E4ds_v4,2
+Edsv4 Series,Standard_E8-2ds_v4,4
+Edsv4 Series,Standard_E8-4ds_v4,4
+Edsv4 Series,Standard_E8ds_v4,4
+Edsv4 Series,Standard_E8ds_v4_ADHType1,4
+Edsv4 Series,Standard_E16ds_v4,8
+Edsv4 Series,Standard_E16-8ds_v4,8
+Edsv4 Series,Standard_E16-4ds_v4,8
+Edsv4 Series,Standard_E16ds_v4_ADHType1,8
+Edsv4 Series,Standard_E20ds_v4,10
+Edsv4 Series,Standard_E32ds_v4_ADHType1,16
+Edsv4 Series,Standard_E32-16ds_v4,16
+Edsv4 Series,Standard_E32-8ds_v4,16
+Edsv4 Series,Standard_E32ds_v4,16
+Edsv4 Series,Standard_E48ds_v4,24
+Edsv4 Series,Standard_E64-16ds_v4,32
+Edsv4 Series,Standard_E64ds_v4,32
+Edsv4 Series,Standard_E64-32ds_v4,32
+Edsv4 Series Dedicated Host,Edsv4_Type 1,1
+Edsv4 Series Dedicated Host,Edsv4_Type2,1.1875
+Edsv4 Series Isolated,Standard_E64ids_v4_SPECIAL,1
+Edsv4 Series Isolated,Standard_E80ids_v4,1.25
+Edsv5 Series,Standard_E2ds_v5,1
+Edsv5 Series,Standard_E4-2ds_v5,2
+Edsv5 Series,Standard_E4ds_v5,2
+Edsv5 Series,Standard_E8ds_v5,4
+Edsv5 Series,Standard_E8-4ds_v5,4
+Edsv5 Series,Standard_E8-2ds_v5,4
+Edsv5 Series,Standard_E16-4ds_v5,8
+Edsv5 Series,Standard_E16-8ds_v5,8
+Edsv5 Series,Standard_E16ds_v5,8
+Edsv5 Series,Standard_E20ds_v5,10
+Edsv5 Series,Standard_E32-8ds_v5,16
+Edsv5 Series,Standard_E32-16ds_v5,16
+Edsv5 Series,Standard_E32ds_v5,16
+Edsv5 Series,Standard_E48ds_v5,24
+Edsv5 Series,Standard_E64-32ds_v5,32
+Edsv5 Series,Standard_E64-16ds_v5,32
+Edsv5 Series,Standard_E64ds_v5,32
+Edsv5 Series,Standard_E96-24ds_v5,48
+Edsv5 Series,Standard_E96ds_v5,48
+Edsv5 Series,Standard_E96-48ds_v5,48
+Edsv5 Series DedicatedHost,Edsv5_Type1,1
+Edsv5 Series Isolated,Standard_E104ids_v5,1
+Edv4 Series,Standard_E2d_v4,1
+Edv4 Series,Standard_E4d_v4,2
+Edv4 Series,Standard_E8d_v4,4
+Edv4 Series,Standard_E16d_v4,8
+Edv4 Series,Standard_E20d_v4,10
+Edv4 Series,Standard_E32d_v4,16
+Edv4 Series,Standard_E48d_v4,24
+Edv4 Series,Standard_E64d_v4,32
+Edv4 Series Isolated,Standard_E64id_v4_SPECIAL,1
+Edv5 Series,Standard_E2d_v5,1
+Edv5 Series,Standard_E4d_v5,2
+Edv5 Series,Standard_E8d_v5,4
+Edv5 Series,Standard_E16d_v5,8
+Edv5 Series,Standard_E20d_v5,10
+Edv5 Series,Standard_E32d_v5,16
+Edv5 Series,Standard_E48d_v5,24
+Edv5 Series,Standard_E64d_v5,32
+Edv5 Series,Standard_E96d_v5,48
+Edv5 Series,Standard_E104id_v5,52
+Eiadmsv5-series Linux,Standard_E112_iadms_v5,1
+Epdsv5 Series,Standard_E2pds_v5,1
+Epdsv5 Series,Standard_E4pds_v5,2
+Epdsv5 Series,Standard_E8pds_v5,4
+Epdsv5 Series,Standard_E16pds_v5,8
+Epdsv5 Series,Standard_E20pds_v5,10
+Epdsv5 Series,Standard_E32pds_v5,16
+Epsv5 Series,Standard_E2ps_v5,1
+Epsv5 Series,Standard_E4ps_v5,2
+Epsv5 Series,Standard_E8ps_v5,4
+Epsv5 Series,Standard_E16ps_v5,8
+Epsv5 Series,Standard_E20ps_v5,10
+Epsv5 Series,Standard_E32ps_v5,16
+Esv4 Series,Standard_E2s_v4,1
+Esv4 Series,Standard_E4-2s_v4,2
+Esv4 Series,Standard_E4s_v4,2
+Esv4 Series,Standard_E4s_v4_ADHType1,2
+Esv4 Series,Standard_E8s_v4,4
+Esv4 Series,Standard_E8-2s_v4,4
+Esv4 Series,Standard_E8-4s_v4,4
+Esv4 Series,Standard_E8s_v4_ADHType1,4
+Esv4 Series,Standard_E16-4s_v4,8
+Esv4 Series,Standard_E16s_v4_ADHType1,8
+Esv4 Series,Standard_E16-8s_v4,8
+Esv4 Series,Standard_E16s_v4,8
+Esv4 Series,Standard_E20s_v4,10
+Esv4 Series,Standard_E32s_v4_ADHType1,16
+Esv4 Series,Standard_E32-16s_v4,16
+Esv4 Series,Standard_E32s_v4,16
+Esv4 Series,Standard_E32-8s_v4,16
+Esv4 Series,Standard_E48s_v4,24
+Esv4 Series,Standard_E64s_v4,32
+Esv4 Series,Standard_E64-32s_v4,32
+Esv4 Series,Standard_E64-16s_v4,32
+Esv4 Series Isolated,Standard_E64is_v4_SPECIAL,1
+Esv4 Series Isolated,Standard_E80is_v4,1.25
+Esv5 Series,Standard_E2s_v5,1
+Esv5 Series,Standard_E4-2s_v5,2
+Esv5 Series,Standard_E4s_v5,2
+Esv5 Series,Standard_E8s_v5,4
+Esv5 Series,Standard_E8-4s_v5,4
+Esv5 Series,Standard_E8-2s_v5,4
+Esv5 Series,Standard_E16-4s_v5,8
+Esv5 Series,Standard_E16-8s_v5,8
+Esv5 Series,Standard_E16s_v5,8
+Esv5 Series,Standard_E20s_v5,10
+Esv5 Series,Standard_E32s_v5,16
+Esv5 Series,Standard_E32-8s_v5,16
+Esv5 Series,Standard_E32-16s_v5,16
+Esv5 Series,Standard_E48s_v5,24
+Esv5 Series,Standard_E64-16s_v5,32
+Esv5 Series,Standard_E64-32s_v5,32
+Esv5 Series,Standard_E64s_v5,32
+Esv5 Series,Standard_E96-24s_v5,48
+Esv5 Series,Standard_E96-48s_v5,48
+Esv5 Series,Standard_E96s_v5,48
+Esv5 Series DedicatedHost,Esv5_Type1,1
+Esv5 Series Isolated,Standard_E104is_v5,1
+Ev3 Series,Standard_E2_v3,1
+Ev3 Series,Standard_E4_v3,2
+Ev3 Series,Standard_E8_v3,4
+Ev3 Series,Standard_E16_v3,8
+Ev3 Series,Standard_E20_v3,10
+Ev3 Series,Standard_E32_v3,16
+Ev3 Series,Standard_E48_v3,24
+Ev3 Series,Standard_E64_v3,28.8
+Ev3 Series Isolated,Standard_E64i_v3,1
+Ev4 Series,Standard_E2_v4,1
+Ev4 Series,Standard_E4_v4,2
+Ev4 Series,Standard_E8_v4,4
+Ev4 Series,Standard_E16_v4,8
+Ev4 Series,Standard_E20_v4,10
+Ev4 Series,Standard_E32_v4,16
+Ev4 Series,Standard_E48_v4,24
+Ev4 Series,Standard_E64_v4,32
+Ev4 Series Isolated,Standard_E64i_v4_SPECIAL,1
+Ev5 Series,Standard_E2_v5,1
+Ev5 Series,Standard_E4_v5,2
+Ev5 Series,Standard_E8_v5,4
+Ev5 Series,Standard_E16_v5,8
+Ev5 Series,Standard_E20_v5,10
+Ev5 Series,Standard_E32_v5,16
+Ev5 Series,Standard_E48_v5,24
+Ev5 Series,Standard_E64_v5,32
+Ev5 Series,Standard_E96_v5,48
+Ev5 Series,Standard_E104i_v5,52
+F Series,Standard_F1,1
+F Series,Standard_F2,2
+F Series,Standard_F4,4
+F Series,Standard_F8,8
+F Series,Standard_F16,16
+FS Series,Standard_F1s,1
+FS Series,Standard_F2s,2
+FS Series,Standard_F4s,4
+FS Series,Standard_F8s,8
+FS Series,Standard_F16s,16
+FSv2 Series,Standard_F2s_v2,1
+FSv2 Series,Standard_F4s_v2,2
+FSv2 Series,Standard_F8s_v2,4
+FSv2 Series,Standard_F16s_v2,8
+FSv2 Series,Standard_F32s_v2,16
+FSv2 Series,Standard_F48s_v2,24
+FSv2 Series,Standard_F64s_v2,32
+FSv2 Series,Standard_F72s_v2,36
+FSv2 Series,Standard_F72fs_v2,36
+FSv2 Series Dedicated Host,Fsv2_Type2,1
+FSv2 Series Dedicated Host,Fsv2 Type3,1.277777778
+FSv2 Series Dedicated Host,Fsv2_Type4,1.388888889
+FX Series Dedicated Host,FXmds Type1,1
+FX Series Linux,Standard_FX4mds,1
+FX Series Linux,Standard_FX12mds,3
+FX Series Linux,Standard_FX24mds,6
+FX Series Linux,Standard_FX36mds,9
+FX Series Linux,Standard_FX48mds,12
+FabCap_CuHour_AE Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_AE Central,Available,1
+FabCap_CuHour_AE Central,Data Warehouse,1
+FabCap_CuHour_AE Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AE Central,eventstream,1
+FabCap_CuHour_AE Central,eventstreams Processor,1
+FabCap_CuHour_AE Central,Data Activator,1
+FabCap_CuHour_AE Central,OneLake Other Operations,1
+FabCap_CuHour_AE Central,OneLake Write Operations via API,1
+FabCap_CuHour_AE Central,Spark Mem Op,1
+FabCap_CuHour_AE Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AE Central,Power BI,1
+FabCap_CuHour_AE Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_AE Central,Data Movement,1
+FabCap_CuHour_AE Central,Data Orchestration,1
+FabCap_CuHour_AE Central,KQL Database,1
+FabCap_CuHour_AE Central,High Scale DF Comp,1
+FabCap_CuHour_AE Central,AI and Machine Learning,1
+FabCap_CuHour_AE Central,Dataflows Standard Comp,1
+FabCap_CuHour_AE Central,OneLake Read Operations,1
+FabCap_CuHour_AE Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_AE Central,OneLake Read Operations via API,1
+FabCap_CuHour_AE Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AE Central,OneLake Write Operations,1
+FabCap_CuHour_AE North,Data Warehouse,1
+FabCap_CuHour_AE North,Data Movement,1
+FabCap_CuHour_AE North,Data Orchestration,1
+FabCap_CuHour_AE North,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AE North,AI and Machine Learning,1
+FabCap_CuHour_AE North,Available,1
+FabCap_CuHour_AE North,OneLake Other Operations,1
+FabCap_CuHour_AE North,OneLake Write Operations,1
+FabCap_CuHour_AE North,eventstream,1
+FabCap_CuHour_AE North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AE North,Spark Mem Op,1
+FabCap_CuHour_AE North,High Scale DF Comp,1
+FabCap_CuHour_AE North,KQL Database,1
+FabCap_CuHour_AE North,Power BI,1
+FabCap_CuHour_AE North,eventstreams Processor,1
+FabCap_CuHour_AE North,Data Activator,1
+FabCap_CuHour_AE North,eventstream Data Traffic per GB,1
+FabCap_CuHour_AE North,OneLake Write Operations via API,1
+FabCap_CuHour_AE North,OneLake Iterative Write Operations,1
+FabCap_CuHour_AE North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AE North,OneLake Read Operations via API,1
+FabCap_CuHour_AE North,OneLake Iterative Read Operations,1
+FabCap_CuHour_AE North,OneLake Read Operations,1
+FabCap_CuHour_AE North,Dataflows Standard Comp,1
+FabCap_CuHour_AP East,AI and Machine Learning,1
+FabCap_CuHour_AP East,OneLake Iterative Read Operations,1
+FabCap_CuHour_AP East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AP East,OneLake Read Operations via API,1
+FabCap_CuHour_AP East,Spark Mem Op,1
+FabCap_CuHour_AP East,OneLake Read Operations,1
+FabCap_CuHour_AP East,High Scale DF Comp,1
+FabCap_CuHour_AP East,Available,1
+FabCap_CuHour_AP East,Data Orchestration,1
+FabCap_CuHour_AP East,Data Movement,1
+FabCap_CuHour_AP East,Data Warehouse,1
+FabCap_CuHour_AP East,Power BI,1
+FabCap_CuHour_AP East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AP East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AP East,KQL Database,1
+FabCap_CuHour_AP East,eventstream,1
+FabCap_CuHour_AP East,eventstreams Processor,1
+FabCap_CuHour_AP East,Data Activator,1
+FabCap_CuHour_AP East,OneLake Write Operations,1
+FabCap_CuHour_AP East,eventstream Data Traffic per GB,1
+FabCap_CuHour_AP East,OneLake Write Operations via API,1
+FabCap_CuHour_AP East,OneLake Iterative Write Operations,1
+FabCap_CuHour_AP East,OneLake Other Operations,1
+FabCap_CuHour_AP East,Dataflows Standard Comp,1
+FabCap_CuHour_AP Southeast,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AP Southeast,AI and Machine Learning,1
+FabCap_CuHour_AP Southeast,Dataflows Standard Comp,1
+FabCap_CuHour_AP Southeast,OneLake Iterative Read Operations,1
+FabCap_CuHour_AP Southeast,OneLake Read Operations via API,1
+FabCap_CuHour_AP Southeast,OneLake Read Operations,1
+FabCap_CuHour_AP Southeast,OneLake Write Operations,1
+FabCap_CuHour_AP Southeast,OneLake Iterative Write Operations,1
+FabCap_CuHour_AP Southeast,OneLake Write Operations via API,1
+FabCap_CuHour_AP Southeast,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AP Southeast,eventstream Data Traffic per GB,1
+FabCap_CuHour_AP Southeast,Data Activator,1
+FabCap_CuHour_AP Southeast,eventstreams Processor,1
+FabCap_CuHour_AP Southeast,eventstream,1
+FabCap_CuHour_AP Southeast,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AP Southeast,High Scale DF Comp,1
+FabCap_CuHour_AP Southeast,Available,1
+FabCap_CuHour_AP Southeast,Data Orchestration,1
+FabCap_CuHour_AP Southeast,Power BI,1
+FabCap_CuHour_AP Southeast,OneLake Other Operations,1
+FabCap_CuHour_AP Southeast,Data Movement,1
+FabCap_CuHour_AP Southeast,Data Warehouse,1
+FabCap_CuHour_AP Southeast,Spark Mem Op,1
+FabCap_CuHour_AP Southeast,KQL Database,1
+FabCap_CuHour_AU Central,Data Warehouse,1
+FabCap_CuHour_AU Central,Spark Mem Op,1
+FabCap_CuHour_AU Central,OneLake Read Operations via API,1
+FabCap_CuHour_AU Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AU Central,AI and Machine Learning,1
+FabCap_CuHour_AU Central,eventstream,1
+FabCap_CuHour_AU Central,Data Movement,1
+FabCap_CuHour_AU Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AU Central,eventstreams Processor,1
+FabCap_CuHour_AU Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_AU Central,Data Activator,1
+FabCap_CuHour_AU Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AU Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_AU Central,KQL Database,1
+FabCap_CuHour_AU Central,High Scale DF Comp,1
+FabCap_CuHour_AU Central,Power BI,1
+FabCap_CuHour_AU Central,OneLake Other Operations,1
+FabCap_CuHour_AU Central,Data Orchestration,1
+FabCap_CuHour_AU Central,Dataflows Standard Comp,1
+FabCap_CuHour_AU Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_AU Central,OneLake Read Operations,1
+FabCap_CuHour_AU Central,OneLake Write Operations via API,1
+FabCap_CuHour_AU Central,OneLake Write Operations,1
+FabCap_CuHour_AU Central,Available,1
+FabCap_CuHour_AU Central 2,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AU Central 2,OneLake Read Operations via API,1
+FabCap_CuHour_AU Central 2,OneLake Read Operations,1
+FabCap_CuHour_AU Central 2,AI and Machine Learning,1
+FabCap_CuHour_AU Central 2,Dataflows Standard Comp,1
+FabCap_CuHour_AU Central 2,OneLake Write Operations,1
+FabCap_CuHour_AU Central 2,OneLake Iterative Read Operations,1
+FabCap_CuHour_AU Central 2,eventstream Data Traffic per GB,1
+FabCap_CuHour_AU Central 2,Data Activator,1
+FabCap_CuHour_AU Central 2,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AU Central 2,Data Warehouse,1
+FabCap_CuHour_AU Central 2,Spark Mem Op,1
+FabCap_CuHour_AU Central 2,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AU Central 2,Data Movement,1
+FabCap_CuHour_AU Central 2,Data Orchestration,1
+FabCap_CuHour_AU Central 2,OneLake Other Operations,1
+FabCap_CuHour_AU Central 2,eventstreams Processor,1
+FabCap_CuHour_AU Central 2,OneLake Write Operations via API,1
+FabCap_CuHour_AU Central 2,High Scale DF Comp,1
+FabCap_CuHour_AU Central 2,KQL Database,1
+FabCap_CuHour_AU Central 2,Power BI,1
+FabCap_CuHour_AU Central 2,Available,1
+FabCap_CuHour_AU Central 2,eventstream,1
+FabCap_CuHour_AU Central 2,OneLake Iterative Write Operations,1
+FabCap_CuHour_AU East,KQL Database,1
+FabCap_CuHour_AU East,Available,1
+FabCap_CuHour_AU East,OneLake Other Operations,1
+FabCap_CuHour_AU East,Power BI,1
+FabCap_CuHour_AU East,Spark Mem Op,1
+FabCap_CuHour_AU East,Data Warehouse,1
+FabCap_CuHour_AU East,Data Movement,1
+FabCap_CuHour_AU East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AU East,Data Orchestration,1
+FabCap_CuHour_AU East,AI and Machine Learning,1
+FabCap_CuHour_AU East,Dataflows Standard Comp,1
+FabCap_CuHour_AU East,OneLake Read Operations,1
+FabCap_CuHour_AU East,OneLake Iterative Read Operations,1
+FabCap_CuHour_AU East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AU East,OneLake Read Operations via API,1
+FabCap_CuHour_AU East,OneLake Write Operations,1
+FabCap_CuHour_AU East,eventstream Data Traffic per GB,1
+FabCap_CuHour_AU East,OneLake Iterative Write Operations,1
+FabCap_CuHour_AU East,Data Activator,1
+FabCap_CuHour_AU East,eventstreams Processor,1
+FabCap_CuHour_AU East,eventstream,1
+FabCap_CuHour_AU East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AU East,OneLake Write Operations via API,1
+FabCap_CuHour_AU East,High Scale DF Comp,1
+FabCap_CuHour_AU Southeast,OneLake Iterative Write Operations,1
+FabCap_CuHour_AU Southeast,eventstream Data Traffic per GB,1
+FabCap_CuHour_AU Southeast,eventstreams Processor,1
+FabCap_CuHour_AU Southeast,eventstream,1
+FabCap_CuHour_AU Southeast,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_AU Southeast,Data Activator,1
+FabCap_CuHour_AU Southeast,KQL Database,1
+FabCap_CuHour_AU Southeast,Available,1
+FabCap_CuHour_AU Southeast,Power BI,1
+FabCap_CuHour_AU Southeast,OneLake Other Operations,1
+FabCap_CuHour_AU Southeast,OneLake Iterative Read Operations,1
+FabCap_CuHour_AU Southeast,OneLake Read Operations via API,1
+FabCap_CuHour_AU Southeast,OneLake Write Operations via API,1
+FabCap_CuHour_AU Southeast,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_AU Southeast,Spark Mem Op,1
+FabCap_CuHour_AU Southeast,Data Warehouse,1
+FabCap_CuHour_AU Southeast,Data Orchestration,1
+FabCap_CuHour_AU Southeast,High Scale DF Comp,1
+FabCap_CuHour_AU Southeast,AI and Machine Learning,1
+FabCap_CuHour_AU Southeast,Dataflows Standard Comp,1
+FabCap_CuHour_AU Southeast,OneLake Read Operations,1
+FabCap_CuHour_AU Southeast,Data Movement,1
+FabCap_CuHour_AU Southeast,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_AU Southeast,OneLake Write Operations,1
+FabCap_CuHour_BR South,eventstreams Processor,1
+FabCap_CuHour_BR South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_BR South,OneLake Write Operations via API,1
+FabCap_CuHour_BR South,eventstream Data Traffic per GB,1
+FabCap_CuHour_BR South,OneLake Write Operations,1
+FabCap_CuHour_BR South,eventstream,1
+FabCap_CuHour_BR South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_BR South,Data Activator,1
+FabCap_CuHour_BR South,Available,1
+FabCap_CuHour_BR South,Spark Mem Op,1
+FabCap_CuHour_BR South,OneLake Other Operations,1
+FabCap_CuHour_BR South,KQL Database,1
+FabCap_CuHour_BR South,Power BI,1
+FabCap_CuHour_BR South,High Scale DF Comp,1
+FabCap_CuHour_BR South,Data Orchestration,1
+FabCap_CuHour_BR South,Data Movement,1
+FabCap_CuHour_BR South,Data Warehouse,1
+FabCap_CuHour_BR South,OneLake Read Operations,1
+FabCap_CuHour_BR South,OneLake Iterative Write Operations,1
+FabCap_CuHour_BR South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_BR South,OneLake Read Operations via API,1
+FabCap_CuHour_BR South,OneLake Iterative Read Operations,1
+FabCap_CuHour_BR South,Dataflows Standard Comp,1
+FabCap_CuHour_BR South,AI and Machine Learning,1
+FabCap_CuHour_BR Southeast,OneLake Iterative Write Operations,1
+FabCap_CuHour_BR Southeast,eventstreams Processor,1
+FabCap_CuHour_BR Southeast,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_BR Southeast,eventstream,1
+FabCap_CuHour_BR Southeast,eventstream Data Traffic per GB,1
+FabCap_CuHour_BR Southeast,Data Activator,1
+FabCap_CuHour_BR Southeast,Spark Mem Op,1
+FabCap_CuHour_BR Southeast,OneLake Write Operations,1
+FabCap_CuHour_BR Southeast,OneLake Read Operations via API,1
+FabCap_CuHour_BR Southeast,OneLake Read Operations,1
+FabCap_CuHour_BR Southeast,OneLake Write Operations via API,1
+FabCap_CuHour_BR Southeast,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_BR Southeast,Power BI,1
+FabCap_CuHour_BR Southeast,Data Movement,1
+FabCap_CuHour_BR Southeast,KQL Database,1
+FabCap_CuHour_BR Southeast,Data Orchestration,1
+FabCap_CuHour_BR Southeast,Available,1
+FabCap_CuHour_BR Southeast,OneLake Other Operations,1
+FabCap_CuHour_BR Southeast,High Scale DF Comp,1
+FabCap_CuHour_BR Southeast,AI and Machine Learning,1
+FabCap_CuHour_BR Southeast,Dataflows Standard Comp,1
+FabCap_CuHour_BR Southeast,OneLake Iterative Read Operations,1
+FabCap_CuHour_BR Southeast,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_BR Southeast,Data Warehouse,1
+FabCap_CuHour_CA Central,Dataflows Standard Comp,1
+FabCap_CuHour_CA Central,OneLake Read Operations,1
+FabCap_CuHour_CA Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_CA Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_CA Central,Available,1
+FabCap_CuHour_CA Central,AI and Machine Learning,1
+FabCap_CuHour_CA Central,Data Warehouse,1
+FabCap_CuHour_CA Central,Data Movement,1
+FabCap_CuHour_CA Central,Data Orchestration,1
+FabCap_CuHour_CA Central,Spark Mem Op,1
+FabCap_CuHour_CA Central,eventstreams Processor,1
+FabCap_CuHour_CA Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_CA Central,Data Activator,1
+FabCap_CuHour_CA Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_CA Central,OneLake Write Operations via API,1
+FabCap_CuHour_CA Central,eventstream,1
+FabCap_CuHour_CA Central,OneLake Write Operations,1
+FabCap_CuHour_CA Central,OneLake Other Operations,1
+FabCap_CuHour_CA Central,OneLake Read Operations via API,1
+FabCap_CuHour_CA Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_CA Central,High Scale DF Comp,1
+FabCap_CuHour_CA Central,KQL Database,1
+FabCap_CuHour_CA Central,Power BI,1
+FabCap_CuHour_CA Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_CA East,OneLake Read Operations via API,1
+FabCap_CuHour_CA East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_CA East,OneLake Iterative Read Operations,1
+FabCap_CuHour_CA East,AI and Machine Learning,1
+FabCap_CuHour_CA East,Dataflows Standard Comp,1
+FabCap_CuHour_CA East,Data Activator,1
+FabCap_CuHour_CA East,Power BI,1
+FabCap_CuHour_CA East,Available,1
+FabCap_CuHour_CA East,Data Movement,1
+FabCap_CuHour_CA East,OneLake Other Operations,1
+FabCap_CuHour_CA East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_CA East,High Scale DF Comp,1
+FabCap_CuHour_CA East,KQL Database,1
+FabCap_CuHour_CA East,Data Orchestration,1
+FabCap_CuHour_CA East,Data Warehouse,1
+FabCap_CuHour_CA East,Spark Mem Op,1
+FabCap_CuHour_CA East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_CA East,eventstreams Processor,1
+FabCap_CuHour_CA East,eventstream,1
+FabCap_CuHour_CA East,eventstream Data Traffic per GB,1
+FabCap_CuHour_CA East,OneLake Write Operations,1
+FabCap_CuHour_CA East,OneLake Write Operations via API,1
+FabCap_CuHour_CA East,OneLake Iterative Write Operations,1
+FabCap_CuHour_CA East,OneLake Read Operations,1
+FabCap_CuHour_CH North,KQL Database,1
+FabCap_CuHour_CH North,eventstream,1
+FabCap_CuHour_CH North,eventstreams Processor,1
+FabCap_CuHour_CH North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_CH North,Dataflows Standard Comp,1
+FabCap_CuHour_CH North,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_CH North,Available,1
+FabCap_CuHour_CH North,Data Orchestration,1
+FabCap_CuHour_CH North,Spark Mem Op,1
+FabCap_CuHour_CH North,Data Movement,1
+FabCap_CuHour_CH North,OneLake Other Operations,1
+FabCap_CuHour_CH North,High Scale DF Comp,1
+FabCap_CuHour_CH North,AI and Machine Learning,1
+FabCap_CuHour_CH North,Power BI,1
+FabCap_CuHour_CH North,Data Warehouse,1
+FabCap_CuHour_CH North,OneLake Iterative Read Operations,1
+FabCap_CuHour_CH North,OneLake Write Operations,1
+FabCap_CuHour_CH North,OneLake Read Operations via API,1
+FabCap_CuHour_CH North,OneLake Iterative Write Operations,1
+FabCap_CuHour_CH North,OneLake Write Operations via API,1
+FabCap_CuHour_CH North,OneLake Read Operations,1
+FabCap_CuHour_CH North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_CH North,eventstream Data Traffic per GB,1
+FabCap_CuHour_CH North,Data Activator,1
+FabCap_CuHour_CH West,Power BI,1
+FabCap_CuHour_CH West,Data Warehouse,1
+FabCap_CuHour_CH West,Spark Mem Op,1
+FabCap_CuHour_CH West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_CH West,Available,1
+FabCap_CuHour_CH West,Data Orchestration,1
+FabCap_CuHour_CH West,Data Activator,1
+FabCap_CuHour_CH West,OneLake Read Operations via API,1
+FabCap_CuHour_CH West,eventstreams Processor,1
+FabCap_CuHour_CH West,OneLake Iterative Write Operations,1
+FabCap_CuHour_CH West,OneLake Write Operations,1
+FabCap_CuHour_CH West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_CH West,OneLake Iterative Read Operations,1
+FabCap_CuHour_CH West,OneLake Read Operations,1
+FabCap_CuHour_CH West,AI and Machine Learning,1
+FabCap_CuHour_CH West,Dataflows Standard Comp,1
+FabCap_CuHour_CH West,OneLake Write Operations via API,1
+FabCap_CuHour_CH West,eventstream,1
+FabCap_CuHour_CH West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_CH West,eventstream Data Traffic per GB,1
+FabCap_CuHour_CH West,Data Movement,1
+FabCap_CuHour_CH West,OneLake Other Operations,1
+FabCap_CuHour_CH West,KQL Database,1
+FabCap_CuHour_CH West,High Scale DF Comp,1
+FabCap_CuHour_Central US EUAP,eventstreams Processor,1
+FabCap_CuHour_Central US EUAP,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_Central US EUAP,eventstream Data Traffic per GB,1
+FabCap_CuHour_Central US EUAP,Data Activator,1
+FabCap_CuHour_Central US EUAP,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_Central US EUAP,eventstream,1
+FabCap_CuHour_Central US EUAP,OneLake Iterative Write Operations,1
+FabCap_CuHour_Central US EUAP,OneLake Write Operations,1
+FabCap_CuHour_Central US EUAP,OneLake Write Operations via API,1
+FabCap_CuHour_Central US EUAP,OneLake Read Operations,1
+FabCap_CuHour_Central US EUAP,OneLake Read Operations via API,1
+FabCap_CuHour_Central US EUAP,AI and Machine Learning,1
+FabCap_CuHour_Central US EUAP,Dataflows Standard Comp,1
+FabCap_CuHour_Central US EUAP,Spark Mem Op,1
+FabCap_CuHour_Central US EUAP,Data Warehouse,1
+FabCap_CuHour_Central US EUAP,Data Movement,1
+FabCap_CuHour_Central US EUAP,Data Orchestration,1
+FabCap_CuHour_Central US EUAP,Available,1
+FabCap_CuHour_Central US EUAP,OneLake Other Operations,1
+FabCap_CuHour_Central US EUAP,KQL Database,1
+FabCap_CuHour_Central US EUAP,Power BI,1
+FabCap_CuHour_Central US EUAP,High Scale DF Comp,1
+FabCap_CuHour_Central US EUAP,OneLake Iterative Read Operations,1
+FabCap_CuHour_DE North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_DE North,OneLake Write Operations via API,1
+FabCap_CuHour_DE North,eventstream Data Traffic per GB,1
+FabCap_CuHour_DE North,OneLake Iterative Write Operations,1
+FabCap_CuHour_DE North,Data Activator,1
+FabCap_CuHour_DE North,Data Orchestration,1
+FabCap_CuHour_DE North,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_DE North,OneLake Read Operations,1
+FabCap_CuHour_DE North,eventstreams Processor,1
+FabCap_CuHour_DE North,OneLake Write Operations,1
+FabCap_CuHour_DE North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_DE North,OneLake Iterative Read Operations,1
+FabCap_CuHour_DE North,Dataflows Standard Comp,1
+FabCap_CuHour_DE North,High Scale DF Comp,1
+FabCap_CuHour_DE North,eventstream,1
+FabCap_CuHour_DE North,Power BI,1
+FabCap_CuHour_DE North,KQL Database,1
+FabCap_CuHour_DE North,OneLake Other Operations,1
+FabCap_CuHour_DE North,Data Movement,1
+FabCap_CuHour_DE North,AI and Machine Learning,1
+FabCap_CuHour_DE North,Available,1
+FabCap_CuHour_DE North,Spark Mem Op,1
+FabCap_CuHour_DE North,OneLake Read Operations via API,1
+FabCap_CuHour_DE North,Data Warehouse,1
+FabCap_CuHour_DE West Central,Data Movement,1
+FabCap_CuHour_DE West Central,Data Orchestration,1
+FabCap_CuHour_DE West Central,High Scale DF Comp,1
+FabCap_CuHour_DE West Central,Power BI,1
+FabCap_CuHour_DE West Central,OneLake Other Operations,1
+FabCap_CuHour_DE West Central,KQL Database,1
+FabCap_CuHour_DE West Central,Data Warehouse,1
+FabCap_CuHour_DE West Central,Spark Mem Op,1
+FabCap_CuHour_DE West Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_DE West Central,Data Activator,1
+FabCap_CuHour_DE West Central,Available,1
+FabCap_CuHour_DE West Central,OneLake Write Operations via API,1
+FabCap_CuHour_DE West Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_DE West Central,eventstream,1
+FabCap_CuHour_DE West Central,eventstreams Processor,1
+FabCap_CuHour_DE West Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_DE West Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_DE West Central,OneLake Write Operations,1
+FabCap_CuHour_DE West Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_DE West Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_DE West Central,OneLake Read Operations,1
+FabCap_CuHour_DE West Central,OneLake Read Operations via API,1
+FabCap_CuHour_DE West Central,AI and Machine Learning,1
+FabCap_CuHour_DE West Central,Dataflows Standard Comp,1
+FabCap_CuHour_EU North,Data Activator,1
+FabCap_CuHour_EU North,OneLake Write Operations via API,1
+FabCap_CuHour_EU North,OneLake Iterative Write Operations,1
+FabCap_CuHour_EU North,OneLake Write Operations,1
+FabCap_CuHour_EU North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_EU North,OneLake Read Operations via API,1
+FabCap_CuHour_EU North,OneLake Read Operations,1
+FabCap_CuHour_EU North,AI and Machine Learning,1
+FabCap_CuHour_EU North,Dataflows Standard Comp,1
+FabCap_CuHour_EU North,OneLake Iterative Read Operations,1
+FabCap_CuHour_EU North,Data Movement,1
+FabCap_CuHour_EU North,Power BI,1
+FabCap_CuHour_EU North,High Scale DF Comp,1
+FabCap_CuHour_EU North,KQL Database,1
+FabCap_CuHour_EU North,Data Orchestration,1
+FabCap_CuHour_EU North,Data Warehouse,1
+FabCap_CuHour_EU North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_EU North,eventstream Data Traffic per GB,1
+FabCap_CuHour_EU North,eventstream,1
+FabCap_CuHour_EU North,eventstreams Processor,1
+FabCap_CuHour_EU North,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_EU North,Spark Mem Op,1
+FabCap_CuHour_EU North,OneLake Other Operations,1
+FabCap_CuHour_EU North,Available,1
+FabCap_CuHour_EU West,Dataflows Standard Comp,1
+FabCap_CuHour_EU West,Available,1
+FabCap_CuHour_EU West,OneLake Other Operations,1
+FabCap_CuHour_EU West,High Scale DF Comp,1
+FabCap_CuHour_EU West,Data Warehouse,1
+FabCap_CuHour_EU West,OneLake Iterative Read Operations,1
+FabCap_CuHour_EU West,AI and Machine Learning,1
+FabCap_CuHour_EU West,Data Activator,1
+FabCap_CuHour_EU West,eventstream,1
+FabCap_CuHour_EU West,OneLake Write Operations,1
+FabCap_CuHour_EU West,OneLake Iterative Write Operations,1
+FabCap_CuHour_EU West,Data Orchestration,1
+FabCap_CuHour_EU West,KQL Database,1
+FabCap_CuHour_EU West,Power BI,1
+FabCap_CuHour_EU West,OneLake Write Operations via API,1
+FabCap_CuHour_EU West,eventstream Data Traffic per GB,1
+FabCap_CuHour_EU West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_EU West,OneLake Read Operations via API,1
+FabCap_CuHour_EU West,OneLake Read Operations,1
+FabCap_CuHour_EU West,Data Movement,1
+FabCap_CuHour_EU West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_EU West,eventstreams Processor,1
+FabCap_CuHour_EU West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_EU West,Spark Mem Op,1
+FabCap_CuHour_East US 2 EUAP,OneLake Write Operations,1
+FabCap_CuHour_East US 2 EUAP,eventstream Data Traffic per GB,1
+FabCap_CuHour_East US 2 EUAP,OneLake Iterative Write Operations,1
+FabCap_CuHour_East US 2 EUAP,OneLake Write Operations via API,1
+FabCap_CuHour_East US 2 EUAP,OneLake Iterative Read Operations,1
+FabCap_CuHour_East US 2 EUAP,OneLake Read Operations,1
+FabCap_CuHour_East US 2 EUAP,Dataflows Standard Comp,1
+FabCap_CuHour_East US 2 EUAP,AI and Machine Learning,1
+FabCap_CuHour_East US 2 EUAP,Power BI,1
+FabCap_CuHour_East US 2 EUAP,OneLake Read Operations via API,1
+FabCap_CuHour_East US 2 EUAP,Data Movement,1
+FabCap_CuHour_East US 2 EUAP,KQL Database,1
+FabCap_CuHour_East US 2 EUAP,Data Activator,1
+FabCap_CuHour_East US 2 EUAP,Available,1
+FabCap_CuHour_East US 2 EUAP,High Scale DF Comp,1
+FabCap_CuHour_East US 2 EUAP,Data Orchestration,1
+FabCap_CuHour_East US 2 EUAP,Data Warehouse,1
+FabCap_CuHour_East US 2 EUAP,OneLake Other Operations,1
+FabCap_CuHour_East US 2 EUAP,eventstreams Processor,1
+FabCap_CuHour_East US 2 EUAP,eventstream,1
+FabCap_CuHour_East US 2 EUAP,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_East US 2 EUAP,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_East US 2 EUAP,Spark Mem Op,1
+FabCap_CuHour_East US SLV,eventstream,1
+FabCap_CuHour_East US SLV,eventstreams Processor,1
+FabCap_CuHour_East US SLV,OneLake Write Operations via API,1
+FabCap_CuHour_East US SLV,OneLake Iterative Write Operations,1
+FabCap_CuHour_East US SLV,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_East US SLV,OneLake Read Operations via API,1
+FabCap_CuHour_East US SLV,OneLake Read Operations,1
+FabCap_CuHour_East US SLV,OneLake Iterative Read Operations,1
+FabCap_CuHour_East US SLV,Dataflows Standard Comp,1
+FabCap_CuHour_East US SLV,High Scale DF Comp,1
+FabCap_CuHour_East US SLV,Spark Mem Op,1
+FabCap_CuHour_East US SLV,Data Movement,1
+FabCap_CuHour_East US SLV,Power BI,1
+FabCap_CuHour_East US SLV,OneLake Other Operations,1
+FabCap_CuHour_East US SLV,Available,1
+FabCap_CuHour_East US SLV,KQL Database,1
+FabCap_CuHour_East US SLV,Data Orchestration,1
+FabCap_CuHour_East US SLV,Data Warehouse,1
+FabCap_CuHour_East US SLV,OneLake Write Operations,1
+FabCap_CuHour_East US SLV,eventstream Data Traffic per GB,1
+FabCap_CuHour_East US SLV,Data Activator,1
+FabCap_CuHour_East US SLV,AI and Machine Learning,1
+FabCap_CuHour_East US SLV,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_FR Central,Spark Mem Op,1
+FabCap_CuHour_FR Central,Available,1
+FabCap_CuHour_FR Central,KQL Database,1
+FabCap_CuHour_FR Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_FR Central,OneLake Write Operations via API,1
+FabCap_CuHour_FR Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_FR Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_FR Central,eventstream,1
+FabCap_CuHour_FR Central,eventstreams Processor,1
+FabCap_CuHour_FR Central,Data Activator,1
+FabCap_CuHour_FR Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_FR Central,OneLake Write Operations,1
+FabCap_CuHour_FR Central,OneLake Read Operations via API,1
+FabCap_CuHour_FR Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_FR Central,OneLake Read Operations,1
+FabCap_CuHour_FR Central,AI and Machine Learning,1
+FabCap_CuHour_FR Central,Dataflows Standard Comp,1
+FabCap_CuHour_FR Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_FR Central,Power BI,1
+FabCap_CuHour_FR Central,Data Orchestration,1
+FabCap_CuHour_FR Central,Data Warehouse,1
+FabCap_CuHour_FR Central,Data Movement,1
+FabCap_CuHour_FR Central,High Scale DF Comp,1
+FabCap_CuHour_FR Central,OneLake Other Operations,1
+FabCap_CuHour_FR South,Data Warehouse,1
+FabCap_CuHour_FR South,High Scale DF Comp,1
+FabCap_CuHour_FR South,KQL Database,1
+FabCap_CuHour_FR South,Power BI,1
+FabCap_CuHour_FR South,Spark Mem Op,1
+FabCap_CuHour_FR South,Available,1
+FabCap_CuHour_FR South,Data Orchestration,1
+FabCap_CuHour_FR South,Data Movement,1
+FabCap_CuHour_FR South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_FR South,AI and Machine Learning,1
+FabCap_CuHour_FR South,OneLake Read Operations,1
+FabCap_CuHour_FR South,OneLake Iterative Read Operations,1
+FabCap_CuHour_FR South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_FR South,eventstream Data Traffic per GB,1
+FabCap_CuHour_FR South,OneLake Read Operations via API,1
+FabCap_CuHour_FR South,Data Activator,1
+FabCap_CuHour_FR South,OneLake Write Operations via API,1
+FabCap_CuHour_FR South,OneLake Other Operations,1
+FabCap_CuHour_FR South,OneLake Write Operations,1
+FabCap_CuHour_FR South,eventstream,1
+FabCap_CuHour_FR South,eventstreams Processor,1
+FabCap_CuHour_FR South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_FR South,OneLake Iterative Write Operations,1
+FabCap_CuHour_FR South,Dataflows Standard Comp,1
+FabCap_CuHour_IL Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_IL Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IL Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_IL Central,eventstream,1
+FabCap_CuHour_IL Central,eventstreams Processor,1
+FabCap_CuHour_IL Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IL Central,Data Activator,1
+FabCap_CuHour_IL Central,OneLake Read Operations,1
+FabCap_CuHour_IL Central,OneLake Read Operations via API,1
+FabCap_CuHour_IL Central,OneLake Write Operations,1
+FabCap_CuHour_IL Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_IL Central,Dataflows Standard Comp,1
+FabCap_CuHour_IL Central,AI and Machine Learning,1
+FabCap_CuHour_IL Central,OneLake Write Operations via API,1
+FabCap_CuHour_IN Central,OneLake Write Operations via API,1
+FabCap_CuHour_IN Central,Data Activator,1
+FabCap_CuHour_IN Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_IN Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_IN Central,OneLake Read Operations via API,1
+FabCap_CuHour_IN Central,OneLake Read Operations,1
+FabCap_CuHour_IN Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IN Central,OneLake Write Operations,1
+FabCap_CuHour_IN Central,Data Orchestration,1
+FabCap_CuHour_IN Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_IN Central,KQL Database,1
+FabCap_CuHour_IN Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IN Central,eventstreams Processor,1
+FabCap_CuHour_IN Central,Dataflows Standard Comp,1
+FabCap_CuHour_IN Central,AI and Machine Learning,1
+FabCap_CuHour_IN Central,eventstream,1
+FabCap_CuHour_IN Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_IN Central,Spark Mem Op,1
+FabCap_CuHour_IN Central,Data Warehouse,1
+FabCap_CuHour_IN Central,Data Movement,1
+FabCap_CuHour_IN Central,Available,1
+FabCap_CuHour_IN Central,OneLake Other Operations,1
+FabCap_CuHour_IN Central,Power BI,1
+FabCap_CuHour_IN Central,High Scale DF Comp,1
+FabCap_CuHour_IN Central Jio,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IN Central Jio,Available,1
+FabCap_CuHour_IN Central Jio,Data Orchestration,1
+FabCap_CuHour_IN Central Jio,Power BI,1
+FabCap_CuHour_IN Central Jio,High Scale DF Comp,1
+FabCap_CuHour_IN Central Jio,Data Activator,1
+FabCap_CuHour_IN Central Jio,OneLake Write Operations via API,1
+FabCap_CuHour_IN Central Jio,eventstream,1
+FabCap_CuHour_IN Central Jio,eventstreams Processor,1
+FabCap_CuHour_IN Central Jio,KQL Database,1
+FabCap_CuHour_IN Central Jio,OneLake Other Operations,1
+FabCap_CuHour_IN Central Jio,OneLake Iterative Write Operations,1
+FabCap_CuHour_IN Central Jio,Data Warehouse,1
+FabCap_CuHour_IN Central Jio,Spark Mem Op,1
+FabCap_CuHour_IN Central Jio,Data Movement,1
+FabCap_CuHour_IN Central Jio,OneLake Write Operations,1
+FabCap_CuHour_IN Central Jio,AI and Machine Learning,1
+FabCap_CuHour_IN Central Jio,Dataflows Standard Comp,1
+FabCap_CuHour_IN Central Jio,OneLake Read Operations,1
+FabCap_CuHour_IN Central Jio,OneLake Iterative Read Operations,1
+FabCap_CuHour_IN Central Jio,OneLake Read Operations via API,1
+FabCap_CuHour_IN Central Jio,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IN Central Jio,eventstream Data Traffic per GB,1
+FabCap_CuHour_IN South,Power BI,1
+FabCap_CuHour_IN South,Dataflows Standard Comp,1
+FabCap_CuHour_IN South,AI and Machine Learning,1
+FabCap_CuHour_IN South,OneLake Read Operations via API,1
+FabCap_CuHour_IN South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IN South,OneLake Write Operations,1
+FabCap_CuHour_IN South,eventstream,1
+FabCap_CuHour_IN South,eventstreams Processor,1
+FabCap_CuHour_IN South,Data Movement,1
+FabCap_CuHour_IN South,KQL Database,1
+FabCap_CuHour_IN South,OneLake Read Operations,1
+FabCap_CuHour_IN South,Data Warehouse,1
+FabCap_CuHour_IN South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_IN South,Spark Mem Op,1
+FabCap_CuHour_IN South,OneLake Iterative Write Operations,1
+FabCap_CuHour_IN South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IN South,Data Activator,1
+FabCap_CuHour_IN South,eventstream Data Traffic per GB,1
+FabCap_CuHour_IN South,Data Orchestration,1
+FabCap_CuHour_IN South,OneLake Write Operations via API,1
+FabCap_CuHour_IN South,Available,1
+FabCap_CuHour_IN South,High Scale DF Comp,1
+FabCap_CuHour_IN South,OneLake Iterative Read Operations,1
+FabCap_CuHour_IN South,OneLake Other Operations,1
+FabCap_CuHour_IN West,Data Warehouse,1
+FabCap_CuHour_IN West,High Scale DF Comp,1
+FabCap_CuHour_IN West,Spark Mem Op,1
+FabCap_CuHour_IN West,OneLake Write Operations,1
+FabCap_CuHour_IN West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_IN West,AI and Machine Learning,1
+FabCap_CuHour_IN West,Dataflows Standard Comp,1
+FabCap_CuHour_IN West,eventstream,1
+FabCap_CuHour_IN West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IN West,eventstream Data Traffic per GB,1
+FabCap_CuHour_IN West,OneLake Write Operations via API,1
+FabCap_CuHour_IN West,eventstreams Processor,1
+FabCap_CuHour_IN West,OneLake Iterative Write Operations,1
+FabCap_CuHour_IN West,Data Activator,1
+FabCap_CuHour_IN West,OneLake Read Operations,1
+FabCap_CuHour_IN West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IN West,OneLake Read Operations via API,1
+FabCap_CuHour_IN West,OneLake Iterative Read Operations,1
+FabCap_CuHour_IN West,Data Movement,1
+FabCap_CuHour_IN West,KQL Database,1
+FabCap_CuHour_IN West,Available,1
+FabCap_CuHour_IN West,OneLake Other Operations,1
+FabCap_CuHour_IN West,Power BI,1
+FabCap_CuHour_IN West,Data Orchestration,1
+FabCap_CuHour_IN West Jio,Data Movement,1
+FabCap_CuHour_IN West Jio,Data Orchestration,1
+FabCap_CuHour_IN West Jio,Spark Mem Op,1
+FabCap_CuHour_IN West Jio,OneLake Other Operations,1
+FabCap_CuHour_IN West Jio,Available,1
+FabCap_CuHour_IN West Jio,AI and Machine Learning,1
+FabCap_CuHour_IN West Jio,Dataflows Standard Comp,1
+FabCap_CuHour_IN West Jio,OneLake Iterative Read Operations,1
+FabCap_CuHour_IN West Jio,Data Activator,1
+FabCap_CuHour_IN West Jio,Data Warehouse,1
+FabCap_CuHour_IN West Jio,Power BI,1
+FabCap_CuHour_IN West Jio,KQL Database,1
+FabCap_CuHour_IN West Jio,High Scale DF Comp,1
+FabCap_CuHour_IN West Jio,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_IN West Jio,eventstream,1
+FabCap_CuHour_IN West Jio,eventstream Data Traffic per GB,1
+FabCap_CuHour_IN West Jio,OneLake Write Operations via API,1
+FabCap_CuHour_IN West Jio,eventstreams Processor,1
+FabCap_CuHour_IN West Jio,OneLake Write Operations,1
+FabCap_CuHour_IN West Jio,OneLake Iterative Write Operations,1
+FabCap_CuHour_IN West Jio,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_IN West Jio,OneLake Read Operations via API,1
+FabCap_CuHour_IN West Jio,OneLake Read Operations,1
+FabCap_CuHour_JA East,Data Movement,1
+FabCap_CuHour_JA East,Spark Mem Op,1
+FabCap_CuHour_JA East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_JA East,AI and Machine Learning,1
+FabCap_CuHour_JA East,Dataflows Standard Comp,1
+FabCap_CuHour_JA East,OneLake Write Operations via API,1
+FabCap_CuHour_JA East,OneLake Read Operations,1
+FabCap_CuHour_JA East,OneLake Iterative Read Operations,1
+FabCap_CuHour_JA East,OneLake Read Operations via API,1
+FabCap_CuHour_JA East,OneLake Write Operations,1
+FabCap_CuHour_JA East,Data Activator,1
+FabCap_CuHour_JA East,OneLake Iterative Write Operations,1
+FabCap_CuHour_JA East,Available,1
+FabCap_CuHour_JA East,eventstreams Processor,1
+FabCap_CuHour_JA East,eventstream,1
+FabCap_CuHour_JA East,KQL Database,1
+FabCap_CuHour_JA East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_JA East,eventstream Data Traffic per GB,1
+FabCap_CuHour_JA East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_JA East,OneLake Other Operations,1
+FabCap_CuHour_JA East,Power BI,1
+FabCap_CuHour_JA East,Data Orchestration,1
+FabCap_CuHour_JA East,Data Warehouse,1
+FabCap_CuHour_JA East,High Scale DF Comp,1
+FabCap_CuHour_JA West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_JA West,Data Orchestration,1
+FabCap_CuHour_JA West,KQL Database,1
+FabCap_CuHour_JA West,Data Movement,1
+FabCap_CuHour_JA West,OneLake Other Operations,1
+FabCap_CuHour_JA West,eventstream,1
+FabCap_CuHour_JA West,eventstreams Processor,1
+FabCap_CuHour_JA West,Data Activator,1
+FabCap_CuHour_JA West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_JA West,AI and Machine Learning,1
+FabCap_CuHour_JA West,eventstream Data Traffic per GB,1
+FabCap_CuHour_JA West,Dataflows Standard Comp,1
+FabCap_CuHour_JA West,OneLake Iterative Write Operations,1
+FabCap_CuHour_JA West,OneLake Write Operations via API,1
+FabCap_CuHour_JA West,OneLake Read Operations via API,1
+FabCap_CuHour_JA West,Available,1
+FabCap_CuHour_JA West,OneLake Write Operations,1
+FabCap_CuHour_JA West,OneLake Read Operations,1
+FabCap_CuHour_JA West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_JA West,OneLake Iterative Read Operations,1
+FabCap_CuHour_JA West,Spark Mem Op,1
+FabCap_CuHour_JA West,Data Warehouse,1
+FabCap_CuHour_JA West,High Scale DF Comp,1
+FabCap_CuHour_JA West,Power BI,1
+FabCap_CuHour_KR Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_KR Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_KR Central,Spark Mem Op,1
+FabCap_CuHour_KR Central,Data Warehouse,1
+FabCap_CuHour_KR Central,Data Movement,1
+FabCap_CuHour_KR Central,Data Orchestration,1
+FabCap_CuHour_KR Central,High Scale DF Comp,1
+FabCap_CuHour_KR Central,KQL Database,1
+FabCap_CuHour_KR Central,Power BI,1
+FabCap_CuHour_KR Central,OneLake Other Operations,1
+FabCap_CuHour_KR Central,Available,1
+FabCap_CuHour_KR Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_KR Central,Data Activator,1
+FabCap_CuHour_KR Central,Dataflows Standard Comp,1
+FabCap_CuHour_KR Central,AI and Machine Learning,1
+FabCap_CuHour_KR Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_KR Central,OneLake Read Operations,1
+FabCap_CuHour_KR Central,OneLake Read Operations via API,1
+FabCap_CuHour_KR Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_KR Central,OneLake Write Operations,1
+FabCap_CuHour_KR Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_KR Central,OneLake Write Operations via API,1
+FabCap_CuHour_KR Central,eventstreams Processor,1
+FabCap_CuHour_KR Central,eventstream,1
+FabCap_CuHour_KR South,Available,1
+FabCap_CuHour_KR South,OneLake Other Operations,1
+FabCap_CuHour_KR South,KQL Database,1
+FabCap_CuHour_KR South,OneLake Read Operations via API,1
+FabCap_CuHour_KR South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_KR South,eventstreams Processor,1
+FabCap_CuHour_KR South,High Scale DF Comp,1
+FabCap_CuHour_KR South,Data Movement,1
+FabCap_CuHour_KR South,Spark Mem Op,1
+FabCap_CuHour_KR South,Power BI,1
+FabCap_CuHour_KR South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_KR South,Data Warehouse,1
+FabCap_CuHour_KR South,Data Activator,1
+FabCap_CuHour_KR South,eventstream Data Traffic per GB,1
+FabCap_CuHour_KR South,OneLake Write Operations,1
+FabCap_CuHour_KR South,OneLake Write Operations via API,1
+FabCap_CuHour_KR South,OneLake Iterative Write Operations,1
+FabCap_CuHour_KR South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_KR South,Data Orchestration,1
+FabCap_CuHour_KR South,OneLake Read Operations,1
+FabCap_CuHour_KR South,OneLake Iterative Read Operations,1
+FabCap_CuHour_KR South,AI and Machine Learning,1
+FabCap_CuHour_KR South,Dataflows Standard Comp,1
+FabCap_CuHour_KR South,eventstream,1
+FabCap_CuHour_NO East,Available,1
+FabCap_CuHour_NO East,KQL Database,1
+FabCap_CuHour_NO East,Data Orchestration,1
+FabCap_CuHour_NO East,Data Warehouse,1
+FabCap_CuHour_NO East,Data Movement,1
+FabCap_CuHour_NO East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_NO East,Dataflows Standard Comp,1
+FabCap_CuHour_NO East,AI and Machine Learning,1
+FabCap_CuHour_NO East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_NO East,OneLake Iterative Write Operations,1
+FabCap_CuHour_NO East,OneLake Read Operations,1
+FabCap_CuHour_NO East,Data Activator,1
+FabCap_CuHour_NO East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_NO East,eventstreams Processor,1
+FabCap_CuHour_NO East,OneLake Read Operations via API,1
+FabCap_CuHour_NO East,eventstream,1
+FabCap_CuHour_NO East,OneLake Write Operations via API,1
+FabCap_CuHour_NO East,eventstream Data Traffic per GB,1
+FabCap_CuHour_NO East,OneLake Write Operations,1
+FabCap_CuHour_NO East,OneLake Iterative Read Operations,1
+FabCap_CuHour_NO East,Spark Mem Op,1
+FabCap_CuHour_NO East,High Scale DF Comp,1
+FabCap_CuHour_NO East,Power BI,1
+FabCap_CuHour_NO East,OneLake Other Operations,1
+FabCap_CuHour_NO West,OneLake Write Operations via API,1
+FabCap_CuHour_NO West,eventstreams Processor,1
+FabCap_CuHour_NO West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_NO West,eventstream Data Traffic per GB,1
+FabCap_CuHour_NO West,Dataflows Standard Comp,1
+FabCap_CuHour_NO West,AI and Machine Learning,1
+FabCap_CuHour_NO West,OneLake Iterative Read Operations,1
+FabCap_CuHour_NO West,OneLake Write Operations,1
+FabCap_CuHour_NO West,OneLake Iterative Write Operations,1
+FabCap_CuHour_NO West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_NO West,Data Warehouse,1
+FabCap_CuHour_NO West,Data Movement,1
+FabCap_CuHour_NO West,Data Orchestration,1
+FabCap_CuHour_NO West,KQL Database,1
+FabCap_CuHour_NO West,High Scale DF Comp,1
+FabCap_CuHour_NO West,OneLake Other Operations,1
+FabCap_CuHour_NO West,Power BI,1
+FabCap_CuHour_NO West,OneLake Read Operations via API,1
+FabCap_CuHour_NO West,Available,1
+FabCap_CuHour_NO West,Spark Mem Op,1
+FabCap_CuHour_NO West,OneLake Read Operations,1
+FabCap_CuHour_NO West,eventstream,1
+FabCap_CuHour_NO West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_NO West,Data Activator,1
+FabCap_CuHour_PL Central,eventstream,1
+FabCap_CuHour_PL Central,eventstreams Processor,1
+FabCap_CuHour_PL Central,Data Activator,1
+FabCap_CuHour_PL Central,OneLake Other Operations,1
+FabCap_CuHour_PL Central,Data Movement,1
+FabCap_CuHour_PL Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_PL Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_PL Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_PL Central,OneLake Write Operations,1
+FabCap_CuHour_PL Central,OneLake Read Operations,1
+FabCap_CuHour_PL Central,OneLake Write Operations via API,1
+FabCap_CuHour_PL Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_PL Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_PL Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_PL Central,Dataflows Standard Comp,1
+FabCap_CuHour_PL Central,AI and Machine Learning,1
+FabCap_CuHour_PL Central,Power BI,1
+FabCap_CuHour_PL Central,Available,1
+FabCap_CuHour_PL Central,Spark Mem Op,1
+FabCap_CuHour_PL Central,High Scale DF Comp,1
+FabCap_CuHour_PL Central,Data Orchestration,1
+FabCap_CuHour_PL Central,KQL Database,1
+FabCap_CuHour_PL Central,Data Warehouse,1
+FabCap_CuHour_PL Central,OneLake Read Operations via API,1
+FabCap_CuHour_QA Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_QA Central,Data Activator,1
+FabCap_CuHour_QA Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_QA Central,eventstream,1
+FabCap_CuHour_QA Central,eventstreams Processor,1
+FabCap_CuHour_QA Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_QA Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_QA Central,OneLake Read Operations via API,1
+FabCap_CuHour_QA Central,OneLake Write Operations via API,1
+FabCap_CuHour_QA Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_QA Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_QA Central,OneLake Read Operations,1
+FabCap_CuHour_QA Central,Dataflows Standard Comp,1
+FabCap_CuHour_QA Central,Spark Mem Op,1
+FabCap_CuHour_QA Central,High Scale DF Comp,1
+FabCap_CuHour_QA Central,KQL Database,1
+FabCap_CuHour_QA Central,Power BI,1
+FabCap_CuHour_QA Central,OneLake Other Operations,1
+FabCap_CuHour_QA Central,Available,1
+FabCap_CuHour_QA Central,Data Orchestration,1
+FabCap_CuHour_QA Central,Data Movement,1
+FabCap_CuHour_QA Central,Data Warehouse,1
+FabCap_CuHour_QA Central,AI and Machine Learning,1
+FabCap_CuHour_QA Central,OneLake Write Operations,1
+FabCap_CuHour_SE Central,High Scale DF Comp,1
+FabCap_CuHour_SE Central,Power BI,1
+FabCap_CuHour_SE Central,Available,1
+FabCap_CuHour_SE Central,KQL Database,1
+FabCap_CuHour_SE Central,OneLake Other Operations,1
+FabCap_CuHour_SE Central,Data Movement,1
+FabCap_CuHour_SE Central,Spark Mem Op,1
+FabCap_CuHour_SE Central,Dataflows Standard Comp,1
+FabCap_CuHour_SE Central,eventstreams Processor,1
+FabCap_CuHour_SE Central,Data Warehouse,1
+FabCap_CuHour_SE Central,Data Orchestration,1
+FabCap_CuHour_SE Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_SE Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_SE Central,OneLake Read Operations via API,1
+FabCap_CuHour_SE Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_SE Central,Data Activator,1
+FabCap_CuHour_SE Central,OneLake Read Operations,1
+FabCap_CuHour_SE Central,OneLake Write Operations,1
+FabCap_CuHour_SE Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_SE Central,eventstream,1
+FabCap_CuHour_SE Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_SE Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_SE Central,AI and Machine Learning,1
+FabCap_CuHour_SE Central,OneLake Write Operations via API,1
+FabCap_CuHour_SE South,High Scale DF Comp,1
+FabCap_CuHour_SE South,Available,1
+FabCap_CuHour_SE South,OneLake Other Operations,1
+FabCap_CuHour_SE South,Power BI,1
+FabCap_CuHour_SE South,KQL Database,1
+FabCap_CuHour_SE South,Data Orchestration,1
+FabCap_CuHour_SE South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_SE South,OneLake Read Operations,1
+FabCap_CuHour_SE South,OneLake Iterative Read Operations,1
+FabCap_CuHour_SE South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_SE South,OneLake Write Operations,1
+FabCap_CuHour_SE South,OneLake Iterative Write Operations,1
+FabCap_CuHour_SE South,OneLake Read Operations via API,1
+FabCap_CuHour_SE South,OneLake Write Operations via API,1
+FabCap_CuHour_SE South,eventstreams Processor,1
+FabCap_CuHour_SE South,Data Activator,1
+FabCap_CuHour_SE South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_SE South,eventstream,1
+FabCap_CuHour_SE South,eventstream Data Traffic per GB,1
+FabCap_CuHour_SE South,Spark Mem Op,1
+FabCap_CuHour_SE South,Data Warehouse,1
+FabCap_CuHour_SE South,Data Movement,1
+FabCap_CuHour_SE South,Dataflows Standard Comp,1
+FabCap_CuHour_SE South,AI and Machine Learning,1
+FabCap_CuHour_TW North,AI and Machine Learning,1
+FabCap_CuHour_TW North,Dataflows Standard Comp,1
+FabCap_CuHour_TW North,OneLake Read Operations,1
+FabCap_CuHour_TW North,eventstream Data Traffic per GB,1
+FabCap_CuHour_TW North,OneLake Write Operations via API,1
+FabCap_CuHour_TW North,OneLake Write Operations,1
+FabCap_CuHour_TW North,eventstreams Processor,1
+FabCap_CuHour_TW North,OneLake Iterative Read Operations,1
+FabCap_CuHour_TW North,Data Warehouse,1
+FabCap_CuHour_TW North,Data Activator,1
+FabCap_CuHour_TW North,OneLake Iterative Write Operations,1
+FabCap_CuHour_TW North,Data Orchestration,1
+FabCap_CuHour_TW North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_TW North,Spark Mem Op,1
+FabCap_CuHour_TW North,Data Movement,1
+FabCap_CuHour_TW North,OneLake Read Operations via API,1
+FabCap_CuHour_TW North,High Scale DF Comp,1
+FabCap_CuHour_TW North,KQL Database,1
+FabCap_CuHour_TW North,Power BI,1
+FabCap_CuHour_TW North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_TW North,OneLake Other Operations,1
+FabCap_CuHour_TW North,Available,1
+FabCap_CuHour_TW North,eventstream,1
+FabCap_CuHour_TW Northwest,AI and Machine Learning,1
+FabCap_CuHour_TW Northwest,eventstream,1
+FabCap_CuHour_TW Northwest,eventstream Data Traffic per GB,1
+FabCap_CuHour_TW Northwest,Data Warehouse,1
+FabCap_CuHour_TW Northwest,OneLake Write Operations via API,1
+FabCap_CuHour_TW Northwest,eventstreams Processor,1
+FabCap_CuHour_TW Northwest,Data Activator,1
+FabCap_CuHour_TW Northwest,OneLake Iterative Write Operations,1
+FabCap_CuHour_TW Northwest,OneLake Read Operations,1
+FabCap_CuHour_TW Northwest,OneLake Read Operations via API,1
+FabCap_CuHour_TW Northwest,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_TW Northwest,Dataflows Standard Comp,1
+FabCap_CuHour_TW Northwest,Data Movement,1
+FabCap_CuHour_TW Northwest,Spark Mem Op,1
+FabCap_CuHour_TW Northwest,OneLake Other Operations,1
+FabCap_CuHour_TW Northwest,Power BI,1
+FabCap_CuHour_TW Northwest,Available,1
+FabCap_CuHour_TW Northwest,High Scale DF Comp,1
+FabCap_CuHour_TW Northwest,KQL Database,1
+FabCap_CuHour_TW Northwest,Data Orchestration,1
+FabCap_CuHour_TW Northwest,OneLake Iterative Read Operations,1
+FabCap_CuHour_TW Northwest,OneLake Write Operations,1
+FabCap_CuHour_TW Northwest,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_UK North,OneLake Write Operations,1
+FabCap_CuHour_UK North,OneLake Iterative Write Operations,1
+FabCap_CuHour_UK North,OneLake Write Operations via API,1
+FabCap_CuHour_UK North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_UK North,OneLake Iterative Read Operations,1
+FabCap_CuHour_UK North,OneLake Read Operations via API,1
+FabCap_CuHour_UK North,eventstreams Processor,1
+FabCap_CuHour_UK North,eventstream,1
+FabCap_CuHour_UK North,eventstream Data Traffic per GB,1
+FabCap_CuHour_UK North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_UK North,Data Activator,1
+FabCap_CuHour_UK North,Dataflows Standard Comp,1
+FabCap_CuHour_UK North,AI and Machine Learning,1
+FabCap_CuHour_UK North,OneLake Read Operations,1
+FabCap_CuHour_UK South,eventstream,1
+FabCap_CuHour_UK South,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_UK South,Data Activator,1
+FabCap_CuHour_UK South,eventstreams Processor,1
+FabCap_CuHour_UK South,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_UK South,OneLake Iterative Read Operations,1
+FabCap_CuHour_UK South,Data Warehouse,1
+FabCap_CuHour_UK South,Data Orchestration,1
+FabCap_CuHour_UK South,Data Movement,1
+FabCap_CuHour_UK South,High Scale DF Comp,1
+FabCap_CuHour_UK South,KQL Database,1
+FabCap_CuHour_UK South,Available,1
+FabCap_CuHour_UK South,Spark Mem Op,1
+FabCap_CuHour_UK South,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_UK South,Power BI,1
+FabCap_CuHour_UK South,Dataflows Standard Comp,1
+FabCap_CuHour_UK South,AI and Machine Learning,1
+FabCap_CuHour_UK South,OneLake Write Operations,1
+FabCap_CuHour_UK South,OneLake Read Operations via API,1
+FabCap_CuHour_UK South,OneLake Read Operations,1
+FabCap_CuHour_UK South,OneLake Write Operations via API,1
+FabCap_CuHour_UK South,OneLake Iterative Write Operations,1
+FabCap_CuHour_UK South,OneLake Other Operations,1
+FabCap_CuHour_UK South,eventstream Data Traffic per GB,1
+FabCap_CuHour_UK South 2,OneLake Iterative Write Operations,1
+FabCap_CuHour_UK South 2,Dataflows Standard Comp,1
+FabCap_CuHour_UK South 2,OneLake Iterative Read Operations,1
+FabCap_CuHour_UK South 2,OneLake Read Operations,1
+FabCap_CuHour_UK South 2,eventstream,1
+FabCap_CuHour_UK South 2,Data Activator,1
+FabCap_CuHour_UK South 2,eventstreams Processor,1
+FabCap_CuHour_UK South 2,OneLake Read Operations via API,1
+FabCap_CuHour_UK South 2,eventstream Data Traffic per GB,1
+FabCap_CuHour_UK South 2,OneLake Write Operations via API,1
+FabCap_CuHour_UK South 2,OneLake Write Operations,1
+FabCap_CuHour_UK South 2,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_UK South 2,AI and Machine Learning,1
+FabCap_CuHour_UK South 2,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_UK West,OneLake Read Operations via API,1
+FabCap_CuHour_UK West,eventstreams Processor,1
+FabCap_CuHour_UK West,eventstream Data Traffic per GB,1
+FabCap_CuHour_UK West,OneLake Write Operations,1
+FabCap_CuHour_UK West,OneLake Iterative Write Operations,1
+FabCap_CuHour_UK West,OneLake Write Operations via API,1
+FabCap_CuHour_UK West,Spark Mem Op,1
+FabCap_CuHour_UK West,KQL Database,1
+FabCap_CuHour_UK West,Data Warehouse,1
+FabCap_CuHour_UK West,Data Orchestration,1
+FabCap_CuHour_UK West,eventstream,1
+FabCap_CuHour_UK West,Data Movement,1
+FabCap_CuHour_UK West,High Scale DF Comp,1
+FabCap_CuHour_UK West,Power BI,1
+FabCap_CuHour_UK West,Available,1
+FabCap_CuHour_UK West,OneLake Other Operations,1
+FabCap_CuHour_UK West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_UK West,AI and Machine Learning,1
+FabCap_CuHour_UK West,Dataflows Standard Comp,1
+FabCap_CuHour_UK West,OneLake Read Operations,1
+FabCap_CuHour_UK West,OneLake Iterative Read Operations,1
+FabCap_CuHour_UK West,Data Activator,1
+FabCap_CuHour_UK West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_UK West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US Central,eventstreams Processor,1
+FabCap_CuHour_US Central,AI and Machine Learning,1
+FabCap_CuHour_US Central,Spark Mem Op,1
+FabCap_CuHour_US Central,OneLake Write Operations,1
+FabCap_CuHour_US Central,Dataflows Standard Comp,1
+FabCap_CuHour_US Central,eventstream,1
+FabCap_CuHour_US Central,OneLake Read Operations via API,1
+FabCap_CuHour_US Central,Data Activator,1
+FabCap_CuHour_US Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_US Central,OneLake Write Operations via API,1
+FabCap_CuHour_US Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_US Central,High Scale DF Comp,1
+FabCap_CuHour_US Central,OneLake Read Operations,1
+FabCap_CuHour_US Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_US Central,Data Warehouse,1
+FabCap_CuHour_US Central,Data Movement,1
+FabCap_CuHour_US Central,Data Orchestration,1
+FabCap_CuHour_US Central,KQL Database,1
+FabCap_CuHour_US Central,Power BI,1
+FabCap_CuHour_US Central,Available,1
+FabCap_CuHour_US Central,OneLake Other Operations,1
+FabCap_CuHour_US East,KQL Database,1
+FabCap_CuHour_US East,OneLake Write Operations,1
+FabCap_CuHour_US East,Dataflows Standard Comp,1
+FabCap_CuHour_US East,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US East,OneLake Other Operations,1
+FabCap_CuHour_US East,Available,1
+FabCap_CuHour_US East,eventstream,1
+FabCap_CuHour_US East,Power BI,1
+FabCap_CuHour_US East,High Scale DF Comp,1
+FabCap_CuHour_US East,Data Movement,1
+FabCap_CuHour_US East,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US East,Data Orchestration,1
+FabCap_CuHour_US East,Data Activator,1
+FabCap_CuHour_US East,eventstreams Processor,1
+FabCap_CuHour_US East,OneLake Write Operations via API,1
+FabCap_CuHour_US East,OneLake Iterative Write Operations,1
+FabCap_CuHour_US East,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US East,eventstream Data Traffic per GB,1
+FabCap_CuHour_US East,OneLake Read Operations,1
+FabCap_CuHour_US East,Spark Mem Op,1
+FabCap_CuHour_US East,OneLake Read Operations via API,1
+FabCap_CuHour_US East,OneLake Iterative Read Operations,1
+FabCap_CuHour_US East,Data Warehouse,1
+FabCap_CuHour_US East,AI and Machine Learning,1
+FabCap_CuHour_US East 2,Dataflows Standard Comp,1
+FabCap_CuHour_US East 2,AI and Machine Learning,1
+FabCap_CuHour_US East 2,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US East 2,High Scale DF Comp,1
+FabCap_CuHour_US East 2,KQL Database,1
+FabCap_CuHour_US East 2,Available,1
+FabCap_CuHour_US East 2,OneLake Other Operations,1
+FabCap_CuHour_US East 2,Power BI,1
+FabCap_CuHour_US East 2,Data Orchestration,1
+FabCap_CuHour_US East 2,Data Movement,1
+FabCap_CuHour_US East 2,Data Warehouse,1
+FabCap_CuHour_US East 2,Spark Mem Op,1
+FabCap_CuHour_US East 2,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US East 2,Data Activator,1
+FabCap_CuHour_US East 2,eventstreams Processor,1
+FabCap_CuHour_US East 2,eventstream,1
+FabCap_CuHour_US East 2,OneLake Iterative Write Operations,1
+FabCap_CuHour_US East 2,OneLake Write Operations,1
+FabCap_CuHour_US East 2,eventstream Data Traffic per GB,1
+FabCap_CuHour_US East 2,OneLake Write Operations via API,1
+FabCap_CuHour_US East 2,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US East 2,OneLake Read Operations,1
+FabCap_CuHour_US East 2,OneLake Read Operations via API,1
+FabCap_CuHour_US East 2,OneLake Iterative Read Operations,1
+FabCap_CuHour_US North Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US North Central,OneLake Write Operations via API,1
+FabCap_CuHour_US North Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_US North Central,Data Warehouse,1
+FabCap_CuHour_US North Central,Spark Mem Op,1
+FabCap_CuHour_US North Central,Data Orchestration,1
+FabCap_CuHour_US North Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_US North Central,eventstreams Processor,1
+FabCap_CuHour_US North Central,AI and Machine Learning,1
+FabCap_CuHour_US North Central,eventstream,1
+FabCap_CuHour_US North Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US North Central,Dataflows Standard Comp,1
+FabCap_CuHour_US North Central,High Scale DF Comp,1
+FabCap_CuHour_US North Central,Data Activator,1
+FabCap_CuHour_US North Central,Data Movement,1
+FabCap_CuHour_US North Central,OneLake Other Operations,1
+FabCap_CuHour_US North Central,Power BI,1
+FabCap_CuHour_US North Central,Available,1
+FabCap_CuHour_US North Central,KQL Database,1
+FabCap_CuHour_US North Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_US North Central,OneLake Write Operations,1
+FabCap_CuHour_US North Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US North Central,OneLake Read Operations,1
+FabCap_CuHour_US North Central,OneLake Read Operations via API,1
+FabCap_CuHour_US South Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US South Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_US South Central,OneLake Read Operations,1
+FabCap_CuHour_US South Central,Available,1
+FabCap_CuHour_US South Central,Data Orchestration,1
+FabCap_CuHour_US South Central,Data Warehouse,1
+FabCap_CuHour_US South Central,Spark Mem Op,1
+FabCap_CuHour_US South Central,OneLake Other Operations,1
+FabCap_CuHour_US South Central,Data Movement,1
+FabCap_CuHour_US South Central,High Scale DF Comp,1
+FabCap_CuHour_US South Central,KQL Database,1
+FabCap_CuHour_US South Central,Power BI,1
+FabCap_CuHour_US South Central,Data Activator,1
+FabCap_CuHour_US South Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US South Central,eventstream,1
+FabCap_CuHour_US South Central,eventstreams Processor,1
+FabCap_CuHour_US South Central,AI and Machine Learning,1
+FabCap_CuHour_US South Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_US South Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_US South Central,OneLake Write Operations via API,1
+FabCap_CuHour_US South Central,OneLake Write Operations,1
+FabCap_CuHour_US South Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US South Central,OneLake Read Operations via API,1
+FabCap_CuHour_US South Central,Dataflows Standard Comp,1
+FabCap_CuHour_US West,Spark Mem Op,1
+FabCap_CuHour_US West,Data Activator,1
+FabCap_CuHour_US West,eventstreams Processor,1
+FabCap_CuHour_US West,eventstream,1
+FabCap_CuHour_US West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US West,Data Movement,1
+FabCap_CuHour_US West,High Scale DF Comp,1
+FabCap_CuHour_US West,OneLake Other Operations,1
+FabCap_CuHour_US West,Available,1
+FabCap_CuHour_US West,KQL Database,1
+FabCap_CuHour_US West,Power BI,1
+FabCap_CuHour_US West,Data Orchestration,1
+FabCap_CuHour_US West,Data Warehouse,1
+FabCap_CuHour_US West,eventstream Data Traffic per GB,1
+FabCap_CuHour_US West,OneLake Write Operations via API,1
+FabCap_CuHour_US West,OneLake Iterative Write Operations,1
+FabCap_CuHour_US West,OneLake Write Operations,1
+FabCap_CuHour_US West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US West,OneLake Read Operations via API,1
+FabCap_CuHour_US West,OneLake Iterative Read Operations,1
+FabCap_CuHour_US West,OneLake Read Operations,1
+FabCap_CuHour_US West,Dataflows Standard Comp,1
+FabCap_CuHour_US West,AI and Machine Learning,1
+FabCap_CuHour_US West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US West 2,OneLake Read Operations,1
+FabCap_CuHour_US West 2,Dataflows Standard Comp,1
+FabCap_CuHour_US West 2,High Scale DF Comp,1
+FabCap_CuHour_US West 2,AI and Machine Learning,1
+FabCap_CuHour_US West 2,Data Warehouse,1
+FabCap_CuHour_US West 2,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US West 2,eventstream,1
+FabCap_CuHour_US West 2,eventstreams Processor,1
+FabCap_CuHour_US West 2,OneLake Write Operations via API,1
+FabCap_CuHour_US West 2,Data Activator,1
+FabCap_CuHour_US West 2,eventstream Data Traffic per GB,1
+FabCap_CuHour_US West 2,OneLake Iterative Write Operations,1
+FabCap_CuHour_US West 2,Data Orchestration,1
+FabCap_CuHour_US West 2,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US West 2,OneLake Read Operations via API,1
+FabCap_CuHour_US West 2,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US West 2,Spark Mem Op,1
+FabCap_CuHour_US West 2,Data Movement,1
+FabCap_CuHour_US West 2,OneLake Other Operations,1
+FabCap_CuHour_US West 2,Available,1
+FabCap_CuHour_US West 2,Power BI,1
+FabCap_CuHour_US West 2,KQL Database,1
+FabCap_CuHour_US West 2,OneLake Write Operations,1
+FabCap_CuHour_US West 2,OneLake Iterative Read Operations,1
+FabCap_CuHour_US West 3,Spark Mem Op,1
+FabCap_CuHour_US West 3,Data Warehouse,1
+FabCap_CuHour_US West 3,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US West 3,OneLake Other Operations,1
+FabCap_CuHour_US West 3,eventstreams Processor,1
+FabCap_CuHour_US West 3,OneLake Iterative Write Operations,1
+FabCap_CuHour_US West 3,Power BI,1
+FabCap_CuHour_US West 3,Available,1
+FabCap_CuHour_US West 3,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US West 3,eventstream,1
+FabCap_CuHour_US West 3,eventstream Data Traffic per GB,1
+FabCap_CuHour_US West 3,Data Activator,1
+FabCap_CuHour_US West 3,OneLake Write Operations via API,1
+FabCap_CuHour_US West 3,OneLake Write Operations,1
+FabCap_CuHour_US West 3,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US West 3,OneLake Iterative Read Operations,1
+FabCap_CuHour_US West 3,OneLake Read Operations via API,1
+FabCap_CuHour_US West 3,OneLake Read Operations,1
+FabCap_CuHour_US West 3,Dataflows Standard Comp,1
+FabCap_CuHour_US West 3,AI and Machine Learning,1
+FabCap_CuHour_US West 3,Data Orchestration,1
+FabCap_CuHour_US West 3,High Scale DF Comp,1
+FabCap_CuHour_US West 3,Data Movement,1
+FabCap_CuHour_US West 3,KQL Database,1
+FabCap_CuHour_US West Central,Available,1
+FabCap_CuHour_US West Central,OneLake Other Operations,1
+FabCap_CuHour_US West Central,Power BI,1
+FabCap_CuHour_US West Central,Data Orchestration,1
+FabCap_CuHour_US West Central,eventstreams Processor,1
+FabCap_CuHour_US West Central,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_US West Central,KQL Database,1
+FabCap_CuHour_US West Central,High Scale DF Comp,1
+FabCap_CuHour_US West Central,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_US West Central,eventstream Data Traffic per GB,1
+FabCap_CuHour_US West Central,Spark Mem Op,1
+FabCap_CuHour_US West Central,AI and Machine Learning,1
+FabCap_CuHour_US West Central,Dataflows Standard Comp,1
+FabCap_CuHour_US West Central,OneLake Read Operations,1
+FabCap_CuHour_US West Central,OneLake Write Operations,1
+FabCap_CuHour_US West Central,OneLake Iterative Write Operations,1
+FabCap_CuHour_US West Central,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_US West Central,Data Movement,1
+FabCap_CuHour_US West Central,Data Warehouse,1
+FabCap_CuHour_US West Central,eventstream,1
+FabCap_CuHour_US West Central,OneLake Iterative Read Operations,1
+FabCap_CuHour_US West Central,OneLake Read Operations via API,1
+FabCap_CuHour_US West Central,Data Activator,1
+FabCap_CuHour_US West Central,OneLake Write Operations via API,1
+FabCap_CuHour_ZA North,Spark Mem Op,1
+FabCap_CuHour_ZA North,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_ZA North,KQL Database,1
+FabCap_CuHour_ZA North,AI and Machine Learning,1
+FabCap_CuHour_ZA North,Dataflows Standard Comp,1
+FabCap_CuHour_ZA North,OneLake Iterative Read Operations,1
+FabCap_CuHour_ZA North,OneLake Write Operations,1
+FabCap_CuHour_ZA North,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_ZA North,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_ZA North,Data Activator,1
+FabCap_CuHour_ZA North,eventstream Data Traffic per GB,1
+FabCap_CuHour_ZA North,eventstream,1
+FabCap_CuHour_ZA North,eventstreams Processor,1
+FabCap_CuHour_ZA North,OneLake Iterative Write Operations,1
+FabCap_CuHour_ZA North,OneLake Write Operations via API,1
+FabCap_CuHour_ZA North,OneLake Read Operations via API,1
+FabCap_CuHour_ZA North,OneLake Read Operations,1
+FabCap_CuHour_ZA North,Data Orchestration,1
+FabCap_CuHour_ZA North,Power BI,1
+FabCap_CuHour_ZA North,Available,1
+FabCap_CuHour_ZA North,OneLake Other Operations,1
+FabCap_CuHour_ZA North,High Scale DF Comp,1
+FabCap_CuHour_ZA North,Data Warehouse,1
+FabCap_CuHour_ZA North,Data Movement,1
+FabCap_CuHour_ZA West,OneLake Other Operations,1
+FabCap_CuHour_ZA West,Data Orchestration,1
+FabCap_CuHour_ZA West,OneLake Iterative Write Operations via API,1
+FabCap_CuHour_ZA West,AI and Machine Learning,1
+FabCap_CuHour_ZA West,Dataflows Standard Comp,1
+FabCap_CuHour_ZA West,OneLake Read Operations via API,1
+FabCap_CuHour_ZA West,OneLake Read Operations,1
+FabCap_CuHour_ZA West,OneLake Write Operations,1
+FabCap_CuHour_ZA West,OneLake Iterative Read Operations,1
+FabCap_CuHour_ZA West,eventstreams Processor,1
+FabCap_CuHour_ZA West,eventstream,1
+FabCap_CuHour_ZA West,Data Activator,1
+FabCap_CuHour_ZA West,eventstream Data Traffic per GB,1
+FabCap_CuHour_ZA West,OneLake Write Operations via API,1
+FabCap_CuHour_ZA West,OneLake Iterative Write Operations,1
+FabCap_CuHour_ZA West,OneLake Iterative Read Operations via API,1
+FabCap_CuHour_ZA West,Data Warehouse,1
+FabCap_CuHour_ZA West,Data Movement,1
+FabCap_CuHour_ZA West,High Scale DF Comp,1
+FabCap_CuHour_ZA West,KQL Database,1
+FabCap_CuHour_ZA West,Power BI,1
+FabCap_CuHour_ZA West,Fabric_Capacity_CU_Hour,1
+FabCap_CuHour_ZA West,Available,1
+FabCap_CuHour_ZA West,Spark Mem Op,1
+Gen7 IaaS LI_internal series Linux,Internal_Gen7_IaaS_LI,1
+H Series,Standard_H8,1
+H Series,Standard_H16,2
+H Series High Memory,Standard_H8m,1
+H Series High Memory,Standard_H16m,2
+H Series High Memory Low Latency,Standard_H16mr,1
+H Series Low Latency,Standard_H16r,1
+HBS Series,Standard_HB60-45rs,1
+HBS Series,Standard_HB60-30rs,1
+HBS Series,Standard_HB60rs,1
+HBS Series,Standard_HB60-15rs,1
+HBSv2 Series Low Latency,Standard_HB120-64rs_v2,1
+HBSv2 Series Low Latency,Standard_HB120-96rs_v2,1
+HBSv2 Series Low Latency,Standard_HB120-32rs_v2,1
+HBSv2 Series Low Latency,Standard_HB120-16rs_v2,1
+HBSv2 Series Low Latency,Standard_HB120rs_v2,1
+HBrsv3 Series Low Latency,Standard_HB120rs_v3,1
+HBrsv3 Series Low Latency,Standard_HB120-96rs_v3,1
+HBrsv3 Series Low Latency,Standard_HB120-32rs_v3,1
+HBrsv3 Series Low Latency,Standard_HB120-64rs_v3,1
+HBrsv3 Series Low Latency,Standard_HB120-16rs_v3,1
+HCS Series,Standard_HC44rs,1
+HCS Series,Standard_HC44-32rs,1
+HCS Series,Standard_HC44-16rs,1
+Internal series Linux,Internal_NPHH_128ids,1
+Internal series Linux,Internal_NPMM_128ids,1
+Internal_Gen8_MM_LI Linux,Internal_Gen8_LMMM_32ds_LI,1
+Internal_Gen8_MM_LI Linux,Internal_Gen8_LMMM_64ds_LI,2
+Internal_Gen8_MM_LI Linux,Internal_Gen8_LMMM_128ids_LI,4
+LS Series,Standard_L4s,1
+LS Series,Standard_L8s,2
+LS Series,Standard_L16s,4
+LS Series,Standard_L32s,8
+LSv2 Series,Standard_L8s_v2,1
+LSv2 Series,Standard_L16s_v2,2
+LSv2 Series,Standard_L32s_v2,4
+LSv2 Series,Standard_L48s_v2,6
+LSv2 Series,Standard_L64s_v2,8
+LSv2 Series,Standard_L80s_v2,10
+LSv2 Series,Standard_L96s_v2,12
+LSv2 Series Dedicated Host,Lsv2_Type1,1
+LSv2 Series Isolated,Standard_L88is_v2,1
+Lasv3 Series DedicatedHost,Lasv3_Type1,1
+Lasv3 Series Linux,Standard_L8as_v3,1
+Lasv3 Series Linux,Standard_L16as_v3,2
+Lasv3 Series Linux,Standard_L32as_v3,4
+Lasv3 Series Linux,Standard_L48as_v3,6
+Lasv3 Series Linux,Standard_L64as_v3,8
+Lasv3 Series Linux,Standard_L80as_v3,10
+Lasv3 Series Linux,Standard_L96ias_v3,12
+Lasv3 Series Linux,Standard_L112ias_v3,14
+Lsv2_Internal-Series Linux,Internal_L128is_v2,1
+Lsv3 Series DedicatedHost,Lsv3_Type1,1
+Lsv3 Series Linux,Standard_L8s_v3,1
+Lsv3 Series Linux,Standard_L16s_v3,2
+Lsv3 Series Linux,Standard_L32s_v3,4
+Lsv3 Series Linux,Standard_L48s_v3,6
+Lsv3 Series Linux,Standard_L64s_v3,8
+Lsv3 Series Linux,Standard_L80s_v3,10
+Lsv3 Series Linux,Standard_L96is_v3,12
+Lsv3 Series Linux,L104is v3,13
+Lsv3 Series Linux,Standard_L112is_v3,14
+MS Series,Standard_M64,1
+MS Series,Standard_M64s,1
+MS Series,Standard_M128,2
+MS Series,Standard_M128s,2
+MS Series Dedicated Host,Ms_Type1,1
+MS Series Fractional,Standard_M16s,1
+MS Series Fractional,Standard_M32s,2
+MS Series Fractional High Memory,Standard_M8-2ms,1
+MS Series Fractional High Memory,Standard_M8ms,1
+MS Series Fractional High Memory,Standard_M8-4ms,1
+MS Series Fractional High Memory,Standard_M16-8ms,2
+MS Series Fractional High Memory,Standard_M16ms,2
+MS Series Fractional High Memory,Standard_M16-4ms,2
+MS Series Fractional High Memory,Standard_M32ms,4
+MS Series Fractional High Memory,Standard_M32-8ms,4
+MS Series Fractional High Memory,Standard_M32-16ms,4
+MS Series Fractional Large,Standard_M32ls,1
+MS Series Fractional Large,Standard_M64ls,1.8846875
+MS Series Fractional Tiny,Standard_M32ts,1
+MS Series HM Dedicated Host,Msm_Type1,1
+MS Series High Memory,Standard_M64-16ms,1
+MS Series High Memory,Standard_M64m,1
+MS Series High Memory,Standard_M64ms,1
+MS Series High Memory,Standard_M64-32ms,1
+MS Series High Memory,Standard_M128-64ms,2
+MS Series High Memory,Standard_M128-32ms,2
+MS Series High Memory,Standard_M128m,2
+MS Series High Memory,Standard_M128ms,2
+MSv2 Series,Standard_M208s_v2,1
+MSv2 Series,Standard_M208-104s_v2,1
+MSv2 Series,Standard_M208-52s_v2,1
+MSv2 Series,Standard_M416-208s_v2,2
+MSv2 Series,Standard_M416s_v2,2
+MSv2 Series,Standard_M416-104s_v2,2
+MSv2 Series,Standard_M416is_v2,2
+MSv2 Series 192ms,Standard_M192ims_v2,1
+MSv2 Series 32,Standard_M32ms_v2,1
+MSv2 Series 64,Standard_M64s_v2,1
+MSv2 Series Dedicated Host,Msv2_Type1,1
+MSv2 Series Disk 192s,Standard_M192is_v2,1
+MSv2 Series Fractional,Standard_M24s_v2,1
+MSv2 Series Fractional,Standard_M48s_v2,2
+MSv2 Series Fractional,Standard_M96s_v2,4
+MSv2 Series Fractional,Standard_M192s_v2,8
+MSv2 Series Fractional High Memory,Standard_M24ms_v2,1
+MSv2 Series Fractional High Memory,Standard_M48ms_v2,2
+MSv2 Series Fractional High Memory,Standard_M96ms_v2,4
+MSv2 Series Fractional High Memory,Standard_M192ms_v2,8
+MSv2 Series Fractional High Memory 128s,Standard_M128s_v2,1
+MSv2 Series HM Dedicated Host,Msmv2_Type1,1
+MSv2 Series High Memory,Standard_M208ms_v2,1
+MSv2 Series High Memory,Standard_M208-52ms_v2,1
+MSv2 Series High Memory,Standard_M208-104ms_v2,1
+MSv2 Series High Memory,Standard_M416s_8_v2,2
+MSv2 Series High Memory,Standard_M416-104ms_v2,2
+MSv2 Series High Memory,Standard_M416ms_v2,2
+MSv2 Series High Memory,Standard_M416-208ms_v2,2
+MSv2 Series High Memory 128ms,Standard_M128ms_v2,1
+MSv2 Series MedMem Dedicated Host,Msv2MedMem Type1,1
+MSv2 Series MedMem HM Dedicated Host,Msmv2MedMem Type1,1
+MSv2 Series Memory,Standard_M64ms_v2,1
+MSv2 XS Series,Standard_M420xs_v2,1
+MSv2 XS Series,Standard_M420ixs_v2,1
+MdSv2 Series 32 Disk,Standard_M32dms_v2,1
+MdSv2 Series 64 Disk,Standard_M64ds_v2,1
+MdSv2 Series Disk,Standard_M192idms_v2,1
+MdSv2 Series Disk 192s,Standard_M192ids_v2,1
+MdSv2 Series Fractional High Memory Disk,Standard_M128ds_v2,1
+MdSv2 Series High Memory Disk,Standard_M128dms_v2,1
+MdSv2 Series Memory Disk,Standard_M64dms_v2,1
+Mdsv2 Series Dedicated Host,Mdsv2MedMem_Type1,1
+Mdsv2 Series HM Dedicated Host,Mdsmv2MedMem _Type1,1
+Msv2 XS Large Series,Standard_M832ixs_v2,1
+Msv2 XS Large Series,Standard_M832ixs,1
+NC Series,Standard_NC6,1
+NC Series,Standard_NC12,2
+NC Series,Standard_NC24,4
+NC Series Low Latency,Standard_NC24r,1
+NCSv2 Series,Standard_NC6s_v2,1
+NCSv2 Series,Standard_NC12s_v2,2
+NCSv2 Series,Standard_NC24s_v2,4
+NCSv2 Series Low Latency,Standard_NC24rs_v2,1
+NCSv3 Series,Standard_NC6s_v3,1
+NCSv3 Series,Standard_NC12s_v3,2
+NCSv3 Series,Standard_NC24s_v3,4
+NCSv3 Series Low Latency,Standard_NC24rs_v3,1
+NCads A100 v4 Series Linux,Standard_NC24ads_A100_v4,1
+NCads A100 v4 Series Linux,Standard_NC48ads_A100_v4,2
+NCads A100 v4 Series Linux,Standard_NC96ads_A100_v4,4
+NCas T4 v3 Series,Standard_NC4as_T4_v3,1
+NCas T4 v3 Series,Standard_NC8as_T4_v3,2
+NCas T4 v3 Series,Standard_NC16as_T4_v3,4
+NCas T4 v3 Series,Standard_NC64as_T4_v3,16
+NCasA10_v4 Linux,Standard_NC8ads_A10_v4,1
+NCasA10_v4 Linux,Standard_NC16ads_A10_v4,2
+NCasA10_v4 Linux,Standard_NC32ads_A10_v4,4
+NDS Series,Standard_ND6s,1
+NDS Series,Standard_ND12s,2
+NDS Series,Standard_ND24s,4
+NDS Series Low Latency,Standard_ND24rs,1
+NDamsr A100 v4 Series Linux,Standard_ND96ams_A100_v4,1
+NDamsr A100 v4 Series Linux,Standard_ND96amsr_A100_v4,1
+NDasr A100 v4 Series,Standard_ND96asr_v4,1
+NDasr A100 v4 Series,Standard_ND96asr_A100_v4,1
+NDrSv2 Series Low Latency,Standard_ND40rs_v2,1
+NP Series,Standard_NP10s,1
+NP Series,Standard_NP20s,2
+NP Series,Standard_NP40s,4
+NV Series,Standard_NV6,1
+NV Series,Standard_NV12,2
+NV Series,Standard_NV24,4
+NVSv3 Series,Standard_NV12s_v3,1
+NVSv3 Series,Standard_NV24s_v3,2
+NVSv3 Series,Standard_NV48s_v3,4
+NVSv3 Series Dedicated Host,NVsv3_Type1,1
+NVSv3 Series High Memory,Standard_NV24ms_v3,1
+NVSv3 Series High Memory,Standard_NV32ms_v3,1.333333333
+NVadsA10_v5 Linux,Standard_NV6ads_A10_v5,1
+NVadsA10_v5 Linux,Standard_NV12ads_A10_v5,2
+NVadsA10_v5 Linux,Standard_NV18ads_A10_v5,3
+NVadsA10_v5 Linux,Standard_NV36adms_A10_v5,6
+NVadsA10_v5 Linux,Standard_NV36ads_A10_v5,6
+NVadsA10_v5 Linux,Standard_NV72ads_A10_v5,12
+NVasv4 Series,Standard_NV4as_v4,1
+NVasv4 Series,Standard_NV8as_v4,2
+NVasv4 Series,Standard_NV16as_v4,4
+NVasv4 Series,Standard_NV32as_v4,8
+NVasv4 Series Dedicated Host,NVasv4_Type1,1
+Red Hat Enterprise Linux,RHEL_1-4_vCPU,1
+Red Hat Enterprise Linux,RHEL_5plus_vCPU,2.166666667
+Red Hat Enterprise Linux for SAP with HA,RHEL_SAP_HA_1-4_vCPU,1
+Red Hat Enterprise Linux for SAP with HA,RHEL_SAP_HA_5plus_vCPU,2.333333333
+Red Hat Enterprise Linux with HA,RHEL_HA_1-4_vCPU,1
+Red Hat Enterprise Linux with HA,RHEL_HA_5plus_vCPU,2
+SQL AHUB,52 vCPU VM,1
+SQL AHUB,104 vCPU VM,2
+SQL on IaaS,Standard_SQLG7_AMD_IaaS,1
+SQLG7,SQLG7_NP104s,1
+SQLG7,SQLG7_IaaS,1.25
+SQLG7,Standard_SQLG7_NVME,1.625
+SQLG7,Standard_SQLG7_AMD_NVME,2
+SUSE Linux Enterprise Server Priority,SLES_Priority_1_vCPU_VM,1
+SUSE Linux Enterprise Server Priority,SLES_Priority_2-4_vCPU_VM,2
+SUSE Linux Enterprise Server Priority,SLES_Priority_6_vCPU_VM,3
+SUSE Linux Enterprise Server Priority,SLES_Priority_8plus_vCPU_VM,3.2
+SUSE Linux Enterprise Server Standard,SLES_Standard_1-2_vCPU_VM,1
+SUSE Linux Enterprise Server Standard,SLES_Standard_3-4_vCPU_VM,1.92308
+SUSE Linux Enterprise Server Standard,SLES_Standard_5plus_vCPU_VM,2.30769
+SUSE Linux Enterprise Server for HPC Priority,SLES_HPC_Priority_1-2_vCPU_VM,1
+SUSE Linux Enterprise Server for HPC Priority,SLES_HPC_Priority_3-4_vCPU_VM,2
+SUSE Linux Enterprise Server for HPC Priority,SLES_HPC_Priority_5plus_vCPU_VM,2.6
+SUSE Linux Enterprise Server for HPC Standard,SLES_HPC_Standard_1-2_vCPU_VM,1
+SUSE Linux Enterprise Server for HPC Standard,SLES_HPC_Standard_3-4_vCPU_VM,1.92308
+SUSE Linux Enterprise Server for HPC Standard,SLES_HPC_Standard_5plus_vCPU_VM,2.92308
+SUSE Linux Enterprise Server for SAP Standard,SLES_SAP_Priority_1-2_vCPU_VM,1
+SUSE Linux Enterprise Server for SAP Standard,SLES_SAP_Priority_3-4_vCPU_VM,2
+SUSE Linux Enterprise Server for SAP Standard,SLES_SAP_Priority_5plus_vCPU_VM,2.41176
+Virtual Machines HBrsv4-series Linux,Standard_HB176-144rs_v4,1
+Virtual Machines HBrsv4-series Linux,Standard_HB176-48rs_v4,1
+Virtual Machines HBrsv4-series Linux,Standard_HB176rs_v4,1
+Virtual Machines HBrsv4-series Linux,Standard_HB176-96rs_v4,1
+Virtual Machines HBrsv4-series Linux,Standard_HB176-24rs_v4,1
+Virtual Machines HXrs Linux,Standard_HX176-24rs,1
+Virtual Machines HXrs Linux,Standard_HX176-144rs,1
+Virtual Machines HXrs Linux,Standard_HX176-48rs,1
+Virtual Machines HXrs Linux,Standard_HX176-96rs,1
+Virtual Machines HXrs Linux,Standard_HX176rs,1
+Virtual Machines NDsr H100 v5-Series Linux,Standard_ND96is_H100_v5,1
+Virtual Machines NDsr H100 v5-Series Linux,Standard_ND96isr_H100_v5,1
+Virtual Machines Ndsrf H100 V5-Series Linux,Standard_ND96isrf_H100_v5,1
+Virtual Machines Ndsrf H100 V5-Series Linux,Standard_ND96isf_H100_v5,1
