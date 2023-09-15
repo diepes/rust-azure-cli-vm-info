@@ -122,7 +122,7 @@ fn print_summary(vms: &JsonValue) {
     // print summary
     println!();
     println!("# CSV summary output");
-    println!("count,currency,count,flex_group,price_consumption,price_1year,price_3years");
+    println!("count,currency,flex_group,price_consumption,price_1year,price_3years");
     for (k, p) in summary.iter() {
         println!(
             "{cnt},{cur},{k},{p0},{p1},{p3}",
