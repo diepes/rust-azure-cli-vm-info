@@ -112,7 +112,7 @@ fn print_summary(vms: &JsonValue) {
             );
         } else {
             println!(
-                " . Summary add new name:{name} vm_size:{vm_size} as flex_group:{flex_group} flex_ratio:{flex_ratio} "
+                "  Summary add new name:{name} vm_size:{vm_size} as flex_group:{flex_group} flex_ratio:{flex_ratio} "
             );
             let price = get_sku_pricing(&vm_size, flex_ratio);
             // println!("    {:?}", price);
