@@ -15,6 +15,11 @@ pub fn run(cmd: &str) -> json::JsonValue {
         println!("DEBUG cmd={cmd}", cmd = cmd.on_blue());
     }
     let cmds: Vec<&str> = split_and_strip(cmd);
+
+    if DEBUG > 0 {
+        eprintln!("run split cmds={:?}", cmds);
+    }
+
     // build command and add args
     let mut command = Command::new(cmds[0]);
     for (i, arg) in cmds.iter().enumerate() {
@@ -61,11 +66,11 @@ pub fn run(cmd: &str) -> json::JsonValue {
 
 fn split_and_strip(input: &str) -> Vec<&str> {
     RE.find_iter(input)
-        .map(|m| m.as_str().trim().trim_matches('\''))
+        .map(|m| m.as_str().trim().trim_matches('\'').trim_matches('"'))
         .collect()
 }
 lazy_static! {
-    static ref RE: Regex = Regex::new(r#"'([^']*)'\s*|([^'\s]*)\s*"#).unwrap();
+    static ref RE: Regex = Regex::new(r#"'([^']*)'\s*|\"([^\"]*)\"\s*|([^'\s]*)\s*"#).unwrap();
 }
 
 #[cfg(test)]
@@ -87,6 +92,15 @@ mod tests {
     fn test_split_and_strip_empty_quotes() {
         let input3 = "Empty '' Single Quotes";
         let expected3 = vec!["Empty", "", "Single", "Quotes"];
+        assert_eq!(split_and_strip(input3), expected3);
+    }
+    #[test]
+    fn test_quoted_url() {
+        let input3 = "curl \"https://mysite.com?\\$filter=name eq 'john' and surname eq 'smith'\"";
+        let expected3 = vec![
+            "curl",
+            "https://mysite.com?\\$filter=name eq 'john' and surname eq 'smith'",
+        ];
         assert_eq!(split_and_strip(input3), expected3);
     }
 }

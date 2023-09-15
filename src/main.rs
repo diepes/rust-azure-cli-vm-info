@@ -18,9 +18,15 @@ mod filter_keys;
 
 mod cmd;
 mod write_banner;
+use std::collections::HashMap;
 
 fn main() {
     dotenv::dotenv().ok();
+    // let p = get_sku_pricing(&"Standard_B2s");
+    // eprintln!("{p:#?}");
+    // if p.arm_region_name.len() > 0 {
+    //     panic!("The End");
+    // };
 
     let subs = cmd::run("az account list --query '[].name' --output json");
     let az_sub = subs[0].as_str().expect("ERR converting subs[0] to str");
@@ -74,7 +80,151 @@ fn main() {
         }
         println!();
     }
+    print_summary(&vms);
 }
+
+fn print_summary(vms: &JsonValue) {
+    eprintln!();
+    eprintln!();
+    eprintln!("# Generate summary of flex servers to reserve to cover all server.");
+    let mut summary: HashMap<String, Pricing> = HashMap::new();
+
+    for vm in vms.members() {
+        // println!(" summary vm={:?}", vm);
+        let name = vm["name"].to_string().clone();
+        let vm_size = vm["hardwareProfile"]["vmSize"].to_string().clone();
+        assert!(vm_size.len() > 4); //catch empty and null
+        let flex_group = vm["flex_group"].to_string().clone();
+        let flex_ratio = vm["flex_ratio"].to_string().parse::<f64>().expect(&format!(
+            "print_summary flex_ration not a number ? {:?}",
+            vm["flex_ratio"]
+        ));
+        // Retrieve the value associated with "key1" from the HashMap
+        if let Some(price) = summary.get(&flex_group) {
+            // Modify the retrieved data
+            let mut price = price.clone();
+            let total_ratio = price.add_ratio_count(flex_ratio);
+            // Update it back into the HashMap
+            summary.insert(String::from(flex_group.clone()), price.clone());
+            println!(
+                "  Summary update: {}-{} {} +{}={} ",
+                name, vm_size, flex_group, flex_ratio, total_ratio
+            );
+        } else {
+            println!(
+                " . Summary add new name:{name} vm_size:{vm_size} as flex_group:{flex_group} flex_ratio:{flex_ratio} "
+            );
+            let price = get_sku_pricing(&vm_size, flex_ratio);
+            // println!("    {:?}", price);
+            summary.insert(flex_group.clone(), price);
+        }
+    }
+    // print summary
+    println!();
+    println!("# CSV summary output");
+    println!("count,currency,count,flex_group,price_consumption,price_1year,price_3years");
+    for (k, p) in summary.iter() {
+        println!(
+            "{cnt},{cur},{k},{p0},{p1},{p3}",
+            cur=p.currency_code,
+            cnt=p.count,
+            p0=p.retail_price_consumption,
+            p1=p.retail_price_1year,
+            p3=p.retail_price_3year
+        );
+    }
+}
+
+#[derive(Debug, Clone)]
+pub struct Pricing {
+    arm_sku_name: String,
+    arm_region_name: String,
+    currency_code: String,
+    //type: String, Consumption, reservation
+    retail_price_consumption: String,
+    retail_price_1year: String,
+    retail_price_3year: String,
+    pub count: f64,
+}
+impl Pricing {
+    fn new(sku_name: &str, region: &str, currency: &str, count: f64) -> Self {
+        Self {
+            arm_sku_name: String::from(sku_name),
+            arm_region_name: String::from(region),
+            currency_code: String::from(currency),
+            retail_price_consumption: String::new(),
+            retail_price_1year: String::new(),
+            retail_price_3year: String::new(),
+            count: count,
+        }
+    }
+
+    fn add_ratio_count(&mut self, ratio: f64) -> f64 {
+        self.count += ratio;
+        self.count
+    }
+    fn update_price_consumption(&mut self, price: &str) {
+        self.retail_price_consumption = String::from(price);
+    }
+    fn update_price_1year(&mut self, price: &str) {
+        self.retail_price_1year = String::from(price);
+    }
+    fn update_price_3year(&mut self, price: &str) {
+        self.retail_price_3year = String::from(price);
+    }
+}
+fn get_sku_pricing(arm_sku_name: &str, flex_ratio: f64) -> Pricing {
+    //let arm_sku_name = "Standard_B2s";
+    let arm_region_name = "australiaeast";
+    let mut p: Pricing = Pricing::new(arm_sku_name, arm_region_name, "USD", flex_ratio);
+    let mut az_cmd = format!(
+        r#"
+        az rest --method get
+        --url "https://prices.azure.com/api/retail/prices?$filter=armRegionName eq '{arm_region_name}' and armSkuName eq '{arm_sku_name}'"
+        --output json
+        "#
+    );
+    az_cmd = az_cmd.trim_start().replace("\n", "");
+    // eprintln!("az_cmd={az_cmd}");
+    let data = cmd::run(&az_cmd);
+    // for o in data.members() {
+    //     println!("members {o}");
+    // }
+    let mut num_found = 0;
+    for options in data["Items"].members() {
+        assert!(p.arm_region_name == options["armRegionName"].to_string());
+        assert!(p.arm_sku_name == options["armSkuName"].to_string());
+        assert!(p.currency_code == options["currencyCode"].to_string());
+        let p_type = options["type"].to_string().clone();
+        let p_term = options["reservationTerm"].to_string().clone();
+        match (p_type.as_str(), p_term.as_str()) {
+            ("Consumption", "null") => {
+                p.update_price_consumption(&options["retailPrice"].to_string().as_str());
+                num_found += 1;
+            }
+            ("Reservation", "1 Year") => {
+                p.update_price_1year(&options["retailPrice"].to_string().as_str());
+                num_found += 1;
+            }
+
+            ("Reservation", "3 Years") => {
+                p.update_price_3year(&options["retailPrice"].to_string().as_str());
+                num_found += 1;
+            }
+
+            _ => (),
+        }
+
+    }
+    if num_found < 3 {
+        println!("arm_sku_name={} {}", arm_sku_name, flex_ratio);
+        println!("{:?}", data["Items"].members());
+        panic!("No price found !");
+    }
+
+    p
+}
+
 fn escape_csv_field(input: &str) -> String {
     if input.contains(',') || input.contains('"') {
         // If the string contains a comma or double quote, enclose it in double quotes
