@@ -1,24 +1,22 @@
 extern crate regex;
 use regex::Regex;
+use std::error::Error;
 
 extern crate lazy_static;
 use lazy_static::lazy_static;
 
+use serde_json::{Map, Value};
+
 use colored::Colorize;
 use std::process::Command;
 
-const DEBUG: usize = 0;
-
-pub fn run(cmd: &str) -> json::JsonValue {
+pub fn run(cmd: &str) -> Result<String, Box<dyn Error>> {
     // Use regex to split spaces and keep 'quoted sub' str together.
-    if DEBUG > 0 {
-        println!("DEBUG cmd={cmd}", cmd = cmd.on_blue());
-    }
+    log::debug!("run({cmd})", cmd = cmd.on_blue());
+
     let cmds: Vec<&str> = split_and_strip(cmd);
 
-    if DEBUG > 0 {
-        eprintln!("run split cmds={:?}", cmds);
-    }
+    log::trace!("split cmds={:?}", cmds);
 
     // build command and add args
     let mut command = Command::new(cmds[0]);
@@ -34,34 +32,74 @@ pub fn run(cmd: &str) -> json::JsonValue {
     let output = match out_result {
         Ok(out) => out,
         Err(e) => {
-            eprintln!("ERR {}", e);
-            panic!()
+            log::error!("ERR {}", e);
+            panic!("ERR {}", e)
         }
     };
 
     if output.status.success() {
-        if DEBUG > 0 {
-            eprintln!("Success cmd: {cmd}");
-            eprintln!("Success output: {output:?}");
-            eprintln!("Success output: {:?}", output.status.code());
-        }
+        log::debug!("Success cmd: {cmd}");
+        log::debug!("Success output.stdout.len(): {}", output.stdout.len());
+        log::debug!("Success output.status.code(): {:?}", output.status.code());
     } else {
         let stderr = String::from_utf8(output.stderr).expect("Error converting utf8");
-        eprintln!(
+        log::trace!(
             "code={code:?}, status={status}\n┎######\nstderr=\n{stderr}\n┖######",
             code = output.status.code(),
             status = output.status,
             stderr = stderr.red()
         );
-        panic!()
+        log::warn!(
+            "{failed} to run {cmd}",
+            failed = "failed".on_red(),
+            cmd = cmd.on_blue()
+        );
+        return Err(format!("ERROR running: {cmd}").into());
     }
 
     let stdout = String::from_utf8(output.stdout).expect("Error converting utf8");
-    let json_return = json::parse(&stdout).expect("Parse JsonValue failed");
-    if DEBUG > 1 {
-        eprintln!("json_return: '{:?}'", json_return.as_str());
-    }
-    json_return
+
+    // use std::fs::File;
+    // use std::io::Write;
+    // let file_name = "cmd_output.txt";
+    // let mut file = File::create(file_name).expect("Unable to create file");
+    // // Write the string to the file
+    // file.write_all(stdout.as_bytes())
+    //     .expect("Unable to write to file");
+    // log::warn!("output.stdout written to file {} successfully", file_name);
+    Ok(stdout)
+}
+
+pub fn string_to_json_vec_map(input: &str) -> Result<Vec<Map<String, Value>>, Box<dyn Error>> {
+    let json_value: serde_json::Value =
+        serde_json::from_str(&input).expect("Parse JsonValue failed");
+    let json_vec: Vec<Map<String, Value>> = match json_value {
+        Value::Array(array) => array
+            .into_iter()
+            .map(|v| v.as_object().unwrap().clone())
+            .collect(),
+        _ => {
+            log::error!("Expected a JSON array");
+            panic!("Expected a JSON array"); // Handle the case where the JSON value is not an array
+        }
+    };
+    Ok(json_vec)
+}
+
+pub fn string_to_json_vec_string(input: &str) -> Result<Vec<String>, Box<dyn Error>> {
+    let json_value: serde_json::Value =
+        serde_json::from_str(&input).expect("Parse JsonValue failed");
+    let json_vec: Vec<String> = match json_value {
+        Value::Array(array) => array
+            .into_iter()
+            .map(|v| format!("{}", v.as_str().unwrap()))
+            .collect(),
+        _ => {
+            log::error!("Expected a JSON array");
+            panic!("Expected a JSON array"); // Handle the case where the JSON value is not an array
+        }
+    };
+    Ok(json_vec)
 }
 
 fn split_and_strip(input: &str) -> Vec<&str> {

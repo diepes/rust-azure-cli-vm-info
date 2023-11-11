@@ -1,71 +1,83 @@
 /// Define keys we want from Azure VM's
 ///
+use serde::Deserialize;
 
-fn get_key_map() -> Vec<(usize, &'static str, &'static str)> {
-    // Keys witn 0 - removed, highter num sorted by priority 1-> 99
-    vec![
-        (0, "additionalCapabilities", ""),
-        (0, "applicationProfile", ""),
-        (0, "availabilitySet", ""),
-        (99, "billingProfile", ""),
-        (0, "capacityReservation", ""),
-        (0, "diagnosticsProfile", ""),
-        (0, "evictionPolicy", ""),
-        (0, "extendedLocation", ""),
-        (0, "extensionsTimeBudget", ""),
-        (99, "fqdns", ""), // --show-details
-        (14, "hardwareProfile", "vmSize"),
-        (0, "host", ""),
-        (0, "hostGroup", ""),
-        (0, "id", ""),
-        (0, "identity", ""),
-        (0, "instanceView", ""),
-        (0, "licenseType", ""),
-        (0, "location", ""),
-        (0, "macAddresses", ""), // --show-details
-        (1, "name", ""),
-        (0, "networkProfile", ""),
-        (0, "osProfile", ""),
-        (0, "plan", ""),
-        (0, "platformFaultDomain", ""),
-        (12, "powerState", ""), // --show-details
-        (0, "priority", ""),
-        (99, "privateIps", ""), // --show-details
-        (0, "provisioningState", ""),
-        (0, "proximityPlacementGroup", ""),
-        (99, "publicIps", ""), // --show-details
-        (15, "resourceGroup", ""),
-        (0, "resources", ""),
-        (0, "scheduledEventsProfile", ""),
-        (0, "securityProfile", ""),
-        (0, "storageProfile", ""),
-        (14, "tags", ""),
-        (0, "timeCreated", ""),
-        (0, "type", ""),
-        (0, "userData", ""),
-        (0, "virtualMachineScaleSet", ""),
-        (20, "vmId", ""),
-        (16, "zones", ""),
-    ]
+#[derive(Debug, Deserialize)]
+pub struct Vm {
+    // "additionalCapabilities", ""),
+    // "applicationProfile", ""),
+    // "availabilitySet", ""),
+    #[serde(rename = "billingProfile")]
+    pub billing_profile: Option<String>,
+    // "capacityReservation", ""),
+    // "diagnosticsProfile", ""),
+    // "evictionPolicy", ""),
+    // "extendedLocation", ""),
+    // "extensionsTimeBudget", ""),
+    pub fqdns: String, // --show-details
+    #[serde(rename = "hardwareProfile")]
+    pub hardware_profile: HardwareProfile,
+    // "host", ""),
+    // "hostGroup", ""),
+    // "id", ""),
+    // "identity", ""),
+    // "instanceView", ""),
+    // "licenseType", ""),
+    // "location", ""),
+    // "macAddresses", ""), // --show-details
+    pub name: String,
+    // "networkProfile", ""),
+    // "osProfile", ""),
+    // "plan", ""),
+    // "platformFaultDomain", ""),
+    #[serde(rename = "powerState")]
+    pub power_state: String, // --show-details
+    // "priority", ""),
+    #[serde(rename = "privateIps")]
+    pub private_ips: String, // --show-details
+    // "provisioningState", ""),
+    // "proximityPlacementGroup", ""),
+    #[serde(rename = "publicIps")]
+    pub public_ips: String, // --show-details
+    #[serde(rename = "resourceGroup")]
+    pub resource_group: String,
+    // "resources", ""),
+    // "scheduledEventsProfile", ""),
+    // "securityProfile", ""),
+    // "storageProfile", ""),
+    pub tags: Option<std::collections::BTreeMap<String, String>>,
+    // "timeCreated", ""),
+    // "type", ""),
+    // "userData", ""),
+    // "virtualMachineScaleSet", ""),
+    #[serde(rename = "vmId")]
+    pub vm_id: String,
+    pub zones: Option<Vec<String>>,
+    pub flex_lookup: Option<FlexLookUp>, // Added from csv lookup of flex options.
 }
-pub fn get_key_sort_order() -> Vec<(String, String)> {
-    let mut keys_in: Vec<(usize, &'static str, &'static str)> = get_key_map();
-    keys_in.sort_by(|a, b| a.0.cmp(&b.0));
 
-    let keys_out: Vec<(String, String)> = keys_in
-        .iter()
-        .filter(|&&(a, _, _)| a > 0) // return = true
-        .map(|v| (v.1.to_string(), v.2.to_string()))
-        .collect::<Vec<(String, String)>>();
-
-    keys_out
+#[derive(Debug, Deserialize)]
+pub struct HardwareProfile {
+    #[serde(rename = "vmSize")]
+    pub vm_size: String,
 }
-pub fn remove_key(k: &str) -> bool {
-    // match keys to ignore (return false)
-    for (prio, key, _sub_key) in get_key_map() {
-        if prio == 0 && key == k {
-            return true;
-        }
+
+// needs Clone so we can make a copy to read Some().fields
+#[derive(Debug, Deserialize, Clone)]
+pub struct FlexLookUp {
+    pub flex_group: String,
+    pub flex_sku_name: String,
+    pub flex_ratio: String,
+    pub flex_options: String,
+}
+
+impl Vm {
+    // Function to create a new Vm instance from a JSON string
+    pub fn from_json(json_str: &str) -> Result<Vm, serde_json::Error> {
+        serde_json::from_str(json_str)
     }
-    return false;
+    // Function to create a Vec<Vm> from a JSON array string
+    pub fn from_json_array(json_str: &str) -> Result<Vec<Vm>, serde_json::Error> {
+        serde_json::from_str(json_str)
+    }
 }
