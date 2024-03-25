@@ -15,6 +15,7 @@ use std::collections::HashMap;
 use std::error::Error;
 use std::process::ExitCode;
 
+mod az_identity;
 mod az_vms;
 mod filter_keys;
 mod pricing_data;
@@ -145,8 +146,7 @@ fn enrich_vm_fields(vms: &mut Vec<filter_keys::Vm>) {
         let csv_row = size_vec
             .iter()
             .find(|row| row.flex_sku_name == vm_size)
-            .expect("Unknow vm size not in csv?")
-            .clone(); // ensure we have our own copy of the matching row.
+            .expect("Unknow vm size not in csv?");
 
         // add new keys to vm
         let s = size_flex[&csv_row.flex_group].join(",");

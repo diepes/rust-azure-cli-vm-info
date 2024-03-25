@@ -41,6 +41,9 @@ pub fn run(cmd: &str) -> Result<String, Box<dyn Error>> {
         log::debug!("Success cmd: {cmd}");
         log::debug!("Success output.stdout.len(): {}", output.stdout.len());
         log::debug!("Success output.status.code(): {:?}", output.status.code());
+        if output.stdout.len() > 500000 {
+            panic! {"Response to much ? len={} cmds=[[{:#?}]]",output.stdout.len(),cmds}
+        };
     } else {
         let stderr = String::from_utf8(output.stderr).expect("Error converting utf8");
         log::trace!(

@@ -11,6 +11,11 @@ Requires a working azure-cli, as it runs az commands.
 * See - ./isfrationblob.csv we got from [https://learn.microsoft.com/en-us/azure/virtual-machines/reserved-vm-instance-size-flexibility]
   * [https://aka.ms/isf]
 
+## Run
+
+1. login ```az login```
+2. select correct tenant ```az login --tenant <tennant_id>```
+
 ## Code overview
 
 provides a ```cmd::run``` function to wrap ```std::process::Command```

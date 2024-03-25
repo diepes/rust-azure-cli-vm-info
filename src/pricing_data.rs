@@ -210,6 +210,7 @@ pub fn get_sku_pricing(
     let data_json = cmd::run(&az_cmd)?;
     log::trace!("data_json={:#?}", data_json);
     let data: AzurePricing = serde_json::from_str(&data_json)?;
+    log::debug!("AzurePricing data={:#?}", data);
     //#
     let mut num_found = 0;
     let mut spot_found = false;
@@ -290,7 +291,7 @@ pub fn get_sku_pricing(
     }
     if num_found != 3 {
         log::error!(
-            "We should only find 3 valid prices - Consumption, 1y, 3y, we got {num_found}  spot={spot_found}"
+            "We should only find 3 valid prices - [Consumption, 1y, 3y], we got {num_found}  spot={spot_found} arm_sku_name='{arm_sku_name}' flex_base_sku_name='{flex_base_sku_name}' guess_sku_name='{guess_sku_name}'"
         );
         println!("arm_sku_name={} {}", arm_sku_name, flex_ratio);
         //println!("{:?}", data.items);

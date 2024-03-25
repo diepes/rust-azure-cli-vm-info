@@ -7,7 +7,7 @@ pub struct Vm {
     // "additionalCapabilities", ""),
     // "applicationProfile", ""),
     // "availabilitySet", ""),
-    #[serde(rename = "billingProfile")]
+    #[serde(rename = "billingProfile.maxPrice")]
     pub billing_profile: Option<String>,
     // "capacityReservation", ""),
     // "diagnosticsProfile", ""),

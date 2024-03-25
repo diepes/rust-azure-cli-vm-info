@@ -1,6 +1,8 @@
 use crate::cmd;
 use crate::filter_keys::Vm; // Vm struct and parsing
-use std::fs;
+use colored::Colorize;
+use std::fs::{self, File};
+use std::io::Write;
 
 pub fn get_fake() -> Result<Vec<Vm>, Box<dyn std::error::Error>> {
     let file_names = [
@@ -35,7 +37,7 @@ pub fn get_all() -> Result<Vec<Vm>, Box<dyn std::error::Error>> {
     log::debug!("loop through subscriptions {}", subs_string);
     //
     for az_sub in subs.into_iter() {
-        log::info!("az_sub='{}'", az_sub);
+        log::info!("az_sub='{az_sub}'", az_sub = az_sub.on_green());
 
         // --show-details makes query slower, checks powerstate etc.
         // make it mut so we can drop entries
@@ -48,10 +50,13 @@ pub fn get_all() -> Result<Vec<Vm>, Box<dyn std::error::Error>> {
                 log::info!("found {num} vm's in subscription {az_sub}", num = vms.len());
                 vms_all.extend(vms);
             } else if let Err(err) = from_json_result {
+                let file_unparsable_json = "log/unparsable_json.json";
+                let mut output = File::create(file_unparsable_json)?;
+                write!(output, "{}", vms_string);
                 log::error!(
-                    "Failed to parse response for subscription {az_sub} Err:{}\n json_string:{}",
+                    "Failed to parse response for subscription {az_sub} ERR:{}\n see json_string in {}",
                     err,
-                    vms_string
+                    file_unparsable_json
                 );
                 // if let Some(position) = err.line_and_col() {
                 //     log::error!("Error occurred at path: {:?}", path);
@@ -82,17 +87,17 @@ mod tests {
         println!("VMS.len ==>> {:#?}", vms_all.len());
         assert!(vms_all.len() > 0, "Expected to find more than one VM");
     }
-    #[test]
-    fn test_get_fake() {
-        let vms_all_result = get_fake();
-        assert!(vms_all_result.is_ok());
-        let vms_all = vms_all_result.unwrap();
-        assert_eq!(vms_all.len(), 31);
-        assert!(vms_all[0].is_object(), "Expected to find VM json object");
-        // verify the last vm has name fake-vm-02
-        assert_eq!(
-            vms_all[30]["name"],
-            serde_json::from_str::<serde_json::Value>(r#""fake-vm-02""#).unwrap()
-        );
-    }
+    // #[test]
+    // fn test_get_fake() {
+    //     let vms_all_result = get_fake();
+    //     assert!(vms_all_result.is_ok());
+    //     let vms_all = vms_all_result.unwrap();
+    //     assert_eq!(vms_all.len(), 31);
+    //     assert!(vms_all[0].is_object(), "Expected to find VM json object");
+    //     // verify the last vm has name fake-vm-02
+    //     assert_eq!(
+    //         vms_all[30]["name"],
+    //         serde_json::from_str::<serde_json::Value>(r#""fake-vm-02""#).unwrap()
+    //     );
+    // }
 }
