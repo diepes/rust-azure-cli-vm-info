@@ -3,20 +3,16 @@
 use dotenv;
 use log;
 
-// https://docs.rs/json/latest/json/
-// extern crate json;
-// use json::JsonValue;
-//use serde_json::Value;
 use serde_json::{Map, Value};
 
 use itertools::Itertools;
 use std::collections::HashMap;
 
 use std::error::Error;
-use std::process::ExitCode;
+// use std::process::ExitCode;
 
-mod az_identity;
-mod az_vms;
+pub mod az;
+pub mod az_vms;
 mod filter_keys;
 mod pricing_data;
 mod read_csv;
@@ -24,24 +20,7 @@ mod read_csv;
 mod cmd;
 mod write_banner;
 
-pub fn run() -> Result<ExitCode, Box<dyn Error>> {
-    dotenv::dotenv().ok();
-    log::info!("#Start run()");
-
-    let mut vms = az_vms::get_all()?;
-    //let mut vms = az_vms::get_fake()?;
-
-    log::info!("got all vm's {}", vms.len());
-
-    log::debug!("add flex group and ratios for each vm");
-    enrich_vm_fields(&mut vms);
-
-    //# print_vms(&vms, &print_keys, &az_sub);
-    print_summary(&vms)?;
-    return Ok(ExitCode::from(0));
-}
-
-fn print_summary(vms: &Vec<filter_keys::Vm>) -> Result<(), Box<dyn Error>> {
+pub fn print_summary(vms: &Vec<filter_keys::Vm>) -> Result<(), Box<dyn Error>> {
     eprintln!();
     eprintln!();
     eprintln!("# Generate summary of flex servers to reserve to cover all server.");
@@ -133,7 +112,7 @@ fn escape_csv_field(input: &str) -> String {
     }
 }
 
-fn enrich_vm_fields(vms: &mut Vec<filter_keys::Vm>) {
+pub fn enrich_vm_fields(vms: &mut Vec<filter_keys::Vm>) {
     // Azure source 2023-09 Instance size flexibility ratios https://aka.ms/isf
     // enrich vm info with flex group and count from csv
     let get_csv = read_csv::get_azure_flex_groups_from_csv();

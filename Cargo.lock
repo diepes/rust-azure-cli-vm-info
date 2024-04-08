@@ -98,8 +98,11 @@ version = "0.1.0"
 dependencies = [
  "azure_core",
  "azure_identity",
+ "azure_mgmt_compute",
+ "azure_mgmt_subscription",
  "colored",
  "dotenv",
+ "futures",
  "itertools",
  "json",
  "lazy_static",
@@ -158,6 +161,38 @@ dependencies = [
  "tz-rs",
  "url",
  "uuid",
+]
+
+[[package]]
+name = "azure_mgmt_compute"
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1af4e1c2759749d26b6fac3df4cf3e5176f75a44b4d520d8a85e7e9a9150b8e8"
+dependencies = [
+ "azure_core",
+ "bytes",
+ "futures",
+ "log",
+ "once_cell",
+ "serde",
+ "serde_json",
+ "time",
+]
+
+[[package]]
+name = "azure_mgmt_subscription"
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae4e54b88482dc72b8bc9ef1449009b335e10e4eb9197315e68cf0d95b329d05"
+dependencies = [
+ "azure_core",
+ "bytes",
+ "futures",
+ "log",
+ "once_cell",
+ "serde",
+ "serde_json",
+ "time",
 ]
 
 [[package]]
@@ -1893,6 +1928,30 @@ name = "tinyvec_macros"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
+
+[[package]]
+name = "tmprust"
+version = "0.1.0"
+dependencies = [
+ "azure_core",
+ "azure_identity",
+ "azure_mgmt_compute",
+ "azure_mgmt_subscription",
+ "colored",
+ "dotenv",
+ "futures",
+ "itertools",
+ "json",
+ "lazy_static",
+ "log",
+ "log4rs",
+ "regex",
+ "reqwest 0.12.1",
+ "serde",
+ "serde_json",
+ "term",
+ "tokio",
+]
 
 [[package]]
 name = "tokio"

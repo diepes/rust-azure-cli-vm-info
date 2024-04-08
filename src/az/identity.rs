@@ -1,5 +1,4 @@
 use azure_core::auth::AccessToken;
-//use graph_rs_sdk::*; // https://lib.rs/crates/graph-rs-sdk#readme-usage
 use azure_core::{auth::TokenCredential, Url};
 use azure_identity::DefaultAzureCredential;
 
@@ -8,47 +7,58 @@ use serde::Deserialize;
 use std::env;
 use std::error::Error;
 
+use azure_identity::AzureCliCredential;
+// use futures::stream::StreamExt;
+use std::sync::Arc;
+
 //#[tokio::main]
-async fn az_get_accesstoken() -> Result<AccessToken, Box<dyn Error>> {
-    let credential = DefaultAzureCredential::default();
+pub async fn az_get_accesstoken() -> Result<AccessToken, Box<dyn Error>> {
+    // let credential = DefaultAzureCredential::default();
+    let credential = Arc::new(AzureCliCredential::new());
     let response = credential
         .get_token(&["https://management.azure.com/.default"])
         .await?;
     // println!("{:?}", response);
     Ok(response)
 }
+pub async fn az_get_credentials() -> Result<Arc<AzureCliCredential>, Box<dyn Error>> {
+    // let credential = DefaultAzureCredential::default();
+    let credentials = Arc::new(AzureCliCredential::new());
+    Ok(credentials)
+}
+
 #[derive(Debug, PartialEq, Deserialize)]
 pub struct Subscriptions {
-    value: Vec<Subscription>,
-    count: Count,
+    pub value: Vec<Subscription>,
+    pub count: Count,
 }
 
 #[derive(Debug, PartialEq, Deserialize)]
 pub struct Count {
     #[serde(rename = "type")]
     count_type: String,
-    value: usize,
+    pub value: usize,
 }
 
 #[derive(Debug, PartialEq, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Subscription {
-    id: String,
-    authorization_source: String,
-    managed_by_tenants: Vec<Option<serde_json::Value>>,
-    subscription_id: String,
-    tenant_id: String,
-    display_name: String,
-    state: String,
-    subscription_policies: SubscriptionPolicies,
+    pub id: String,
+    pub authorization_source: String,
+    pub managed_by_tenants: Vec<Option<serde_json::Value>>,
+    pub subscription_id: String,
+    pub tenant_id: String,
+    pub display_name: String,
+    pub state: String,
+    pub subscription_policies: SubscriptionPolicies,
 }
 
 #[derive(Debug, PartialEq, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct SubscriptionPolicies {
-    location_placement_id: String,
-    quota_id: String,
-    spending_limit: String,
+    pub location_placement_id: String,
+    pub quota_id: String,
+    pub spending_limit: String,
 }
 impl Subscriptions {
     // Function to create a new Vm instance from a JSON string
@@ -56,8 +66,14 @@ impl Subscriptions {
         let subscriptions = serde_json::from_str(json_str);
         subscriptions
     }
+    pub fn len(&self) -> usize {
+        let count = self.value.len();
+        assert_eq!(count, self.count.value);
+        count
+    }
 }
-async fn az_get_subscriptions(az_token: &AccessToken) -> Result<Subscriptions, Box<dyn Error>> {
+
+pub async fn az_get_subscriptions(az_token: &AccessToken) -> Result<Subscriptions, Box<dyn Error>> {
     let url = Url::parse(&format!(
         "https://management.azure.com/subscriptions?api-version=2022-12-01"
     ))?;
@@ -73,18 +89,18 @@ async fn az_get_subscriptions(az_token: &AccessToken) -> Result<Subscriptions, B
         .text()
         .await?;
 
-    println!("{:?}", response);
-    // let subs_json: serde_json::Value =
-    //     serde_json::from_str(&response).expect("JSON was not well-formatted");
+    log::debug!("{:?}", response);
     let subs_json = Subscriptions::from_json(&response).expect("JSON was not well-formatted");
     Ok(subs_json)
 }
 
-async fn az_storage(az_token: &AccessToken, subscription_id: &str) -> Result<String, Box<dyn Error>> {
+async fn az_storage(
+    az_token: &AccessToken,
+    subscription_id: &str,
+) -> Result<String, Box<dyn Error>> {
     // NOTE: AZ Tenant(org) has multiple Subscriptions
     // let subscription_id =
     //     env::var("AZURE_SUBSCRIPTION_ID").expect("No 'AZURE_SUBSCRIPTION_ID' env var.");
-    //let subscription_id = "07e47c7e-9339-473b-8138-adb77559c551"; // homeTenantId / tenantId
     let url = Url::parse(&format!(
         "https://management.azure.com/subscriptions/{}/providers/Microsoft.Storage/storageAccounts?api-version=2019-06-01",
         subscription_id))?;
@@ -107,7 +123,6 @@ async fn az_storage(az_token: &AccessToken, subscription_id: &str) -> Result<Str
 #[cfg(test)]
 mod tests {
     use super::*;
-    static ACCESS_TOKEN: &str = "ACCESS_TOKEN";
     //#[test]
     #[tokio::test]
     async fn test_az_get_accesstoken_and_subscriptions() {
@@ -118,7 +133,7 @@ mod tests {
         let subs = az_get_subscriptions(&r).await;
         assert!(matches!(&subs, Ok(_)), "Not logged in with az login ? ");
         let subs = subs.unwrap();
-        assert_eq!(subs.count.value , 8);
+        assert_eq!(subs.count.value, 8);
         // println!("subs {:?}", subs);
 
         let st = az_storage(&r, &subs.value[0].subscription_id).await;
@@ -177,8 +192,11 @@ mod tests {
             Subscriptions::from_json(&test_response).expect("JSON was not well-formatted");
         assert_eq!(
             subs_json.count,
-            Count { count_type: "Total".to_string(), value: 8 }     
-            );
+            Count {
+                count_type: "Total".to_string(),
+                value: 8
+            }
+        );
     }
     #[test]
     fn test_az_parse_simple_subscription() {
@@ -194,8 +212,11 @@ mod tests {
             Subscriptions::from_json(&test_response).expect("JSON was not well-formatted");
         assert_eq!(
             subs_json.count,
-            Count { count_type: "Total".to_string(), value: 18 }     
-            );
+            Count {
+                count_type: "Total".to_string(),
+                value: 18
+            }
+        );
     }
     // #[test]
     // fn test_az4() {

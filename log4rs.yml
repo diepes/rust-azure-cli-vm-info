@@ -26,8 +26,8 @@ appenders:
 # the appender that prints to stdout will only print if the log level of the message is warn or above
 root:
   # level: warn
-  # level: info 
-  level: debug
+  level: info 
+  # level: debug
   appenders:
     #- stdout
     - colored_console

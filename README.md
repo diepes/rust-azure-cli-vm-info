@@ -15,8 +15,11 @@ Requires a working azure-cli, as it runs az commands.
 
 1. login ```az login```
 2. select correct tenant ```az login --tenant <tennant_id>```
+3. cargo run
 
 ## Code overview
+
+* Tests cargo test
 
 provides a ```cmd::run``` function to wrap ```std::process::Command```
 
