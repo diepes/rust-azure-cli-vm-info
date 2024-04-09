@@ -1,3 +1,4 @@
+// use azure_mgmt_compute::models::VirtualMachine;
 use azure_vm_info::{self, az}; // Import lib.rs (library)
 use log4rs;
 //use tokio::main;
@@ -17,16 +18,24 @@ async fn main() -> Result<(), Box<dyn Error>> {
     log::info!("got az subscriptions 2/2: #{}", count_total_subscriptions);
 
     let mut count_total_vms = 0;
-    for subscription in &subs.value {
-        let subscription_id = &(subscription.subscription_id.clone().unwrap());
-        let vms = az::vmlist::get_vms(subscription_id).await;
-        let cnt_vms = vms.unwrap().value.len();
-        count_total_vms += cnt_vms;
-        log::info!("vms: #{:?} subscription: {}", cnt_vms, subscription_id);
+    let mut vms = az::vmlist::VirtualMachines{ 0: vec![]};
+    for subscription in &subs.0 {
+        let subscription_id = &subscription.subscription_id;
+        let mut vms_sub = az::vmlist::get_vms(subscription_id)
+            .await
+            .expect("Error retrieving VM's");
+        let cnt_vms_sub = vms_sub.0.len();
+        // for vm in vms.value {
+        //     println!("VM: {} id:{}", vm.name, vm.id);
+        // }
+        count_total_vms += cnt_vms_sub;
+        vms.0.append(&mut vms_sub.0);
+        log::info!("vms: #{:?} subscription: {}", cnt_vms_sub, subscription_id);
     }
     log::info!(
-        "Total vms: #{} subscription: #{}",
+        "Total vms: #{}={} subscription: #{}",
         count_total_vms,
+        vms.0.len(),
         count_total_subscriptions
     );
 

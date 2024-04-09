@@ -11,24 +11,20 @@ use std::sync::Arc;
 //#[tokio::main]
 
 #[derive(Debug, PartialEq)]
-pub struct Subscriptions {
-    pub value: Vec<azure_mgmt_subscription::models::Subscription>,
-}
+pub struct Subscriptions(pub Vec<Subscription>);
 
 #[derive(Debug, PartialEq)]
-pub struct Subscriptionx {
-    pub id: String,
-    pub authorization_source: String,
+pub struct Subscription {
     pub subscription_id: String,
-    pub tenant_id: String,
     pub display_name: String,
-    pub state: String,
+    pub state: azure_mgmt_subscription::models::subscription::State,
+    pub az: azure_mgmt_subscription::models::Subscription, // Value from Rust Azure generated api
 }
 
 impl Subscriptions {
     // Function to create a new Vm instance from a JSON string
     pub async fn new() -> Subscriptions {
-        let mut subs_vec: Vec<azure_mgmt_subscription::models::Subscription> = vec![];
+        let mut subs_vec: Vec<Subscription> = vec![];
         let credential = Arc::new(AzureCliCredential::new());
         let subscriptions_client = azure_mgmt_subscription::Client::builder(credential)
             .build()
@@ -40,13 +36,18 @@ impl Subscriptions {
         while let Some(subscriptions) = subscriptions_pagable.next().await {
             for sub in subscriptions.unwrap().value {
                 // println!("sub: {:?}\n\n", sub);
-                subs_vec.push(sub);
+                subs_vec.push(Subscription {
+                    subscription_id: sub.subscription_id.clone().unwrap(),
+                    display_name: sub.display_name.clone().unwrap(),
+                    state: sub.state.clone().unwrap(),
+                    az: sub,
+                });
             }
         }
-        Subscriptions { value: subs_vec }
+        Subscriptions{ 0: subs_vec }
     }
     pub fn len(&self) -> usize {
-        let count = self.value.len();
+        let count = self.0.len();
         count
     }
 }

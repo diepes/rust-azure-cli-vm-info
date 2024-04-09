@@ -3,7 +3,7 @@
 use dotenv;
 use log;
 
-use serde_json::{Value};
+use serde_json::Value;
 
 use itertools::Itertools;
 use std::collections::HashMap;
@@ -12,7 +12,7 @@ use std::error::Error;
 // use std::process::ExitCode;
 
 pub mod az; // subscritpions & vmlist
-// pub mod az_vms;
+            // pub mod az_vms;
 mod filter_keys;
 mod pricing_data;
 mod read_csv;
