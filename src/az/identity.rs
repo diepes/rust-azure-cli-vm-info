@@ -1,10 +1,10 @@
 use azure_core::auth::AccessToken;
 use azure_core::{auth::TokenCredential, Url};
-use azure_identity::DefaultAzureCredential;
+// use azure_identity::DefaultAzureCredential;
 
 use serde::Deserialize;
 
-use std::env;
+// use std::env;
 use std::error::Error;
 
 use azure_identity::AzureCliCredential;

@@ -1,4 +1,4 @@
-workspace = { members = ["tmp_rust/tmprust"] }
+# workspace = { members = ["tmp_rust/tmprust"] }
 [package]
 name = "azure-vm-info"
 version = "0.1.0"
