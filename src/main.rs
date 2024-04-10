@@ -18,9 +18,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
     log::info!("got az subscriptions 2/2: #{}", count_total_subscriptions);
 
     let mut count_total_vms = 0;
-    let mut vms = az::vmlist::VirtualMachines{ 0: vec![]};
+    let mut vms = az::vmlist::VirtualMachines { 0: vec![] };
     for subscription in &subs.0 {
         let subscription_id = &subscription.subscription_id;
+        let subscription_name = &subscription.display_name;
         let mut vms_sub = az::vmlist::get_vms(subscription_id)
             .await
             .expect("Error retrieving VM's");
@@ -30,7 +31,12 @@ async fn main() -> Result<(), Box<dyn Error>> {
         // }
         count_total_vms += cnt_vms_sub;
         vms.0.append(&mut vms_sub.0);
-        log::info!("vms: #{:?} subscription: {}", cnt_vms_sub, subscription_id);
+        log::info!(
+            "vms: #{:?} subscription: '{}' {}",
+            cnt_vms_sub,
+            subscription_name,
+            subscription_id
+        );
     }
     log::info!(
         "Total vms: #{}={} subscription: #{}",
@@ -40,7 +46,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     );
 
     log::debug!("add flex group and ratios for each vm");
-    //azure_vm_info::enrich_vm_fields(&mut vms);
+    azure_vm_info::enrich_vm_fields(&mut vms);
 
     //# print_vms(&vms, &print_keys, &az_sub);
     //azure_vm_info::print_summary(&vms)?;

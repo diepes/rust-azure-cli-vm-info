@@ -44,7 +44,7 @@ impl Subscriptions {
                 });
             }
         }
-        Subscriptions{ 0: subs_vec }
+        Subscriptions { 0: subs_vec }
     }
     pub fn len(&self) -> usize {
         let count = self.0.len();

@@ -1,6 +1,6 @@
 // cargo watch -x 'fmt' -x 'run'  // 'run -- --some-arg'
 
-use dotenv;
+// use dotenv;
 use log;
 
 use serde_json::Value;
@@ -20,18 +20,19 @@ mod read_csv;
 mod cmd;
 mod write_banner;
 
-pub fn print_summary(vms: &Vec<filter_keys::Vm>) -> Result<(), Box<dyn Error>> {
+pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Error>> {
     eprintln!();
     eprintln!();
     eprintln!("# Generate summary of flex servers to reserve to cover all server.");
     // sum Pricing per flex_group
     let mut summary: HashMap<String, pricing_data::Pricing> = HashMap::new();
 
-    for (i, vm) in vms.iter().enumerate() {
+    for (i, vm) in vms.0.iter().enumerate() {
         // println!(" summary vm={:?}", vm);
         let name = &vm.name;
-        let vm_size = &vm.hardware_profile.vm_size;
-        let vm_power_state = &vm.power_state;
+        let vm_size = &vm.vm_size;
+        // let vm_power_state = &vm.power_state;
+        let vm_power_state = "VM running";
         assert!(vm_size.len() > 4); //catch empty and null
         let vm_flex_lookup = vm.flex_lookup.clone().unwrap();
         let flex_group = vm_flex_lookup.flex_group;
@@ -112,24 +113,24 @@ fn escape_csv_field(input: &str) -> String {
     }
 }
 
-pub fn enrich_vm_fields(vms: &mut Vec<filter_keys::Vm>) {
+pub fn enrich_vm_fields(vms: &mut az::vmlist::VirtualMachines) {
     // Azure source 2023-09 Instance size flexibility ratios https://aka.ms/isf
     // enrich vm info with flex group and count from csv
     let get_csv = read_csv::get_azure_flex_groups_from_csv();
     // get csv size_vec vm,flex,cnt   and size_flex flex_size and vec of unit 1 options
     let (size_vec, size_flex) = get_csv.get().expect("No csv data ??");
-    for vm in vms {
-        let vm_size = vm.hardware_profile.vm_size.clone();
+    for vm in &mut vms.0 {
+        let vm_size = vm.vm_size.clone();
 
         // search size_vec for match for current vm_size
         let csv_row = size_vec
             .iter()
             .find(|row| row.flex_sku_name == vm_size)
-            .expect("Unknow vm size not in csv?");
+            .expect(&format!("Unknow vm_size='{}' not in csv?", vm_size));
 
         // add new keys to vm
         let s = size_flex[&csv_row.flex_group].join(",");
-        let vm_flex = filter_keys::FlexLookUp {
+        let vm_flex = az::vmlist::FlexLookUp {
             flex_group: csv_row.flex_group.to_string(),
             flex_sku_name: csv_row.flex_sku_name.to_string(),
             flex_ratio: csv_row.flex_ratio.to_string(),
