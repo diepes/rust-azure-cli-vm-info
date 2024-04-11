@@ -28,13 +28,16 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
     let mut summary: HashMap<String, pricing_data::Pricing> = HashMap::new();
 
     for (i, vm) in vms.0.iter().enumerate() {
-        // println!(" summary vm={:?}", vm);
+        log::info!(" vm.flex_lookup={:?}", vm.flex_lookup);
         let name = &vm.name;
         let vm_size = &vm.vm_size;
         // let vm_power_state = &vm.power_state;
         let vm_power_state = "VM running";
         assert!(vm_size.len() > 4); //catch empty and null
-        let vm_flex_lookup = vm.flex_lookup.clone().unwrap();
+        let vm_flex_lookup = vm
+            .flex_lookup
+            .clone()
+            .expect(&format!("No flex_lookup data for vm:{name} ?"));
         let flex_group = vm_flex_lookup.flex_group;
         let flex_ratio = vm_flex_lookup.flex_ratio.parse::<f64>().expect(&format!(
             "print_summary flex_ration not a number ? {:?}",
@@ -49,6 +52,7 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
         } else {
             0.0
         };
+        // see if we already have this flex_group lookup.
         if let Some(price) = summary.get_mut(&flex_group) {
             log_current_total_flex = price.add_ratio_count(flex_add);
             log_msg = "Summary update:";
@@ -60,8 +64,9 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
             summary.insert(flex_group.clone(), price);
         }
         log::info!(
-            r#"{log_msg}{:2}, {name}, {vm_size}, =flex:,{flex_group}, {flex_ratio}, {flex_add}, total:{log_current_total_flex}, flexOpt:{flex_options}, {vm_power_state}"#,
-            i + 1
+            r#"{log_msg}{num:2}, {name}, {vm_size}, =flex:,{flex_group}, {flex_ratio}, {flex_add}, total:{log_current_total_flex}, flexOpt:{flex_options}, {vm_power_state}"#,
+            num = i + 1,
+            flex_options = flex_options.join(", "),
         );
     }
     // print summary
@@ -129,12 +134,12 @@ pub fn enrich_vm_fields(vms: &mut az::vmlist::VirtualMachines) {
             .expect(&format!("Unknow vm_size='{}' not in csv?", vm_size));
 
         // add new keys to vm
-        let s = size_flex[&csv_row.flex_group].join(",");
+        //let s = size_flex[&csv_row.flex_group].join(",");
         let vm_flex = az::vmlist::FlexLookUp {
             flex_group: csv_row.flex_group.to_string(),
             flex_sku_name: csv_row.flex_sku_name.to_string(),
             flex_ratio: csv_row.flex_ratio.to_string(),
-            flex_options: s,
+            flex_options: size_flex[&csv_row.flex_group].clone(),
         };
         vm.flex_lookup = Some(vm_flex);
     }

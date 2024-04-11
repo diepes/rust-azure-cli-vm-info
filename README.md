@@ -10,7 +10,7 @@ Requires a working azure-cli, as it runs az commands.
 * Azure flex group, allows for reservaton of small size vm in a family group and then apply the savings to it and bigger vms.
 * See - ./isfrationblob.csv we got from [https://learn.microsoft.com/en-us/azure/virtual-machines/reserved-vm-instance-size-flexibility]
   * [https://aka.ms/isf]
-  * 2024-04-10 missing 'Standard_A2_v2'
+  * 2024-04-10 missing 'Standard_A2_v2' update isfrationblob.csv with latest fInstance size flex ratios.
 
 ## Run
 

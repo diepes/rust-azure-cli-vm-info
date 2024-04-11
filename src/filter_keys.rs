@@ -1,6 +1,14 @@
 /// Define keys we want from Azure VM's
 ///
 use serde::Deserialize;
+// needs Clone so we can make a copy to read Some().fields
+#[derive(Debug, Deserialize, Clone)]
+pub struct FlexLookUp {
+    pub flex_group: String,
+    pub flex_sku_name: String,
+    pub flex_ratio: String,
+    pub flex_options: String,
+}
 
 // #[derive(Debug, Deserialize)]
 // pub struct Vm {
@@ -61,15 +69,6 @@ use serde::Deserialize;
 //     #[serde(rename = "vmSize")]
 //     pub vm_size: String,
 // }
-
-// needs Clone so we can make a copy to read Some().fields
-#[derive(Debug, Deserialize, Clone)]
-pub struct FlexLookUp {
-    pub flex_group: String,
-    pub flex_sku_name: String,
-    pub flex_ratio: String,
-    pub flex_options: String,
-}
 
 // impl Vm {
 //     // Function to create a new Vm instance from a JSON string

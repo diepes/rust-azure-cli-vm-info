@@ -34,7 +34,7 @@ pub struct FlexLookUp {
     pub flex_group: String,
     pub flex_sku_name: String,
     pub flex_ratio: String,
-    pub flex_options: String,
+    pub flex_options: Vec<String>,
 }
 impl VM {
     pub fn new(
