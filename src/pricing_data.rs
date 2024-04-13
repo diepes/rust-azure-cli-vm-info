@@ -66,10 +66,11 @@ pub fn get_sku_pricing(
     );
     let mut num_found = 0;
     let mut spot_found = false;
+    let mut spot_found_win = false;
     for (i, price_option) in data.prices.iter().enumerate() {
         // if price_option.arm_sku_name != flex_base_sku_name {
         let (po_sku_name, po_sku_name_type) =
-            crate::cleanup_vm_name::split_price_type(&price_option.sku_name);
+            crate::cleanup_vm_name::split_price_type(price_option);
         let po_sku_name_guess =
             crate::cleanup_vm_name::split_and_cleanup_name(&po_sku_name)[0].clone();
         if (price_option.sku_name != flex_base_sku_name) && (po_sku_name_guess != guess_sku_name) {
@@ -135,14 +136,6 @@ pub fn get_sku_pricing(
             sn = price_option.sku_name,
         );
 
-        if price_option.product_name.ends_with("Windows") {
-            log::debug!(
-                "i={i} Skip priceing for Windows sku_name='{}', product_name='{}'",
-                price_option.sku_name,
-                price_option.product_name
-            );
-            continue;
-        }
         if !regex_product_name.is_match(&price_option.product_name) {
             log::warn!(
                 "i={i} Skip unknown product '{}' looking for regex match '{pattern_product_name}' service_name={}",
@@ -168,10 +161,15 @@ pub fn get_sku_pricing(
                 log::debug!("i={i} num_found={num_found} match #1 pay as you go Consumption");
             }
 
-            ("Consumption", None, po_name, VmPriceType::Spot)
-                // if (po_name == &format!("{} Spot", guess_sku_name))
-                //    || (po_name == &format!("{} Spot", price_option.sku_name)) =>
-                =>
+            ("Consumption", None, po_name, VmPriceType::NormalWindows)
+                if (po_name == &guess_sku_name) =>
+            {
+                p.update_price_1hr_consumption_windows(price_option.retail_price);
+                num_found += 1;
+                log::debug!("i={i} num_found={num_found} match #1 pay as you go Consumption Windows");
+            }
+
+            ("Consumption", None, po_name, VmPriceType::Spot) =>
             {
                 // We can have normal or spot or something else
                 p.update_price_1hr_spot(price_option.retail_price);
@@ -181,10 +179,15 @@ pub fn get_sku_pricing(
                 log::debug!("i={i}+spot num_found={num_found} match #1 SPOT Consumption");
             }
 
-            ("Consumption", None, po_name, VmPriceType::LowPriority)
-                // if (po_name == &format!("{} Low Priority", guess_sku_name))
-                //     || (po_name == &format!("{} Low Priority", price_option.sku_name))
-                    =>
+            ("Consumption", None, po_name, VmPriceType::SpotWindows) =>
+            {
+                p.update_price_1hr_spot_windows(price_option.retail_price);
+                assert_eq!(spot_found_win, false, "2nd Spot instance ??");
+                spot_found_win = true;
+                log::debug!("i={i}+spotWIN num_found={num_found} match #1 SPOT Consumption WIN");
+            }
+
+            ("Consumption", None, po_name, VmPriceType::LowPriority) =>
             {
                 // We can have normal or spot or something else
                 log::debug!("i={i} skip 'Low Priority' vm, ToDo add to pricing");
@@ -192,7 +195,7 @@ pub fn get_sku_pricing(
 
             ("Reservation", Some(value), po_name, VmPriceType::Normal)
                 if (po_name == &guess_sku_name)
-                    && value == "1 Year" =>
+                    && (value == "1 Year") =>
             {
                 p.update_price_1year(price_option.retail_price);
                 num_found += 1;

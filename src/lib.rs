@@ -73,32 +73,46 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
     // print summary
     println!();
     println!("# CSV summary output");
-    println!("count, currency, flex_group             , flex_sku         , 1h_SPOT, 1hr_AsYouGo, 1y_SPOT, 1y_AsYouGo, 1y_Reserv_USD, 3y_Reserv_USD");
+    println!("count, currency, flex_group             , flex_sku         , 1h_SPOT, 1hr_Linux, 1hr_Win, 1ySpLin, 1ySpWin, 1y_Linux, 1y_Win, 1y_Reserv_USD, 3y_Reserv_USD");
     let mut total_count = 0.0;
     for flex_group in summary.keys().sorted() {
         //for (fg, p) in summary.iter().sorted_by_key(|(&key, _)| key) {
         let p = &summary[flex_group];
         let p_calc = p.get_calc_struct_ro();
         println!(
-            r#"{cnt:5}, {cur:8}, {flex_group:23}, {flex_sku:17}, {spota}, {pga:11}, {spotb}, {pgb:10.0}, {p1y:13}, {p3y:13}"#,
+            r#"{cnt:5}, {cur:8}, {flex_group:23}, {flex_sku:17}, {spotl}, {pga:9}, {pgw:7}, {spotly}, {spotwy}, {pgay:9.0} {pgwy:6.0}, {p1y:13}, {p3y:13}"#,
             cnt = p_calc.count,
             cur = p.currency_code,
             // fg
             flex_sku = p_calc.flex_base_sku_name,
-            spota = if p_calc.spot_price_1hr_consumption > 0.0 {
+
+            pga = p_calc.retail_price_1hr_consumption,
+            pgay = p_calc.retail_price_1hr_consumption * 24.0 * 365.0,
+            pgw = p_calc.retail_price_1hr_consumption_windows,
+            pgwy = p_calc.retail_price_1hr_consumption_windows * 24.0 * 365.0,
+            p1y = p_calc.retail_price_1year,
+            p3y = p_calc.retail_price_3year,
+            // spot Linux & Win optional
+            spotl = if p_calc.spot_price_1hr_consumption > 0.0 {
                 format!("{:7.3}", p_calc.spot_price_1hr_consumption)
             } else {
                 "      -".to_string()
             },
-            spotb = if p_calc.spot_price_1hr_consumption > 0.0 {
+            spotly = if p_calc.spot_price_1hr_consumption > 0.0 {
                 format!("{:7.0}", p_calc.spot_price_1hr_consumption * 24.0 * 365.0)
             } else {
                 "      -".to_string()
             },
-            pga = p_calc.retail_price_1hr_consumption,
-            pgb = p_calc.retail_price_1hr_consumption * 24.0 * 365.0,
-            p1y = p_calc.retail_price_1year,
-            p3y = p_calc.retail_price_3year,
+            // spotw = if p_calc.spot_price_1hr_consumption_windows > 0.0 {
+            //     format!("{:7.3}", p_calc.spot_price_1hr_consumption_windows)
+            // } else {
+            //     "      -".to_string()
+            // },
+            spotwy = if p_calc.spot_price_1hr_consumption_windows > 0.0 {
+                format!("{:7.0}", p_calc.spot_price_1hr_consumption_windows * 24.0 * 365.0)
+            } else {
+                "      -".to_string()
+            },
         );
         total_count += p_calc.count;
     }

@@ -36,7 +36,9 @@ pub struct Pricing {
 #[derive(Debug, Clone, Deserialize)]
 pub struct PricingCalc {
     pub retail_price_1hr_consumption: f64,
+    pub retail_price_1hr_consumption_windows: f64,
     pub spot_price_1hr_consumption: f64,
+    pub spot_price_1hr_consumption_windows: f64,
     pub retail_price_1year: f64,
     pub retail_price_3year: f64,
     pub count: f64,
@@ -45,7 +47,9 @@ pub struct PricingCalc {
 impl PricingCalc {
     pub fn new(
         rp1hr: f64,
+        rp1hrwin: f64,
         sp1hr: f64,
+        sp1hrwin: f64,
         rp1y: f64,
         rp3y: f64,
         count: f64,
@@ -53,7 +57,9 @@ impl PricingCalc {
     ) -> Self {
         PricingCalc {
             retail_price_1hr_consumption: rp1hr,
+            retail_price_1hr_consumption_windows: rp1hrwin,
             spot_price_1hr_consumption: sp1hr,
+            spot_price_1hr_consumption_windows: sp1hrwin,
             retail_price_1year: rp1y,
             retail_price_3year: rp3y,
             count: count,
@@ -94,7 +100,7 @@ impl Pricing {
     pub fn get_calc_struct(&mut self) -> &mut PricingCalc {
         self.calc.get_or_insert_with(|| {
             log::debug!("initialize PricingCalc to zero default");
-            PricingCalc::new(0.0, 0.0, 0.0, 0.0, 0.0, "not set")
+            PricingCalc::new(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, "not set")
         })
     }
     pub fn get_calc_struct_ro(&self) -> &PricingCalc {
@@ -130,10 +136,36 @@ impl Pricing {
             );
         }
     }
+    pub fn update_price_1hr_consumption_windows(&mut self, price: f64) {
+        let mut some_calc = self.get_calc_struct();
+        let current_price = some_calc.retail_price_1hr_consumption_windows.clone();
+        some_calc.retail_price_1hr_consumption_windows = price;
+        if current_price == 0.0 {
+            log::debug!("set price 1hr WIN {} with {price}", self.arm_sku_name);
+        } else {
+            log::warn!(
+                "update price 1hr WIN {} from {current_price} to {price}",
+                self.arm_sku_name
+            );
+        }
+    }
     pub fn update_price_1hr_spot(&mut self, price: f64) {
         let mut some_calc = self.get_calc_struct();
         let current_price = some_calc.spot_price_1hr_consumption.clone();
         some_calc.spot_price_1hr_consumption = price;
+        if current_price == 0.0 {
+            log::debug!("set spot price 1hr {} with {price}", self.arm_sku_name);
+        } else {
+            log::warn!(
+                "update spot price 1hr {} from {current_price} to {price}",
+                self.arm_sku_name
+            );
+        }
+    }
+    pub fn update_price_1hr_spot_windows(&mut self, price: f64) {
+        let mut some_calc = self.get_calc_struct();
+        let current_price = some_calc.spot_price_1hr_consumption_windows.clone();
+        some_calc.spot_price_1hr_consumption_windows = price;
         if current_price == 0.0 {
             log::debug!("set spot price 1hr {} with {price}", self.arm_sku_name);
         } else {

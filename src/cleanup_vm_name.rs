@@ -7,30 +7,63 @@ pub struct VmNameAndPrice {
 #[derive(Debug, PartialEq)]
 pub enum VmPriceType {
     Spot,
+    SpotWindows,
     LowPriority,
+    LowPriorityWindows,
+    DevTest,
+    DevTestWindows,
     Normal,
+    NormalWindows,
 }
 impl VmPriceType {
     pub fn to_str(&self) -> &str {
         match self {
             VmPriceType::Spot => "Spot",
+            VmPriceType::SpotWindows => "Spot Windows",
             VmPriceType::LowPriority => "Low Priority",
+            VmPriceType::LowPriorityWindows => "Low Priority Windows",
+            VmPriceType::DevTest => "DevTest",
+            VmPriceType::DevTestWindows => "DevTestWindows",
             VmPriceType::Normal => "",
+            VmPriceType::NormalWindows => "Windows",
         }
     }
 }
 
-pub fn split_price_type(name_in: &str) -> (String, VmPriceType) {
+pub fn split_price_type(
+    price_option: &crate::az::pricing::retrieve::Pricing,
+) -> (String, VmPriceType) {
     let price_type: VmPriceType;
     let vm_name: String;
-    if let Some(name) = name_in.strip_suffix(VmPriceType::Spot.to_str()) {
-        price_type = VmPriceType::Spot;
+    let name_in = &price_option.sku_name;
+    let flag_windows = price_option.product_name.ends_with("Windows");
+    if price_option.type_bill == "DevTestConsumption" {
+        price_type = if flag_windows {
+            VmPriceType::DevTestWindows
+        } else {
+            VmPriceType::DevTest
+        };
+        vm_name = name_in.trim().to_string();
+    } else if let Some(name) = name_in.strip_suffix(VmPriceType::Spot.to_str()) {
+        price_type = if flag_windows {
+            VmPriceType::SpotWindows
+        } else {
+            VmPriceType::Spot
+        };
         vm_name = name.trim().to_string();
     } else if let Some(name) = name_in.strip_suffix(VmPriceType::LowPriority.to_str()) {
-        price_type = VmPriceType::LowPriority;
+        price_type = if flag_windows {
+            VmPriceType::LowPriorityWindows
+        } else {
+            VmPriceType::LowPriority
+        };
         vm_name = name.trim().to_string();
     } else {
-        price_type = VmPriceType::Normal;
+        price_type = if flag_windows {
+            VmPriceType::NormalWindows
+        } else {
+            VmPriceType::Normal
+        };
         vm_name = name_in.to_string();
     }
     (vm_name, price_type)
