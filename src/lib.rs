@@ -13,6 +13,7 @@ use std::error::Error;
 
 pub mod az; // subscritpions & vmlist
             // pub mod az_vms;
+mod cleanup_vm_name;
 mod filter_keys;
 mod pricing_data;
 mod read_csv;
@@ -25,7 +26,7 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
     eprintln!();
     eprintln!("# Generate summary of flex servers to reserve to cover all server.");
     // sum Pricing per flex_group
-    let mut summary: HashMap<String, pricing_data::Pricing> = HashMap::new();
+    let mut summary: HashMap<String, az::pricing::retrieve::Pricing> = HashMap::new();
 
     for (i, vm) in vms.0.iter().enumerate() {
         log::info!(" vm.flex_lookup={:?}", vm.flex_lookup);
@@ -60,7 +61,7 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
             // We have vm and its flex_group, now find pricing for small vm that is 1:1 with flex_group
             let mut price = pricing_data::get_sku_pricing(&vm_size, 0.0, &flex_options)?;
             log_current_total_flex = price.add_ratio_count(flex_add);
-            log_msg = "Summary addnew:";
+            log_msg = "Summary add new:";
             summary.insert(flex_group.clone(), price);
         }
         log::info!(
@@ -72,14 +73,14 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
     // print summary
     println!();
     println!("# CSV summary output");
-    println!("count, currency, flex_group           , flex_sku       , 1h_SPOT, 1hr_AsYouGo, 1y_SPOT, 1y_AsYouGo, 1y_Reserv_USD, 3y_Reserv_USD");
+    println!("count, currency, flex_group             , flex_sku         , 1h_SPOT, 1hr_AsYouGo, 1y_SPOT, 1y_AsYouGo, 1y_Reserv_USD, 3y_Reserv_USD");
     let mut total_count = 0.0;
     for flex_group in summary.keys().sorted() {
         //for (fg, p) in summary.iter().sorted_by_key(|(&key, _)| key) {
         let p = &summary[flex_group];
         let p_calc = p.get_calc_struct_ro();
         println!(
-            r#"{cnt:5}, {cur:8}, {flex_group:21}, {flex_sku:15}, {spota}, {pga:11}, {spotb}, {pgb:10.0}, {p1y:13}, {p3y:13}"#,
+            r#"{cnt:5}, {cur:8}, {flex_group:23}, {flex_sku:17}, {spota}, {pga:11}, {spotb}, {pgb:10.0}, {p1y:13}, {p3y:13}"#,
             cnt = p_calc.count,
             cur = p.currency_code,
             // fg
