@@ -53,19 +53,19 @@ async fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-pub fn run() -> Result<(), Box<dyn Error>> {
-    dotenv::dotenv().ok();
-    log::info!("#Start run()");
+// pub fn run() -> Result<(), Box<dyn Error>> {
+//     dotenv::dotenv().ok();
+//     log::info!("#Start run()");
 
-    //let mut vms = az_vms::get_all()?;
-    //let mut vms = az_vms::get_fake()?;
+//     let mut vms = az_vms::get_all()?;
+//     //let mut vms = az_vms::get_fake()?;
 
-    //log::info!("got all vm's {}", vms.len());
+//     //log::info!("got all vm's {}", vms.len());
 
-    log::debug!("add flex group and ratios for each vm");
-    // enrich_vm_fields(&mut vms);
+//     log::debug!("add flex group and ratios for each vm");
+//     // enrich_vm_fields(&mut vms);
 
-    //# print_vms(&vms, &print_keys, &az_sub);
-    // print_summary(&vms)?;
-    Ok(())
-}
+//     //# print_vms(&vms, &print_keys, &az_sub);
+//     // print_summary(&vms)?;
+//     Ok(())
+// }

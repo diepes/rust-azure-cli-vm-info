@@ -85,7 +85,6 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
             cur = p.currency_code,
             // fg
             flex_sku = p_calc.flex_base_sku_name,
-
             pga = p_calc.retail_price_1hr_consumption,
             pgay = p_calc.retail_price_1hr_consumption * 24.0 * 365.0,
             pgw = p_calc.retail_price_1hr_consumption_windows,
@@ -109,7 +108,10 @@ pub fn print_summary(vms: &az::vmlist::VirtualMachines) -> Result<(), Box<dyn Er
             //     "      -".to_string()
             // },
             spotwy = if p_calc.spot_price_1hr_consumption_windows > 0.0 {
-                format!("{:7.0}", p_calc.spot_price_1hr_consumption_windows * 24.0 * 365.0)
+                format!(
+                    "{:7.0}",
+                    p_calc.spot_price_1hr_consumption_windows * 24.0 * 365.0
+                )
             } else {
                 "      -".to_string()
             },

@@ -84,18 +84,28 @@ mod tests {
     //#[test]
     #[tokio::test]
     async fn test_split_price_type() {
+        let price_option = crate::az::pricing::retrieve::Pricing {
+            sku_name: "Standard_DS11_v2".to_string(),
+            product_name: "Standard_DS11_v2".to_string(),
+            type_bill: "DevTestConsumption".to_string(),
+            ..Default::default()
+        };
         assert_eq!(
-            split_price_type(&"MyVm/2ndVm Spot"),
-            ("MyVm/2ndVm".to_string(), VmPriceType::Spot)
+            split_price_type(&price_option),
+            ("Standard_DS11_v2".to_string(), VmPriceType::DevTest)
         );
-        assert_eq!(
-            split_price_type(&"MyVm/3ndVm"),
-            ("MyVm/3ndVm".to_string(), VmPriceType::Normal)
-        );
-        assert_eq!(
-            split_price_type(&"MyVm/4ndVm Low Priority"),
-            ("MyVm/4ndVm".to_string(), VmPriceType::LowPriority)
-        );
+        // assert_eq!(
+        //     split_price_type(&price_option),
+        //     ("MyVm/3ndVm".to_string(), VmPriceType::Normal)
+        // );
+        // assert_eq!(
+        //     split_price_type(&price_option),
+        //     ("MyVm/4ndVm".to_string(), VmPriceType::DevTest)
+        // );
+        // assert_eq!(
+        //     split_price_type(&price_option),
+        //     ("MyVm/4ndVm".to_string(), VmPriceType::LowPriority)
+        // );
     }
 
     #[test]

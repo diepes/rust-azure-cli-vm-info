@@ -20,6 +20,8 @@ Requires a working azure-cli, as it runs az commands.
 
 ## Code overview
 
+* Updated away from cmd::run to run az cli, to calling rust Azure api
+
 * Tests cargo test
 
 provides a ```cmd::run``` function to wrap ```std::process::Command```

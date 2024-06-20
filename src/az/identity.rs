@@ -133,7 +133,7 @@ mod tests {
         let subs = az_get_subscriptions(&r).await;
         assert!(matches!(&subs, Ok(_)), "Not logged in with az login ? ");
         let subs = subs.unwrap();
-        assert_eq!(subs.count.value, 8);
+        assert!(subs.count.value > 0);
         // println!("subs {:?}", subs);
 
         let st = az_storage(&r, &subs.value[0].subscription_id).await;

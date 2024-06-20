@@ -11,7 +11,7 @@ pub struct AzurePricing {
     pub prices: Vec<Pricing>,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, Default)]
 #[serde(rename_all = "camelCase")] //camelcase that starts with lowercase
 pub struct Pricing {
     pub arm_region_name: String,
